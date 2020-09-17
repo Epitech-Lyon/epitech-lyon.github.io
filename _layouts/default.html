@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-<link rel="icon" href="{{ site.baseurl }}/assets/images/logo.png">
+<link rel="icon" href="{{ site.baseurl }}/assets/images/epitech-logo-signature-noir.png">
 
 <title>{{ page.title }} | {{site.name}}</title>
 
@@ -63,32 +63,32 @@ ga('send', 'pageview');
 
             <ul class="navbar-nav ml-auto">
 
+                <li class="nav-item">
+                <a class="nav-link" href="{{ site.baseurl }}/about">About</a>
+                </li>
+
                 {% if page.url == "/" %}
                 <li class="nav-item active">
                 {% else %}
                 <li class="nav-item">
                 {% endif %}
-                <a class="nav-link" href="{{ site.baseurl }}/index.html">Blog</a>
+                <a class="nav-link" href="{{ site.baseurl }}/categories">All</a>
                 </li>
 
                 <li class="nav-item">
-                <a class="nav-link" href="{{ site.baseurl }}/about">About</a>
+                <a target="_blank" class="nav-link" href="{{ site.baseurl }}/categories#workshop"> Workshops</a>
                 </li>
 
                 <li class="nav-item">
-                <a target="_blank" class="nav-link" href="https://bootstrapstarter.com/bootstrap-templates/template-mediumish-bootstrap-jekyll/"> Docs</a>
+                <a target="_blank" class="nav-link" href="{{ site.baseurl }}/categories#talk"> Talks</a>
                 </li>
 
                 <li class="nav-item">
-                <a target="_blank" class="nav-link" href="https://www.wowthemes.net/themes/mediumish-wordpress/"><i class="fab fa-wordpress-simple"></i> WP Version</a>
+                <a target="_blank" class="nav-link" href="{{ site.baseurl }}/categories#hubproject"> Hub Projects</a>
                 </li>
 
                 <li class="nav-item">
-                <a target="_blank" class="nav-link" href="https://www.wowthemes.net/themes/mediumish-ghost/"><i class="fab fa-snapchat-ghost"></i> Ghost Version</a>
-                </li>
-
-                <li class="nav-item">
-                <a target="_blank" class="nav-link" href="https://github.com/wowthemesnet/mediumish-theme-jekyll"><i class="fab fa-github"></i> Fork on Github</a>
+                <a target="_blank" class="nav-link" href="https://github.com/epitech-lyon"><i class="fab fa-github"></i> Github Repo</a>
                 </li>
 
                 {% include search-lunr.html %}

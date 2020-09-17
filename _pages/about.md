@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Mediumish Template for Jekyll
+title: About
 permalink: /about
 comments: true
 ---
@@ -8,7 +8,15 @@ comments: true
 <div class="row justify-content-between">
 <div class="col-md-8 pr-5">
 
-<p>This website is built with Jekyll and Mediumish template for Jekyll. It's for demonstration purposes, no real content can be found. Mediumish template for Jekyll is compatible with Github pages, in fact even this demo is created with Github Pages and hosted with Github.</p>
+<p>This website is feeded by the students and partners of Epitech Lyon. Here you will find resumes of :
+<ul>
+    <li> scientific talks : conference of a pro or student / former alumni on a tech subject generally held in the HUB </li>
+    <li> workshops: a few hours of experimentation to discover a tech project / concept </li>
+    <li> r&d projects : ambitious project alone or in group, validated by a jury </li>
+    <li> experiences : ambitious project alone or in group, validated by a jury </li>
+</ul>
+
+</p>
 
 <p class="mb-5"><img class="shadow-lg" src="{{site.baseurl}}/assets/images/mediumish-jekyll-template.png" alt="jekyll template mediumish" /></p>
 <h4>Documentation</h4>

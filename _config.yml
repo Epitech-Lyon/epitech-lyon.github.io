@@ -1,13 +1,13 @@
 # Site
-name: "Mediumish"
-title: "Mediumish"
-description: "Jekyll template, Medium styled, free for bloggers."
-logo: 'assets/images/logo.png'
-favicon: 'assets/images/logo.png'
-baseurl: /mediumish-theme-jekyll
-google_analytics: 'UA-46278016-1'
-disqus: 'demowebsite'
-mailchimp-list: 'https://wowthemes.us11.list-manage.com/subscribe/post?u=8aeb20a530e124561927d3bd8&amp;id=8c3d2d214b'
+name: "Epitech Lyon Innovation Hub"
+title: "Epitech-Lyon"
+description: "scientific talks, workshops, hub projects"
+logo: 'assets/images/epitech-logo-signature-noir.png'
+favicon: 'assets/images/epitech-logo-signature-noir.png'
+baseurl: ''
+google_analytics: 'UA-178278290-1'
+disqus: 'p4tth3c4t'
+mailchimp-list: 'https://github.us2.list-manage.com/subscribe?u=183f5527b6f815b09e0c6fcfe&id=5e645fad9e'
 include: ["_pages"]
 permalink: /:title/
 
