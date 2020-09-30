@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Let's test spoilers"
+title:  "Welcome to Lyon Innovation HUB"
 author: sal
 categories: [ talk ]
 image: assets/images/12.jpg

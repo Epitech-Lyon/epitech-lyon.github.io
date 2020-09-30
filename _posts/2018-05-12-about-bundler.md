@@ -2,7 +2,7 @@
 layout: post
 title:  "About Bundler"
 author: sal
-categories: [ Jekyll ]
+categories: [ hubproject ]
 image: assets/images/2.jpg
 rating: 3
 ---
