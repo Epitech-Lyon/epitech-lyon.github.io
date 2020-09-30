@@ -1,43 +1,55 @@
 ---
 layout: page
-title: About
+title: About us
 permalink: /about
 comments: true
 ---
 
 <div class="row justify-content-between">
-<div class="col-md-8 pr-5">
 
-<p>This website is feeded by the students and partners of Epitech Lyon. Here you will find resumes of :
-<ul>
-    <li> scientific talks : conference of a pro or student / former alumni on a tech subject generally held in the HUB </li>
-    <li> workshops: a few hours of experimentation to discover a tech project / concept </li>
-    <li> r&d projects : ambitious project alone or in group, validated by a jury </li>
-    <li> experiences : ambitious project alone or in group, validated by a jury </li>
-</ul>
+    <div class="col-md-8 pr-5">
 
-</p>
+        <p>
+            This website is feeded by students of Epitech Lyon. Here you will find resources on :
+        </p>
+        <ul>
+            <li> <b>Scientific talks</b> : Conference of a pro or student / former alumni on a tech subject generally held in the HUB </li>
+            <li> <b>Workshops</b>: A few hours of experimentation to discover a tech project / concept </li>
+            <li> <b>R&D projects</b> : Ambitious project alone or in group, validated by a jury </li>
+            <li> <b>Experiences</b> : A simple project of discovering something technical </li>
+        </ul>
 
-<p class="mb-5"><img class="shadow-lg" src="{{site.baseurl}}/assets/images/mediumish-jekyll-template.png" alt="jekyll template mediumish" /></p>
-<h4>Documentation</h4>
+        <p class="mb-5" align="center">
+            <img class="shadow-lg" src="{{site.baseurl}}/assets/images/EPITECH_AVATAR_FB_LYON.png" alt="Epitech Lyon" />
+        </p>
 
-<p>Please, read the docs <a href="https://bootstrapstarter.com/bootstrap-templates/template-mediumish-bootstrap-jekyll/">here</a>.</p>
+        <h4> Check our posts </h4>
 
-<h4>Questions or bug reports?</h4>
+        <p>
+            Start reading our <a href="{{site.baseurl}}/categories">posts</a> !
+        </p>
 
-<p>Head over to our <a href="https://github.com/wowthemesnet/mediumish-theme-jekyll">Github repository</a>!</p>
+        <h4> Want to check the code ? </h4>
+        
+        <p>
+            Head over to our <a href="https://github.com/epitech-lyon"> Github repository </a>!
+        </p>
 
-</div>
+    </div>
 
-<div class="col-md-4">
+    <div class="col-md-4">
 
-<div class="sticky-top sticky-top-80">
-<h5>Buy me a coffee</h5>
+        <div class="sticky-top sticky-top-80">
 
-<p>Thank you for your support! Your donation helps me to maintain and improve <a target="_blank" href="https://github.com/wowthemesnet/mediumish-theme-jekyll">Mediumish <i class="fab fa-github"></i></a>.</p>
+            <h5> Contact Us </h5>
 
-<a target="_blank" href="https://www.wowthemes.net/donate/" class="btn btn-danger">Buy me a coffee</a> <a target="_blank" href="https://bootstrapstarter.com/bootstrap-templates/template-mediumish-bootstrap-jekyll/" class="btn btn-warning">Documentation</a>
+            <p>
+                Want to know more about our students work? Contact us or have a look <a target="_blank" href="https://github.com/epitech-lyon">here <i class="fab fa-github"></i></a>.
+            </p>
 
-</div>
-</div>
+            <a target="_blank" href="{{site.baseurl}}/contact" class="btn btn-warning">Say Hi!</a>
+
+        </div>
+    </div>
+
 </div>
