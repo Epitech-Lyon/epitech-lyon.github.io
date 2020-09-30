@@ -30,6 +30,14 @@ authors:
     web: https://www.wowthemes.net
     twitter: https://twitter.com/wowthemesnet
     description: "This is the author box. Write a short description of the author here. You are currently previewing Mediumish demo, a Jekyll template compatible with Github pages."
+  jhouvenaghel:
+    name: Juliette Houvenaghel
+    display_name: Juliette H.
+    avatar: 'assets/images/avatars/jhouvenaghel.jpg'
+    email: juliette.houvenaghel@epitech.eu
+    web: https://www.epitech.eu
+    twitter: https://twitter.com/jhouvenaghel
+    description: "Juliette H. est une étudiante en 4e année à Epitech (Lyon). Elle est passionnée par le Web, le design et le développement mobile."
 
 # Plugins
 plugins:
