@@ -2,7 +2,7 @@
 layout: post
 title:  "Welcome to Lyon Innovation HUB"
 author: sal
-categories: [ talk ]
+categories: [ edito ]
 image: assets/images/12.jpg
 featured: true
 hidden: true
