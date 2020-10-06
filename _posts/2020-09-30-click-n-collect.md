@@ -13,6 +13,8 @@ Je voulais une solution très simple d'accès d'où l'idée d'utiliser les servi
 
 Click N Collect a donc pris la forme d'un [bot messenger][3] - la plateforme la plus utilisée pour communiquer entre les étudiants Epitech. Cela évite la création d'un compte quelque part, ou encore, de mémoriser une énième plateforme. C'était aussi une découverte pour moi, ayant toujours voulu tester la programmation de bots.
 
+---
+
 Ci dessous, les technologies utilisées pour programmer la solution :
 
 - Livraison : [Docker][2] + [Git][1]
