@@ -37,6 +37,14 @@ authors:
     web: https://www.epitech.eu
     twitter: https://twitter.com/ymagnin
     description: "Yann M. est étudiant en 4e année à Epitech (Lyon). Il est passionné de Hardware, programmation bas niveau et"
+  nmary:
+    name: Nicolas Mary
+    display_name: Nicolas M.
+    avatar: 'assets/images/avatars/nmary.jpg'
+    email: nicolas.mary@epitech.eu
+    web: https://www.epitech.eu
+    twitter: https://twitter.com/nmary
+    description: "Nicolas M. est en 2e année à Epitech (Lyon). Il est passionné par le design et la programmation de jeux vidéos "
 
 # Plugins
 plugins:
