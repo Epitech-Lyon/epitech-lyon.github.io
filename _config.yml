@@ -45,6 +45,22 @@ authors:
     web: https://www.epitech.eu
     twitter: https://twitter.com/nmary
     description: "Nicolas M. est en 2e année à Epitech (Lyon). Il est passionné par le design et la programmation de jeux vidéos "
+  hbach:
+      name: Hugo Bach
+      display_name: Hugo B.
+      avatar: 'assets/images/avatars/hbach.jpg'
+      email: hugo.bach@epitech.eu
+      web: https://www.epitech.eu
+      twitter: https://twitter.com/hbach
+      description: "Hugo B. est en 3e année à Epitech (Lyon). Il est passionné de cybersécurité, back-end et devops"
+  llhuile:
+    name: Leo Lhuile
+    display_name: Leo L.
+    avatar: 'assets/images/avatars/llhuile.jpg'
+    email: leo.lhuile@epitech.eu
+    web: https://www.epitech.eu
+    twitter: https://twitter.com/llhuile
+    description: "Leo L. est en 4e année à Epitech (Lyon). Il est passionné par la programmation des jeux video et le développement Web "
 
 # Plugins
 plugins:
