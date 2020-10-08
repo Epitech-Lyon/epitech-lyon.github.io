@@ -61,6 +61,14 @@ authors:
     web: https://www.epitech.eu
     twitter: https://twitter.com/llhuile
     description: "Leo L. est en 4e année à Epitech (Lyon). Il est passionné par la programmation des jeux video et le développement Web "
+  pcoulon:
+    name: Pierre Coulon
+    display_name: Pierre C.
+    avatar: 'assets/images/avatars/pcoulon.jpg'
+    email: pierre.coulon@epitech.eu
+    web: https://www.epitech.eu
+    twitter: https://twitter.com/pcoulon
+    description: "P. Coulon est en 4e année à Epitech (Lyon). Il est passionné par la programmation web et les objects connectés"
 
 # Plugins
 plugins:
