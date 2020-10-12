@@ -6,7 +6,7 @@ categories: [ hubproject ]
 image: assets/images/vhex/vhex.jpg
 ---
 
-L'année dernière, j'ai choisi de faire comme projet Hub un kernel pour les calculatrices Casio. Comme le projet est toujours d'actualité et que j'ai l'opportunité de partager mes prévisions pour la suite, je vais essayer d'expliquer le plus possible l'objectif derrière ce noyau.
+L'année dernière, j'ai choisi de faire comme [projet Hub][4] un kernel pour les calculatrices Casio. Comme le projet est toujours d'actualité et que j'ai l'opportunité de partager mes prévisions pour la suite, je vais essayer d'expliquer le plus possible l'objectif derrière ce noyau.
 
 ---
 
@@ -101,9 +101,10 @@ J'espère sincèrement que le projet prendra vie et arrivera à maturité. Dans 
 ### Annexes
 * [Le topic principal peut-être trouve sur Panet-Casio][1]
 * [Les sources de mon kernel se trouvent sur le Gitea de Planet-Casio également][2]
-* [Mes notes sur la rétro-ingénierie du processeur SH7305][2]
+* [Mes notes sur la rétro-ingénierie du processeur SH7305][3]
 
 
 [1]: https://www.planet-casio.com/Fr/forums/topic16469-1-projet-vhex-kernel-pour-les-calculatrices-casio.html
 [2]: https://gitea.planet-casio.com/Yatis/Vhex-kernel
 [3]: https://bible.planet-casio.com/yatis
+[4]: https://github.com/Epitech-Lyon/Vhex-kernel
