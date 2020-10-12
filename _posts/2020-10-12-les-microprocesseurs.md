@@ -91,3 +91,6 @@ Cet article avait pour but de présenter les microprocesseurs de manière simple
 - Les jeux d'instructions et leur type (ou famille de jeux d'instructions).
 - les indicateurs de performances
 - le multithreading
+
+## Ressources
+
