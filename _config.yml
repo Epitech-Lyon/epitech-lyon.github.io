@@ -69,6 +69,23 @@ authors:
     web: https://www.epitech.eu
     twitter: https://twitter.com/pcoulon
     description: "P. Coulon est en 4e année à Epitech (Lyon). Il est passionné par la programmation web et les objects connectés"
+  tpoisson:
+    name: Tristan Poisson
+    display_name: Tristan P.
+    avatar: 'assets/images/avatars/tpoisson.jpg'
+    email: tristan.poisson@epitech.eu
+    web: https://www.epitech.eu
+    twitter: https://twitter.com/tpoisson
+    description: "Tristan P. est en 3e année à Epitech (Lyon). Il est passionné par la programmation mobile et les objects connectés"
+  mverdier:
+    name: Maugan Verdier
+    display_name: Maugan V.
+    avatar: 'assets/images/avatars/mverdier.jpg'
+    email: maugan.verdier@epitech.eu
+    web: https://www.epitech.eu
+    twitter: https://twitter.com/mverdier
+    description: "Maugan V. est en 3e année à Epitech (Lyon). Il est passionné par le hardware et la programmation bas niveau"
+
 
 # Plugins
 plugins:
