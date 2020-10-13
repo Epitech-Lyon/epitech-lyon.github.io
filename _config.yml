@@ -85,7 +85,70 @@ authors:
     web: https://www.epitech.eu
     twitter: https://twitter.com/mverdier
     description: "Maugan V. est en 3e année à Epitech (Lyon). Il est passionné par le hardware et la programmation bas niveau"
-
+  mbelleville:
+    name: Matheo Belleville
+    display_name: Matheo B.
+    avatar: 'assets/images/avatars/mbelleville.jpg'
+    email: matheo.belleville@epitech.eu
+    web: https://www.epitech.eu
+    twitter: https://twitter.com/mbelleville
+    description: "Matheo B. est en 3e année à Epitech (Lyon). Il est passionné par le jeu video et la programmation sous unity"  
+  mhechaichi:
+    name: Moussa Hechaichi
+    display_name: Moussa H.
+    avatar: 'assets/images/avatars/mhechaichi.jpg'
+    email: moussa.hechaichi@epitech.eu
+    web: https://www.epitech.eu
+    twitter: https://twitter.com/mheichaichi
+    description: "Moussa Hechaichi est en 4e année à Epitech (Lyon). Il est passionné par le web et la programmation mobile"
+  mbarbet:
+    name: Max Barbet
+    display_name: Max B.
+    avatar: 'assets/images/avatars/mbarbet.jpg'
+    email: max.barbet@epitech.eu
+    web: https://www.epitech.eu
+    twitter: https://twitter.com/mbarbet
+    description: "M. Barbet est en 3e année à Epitech (Lyon). Il est passionné d'IA et de programation Web"
+  jharrau:
+    name: Jeremy Harrau
+    display_name: Jeremy H.
+    avatar: 'assets/images/avatars/jharrau.jpg'
+    email: jeremy.harrau@epitech.eu
+    web: https://www.epitech.eu
+    twitter: https://twitter.com/jharrau
+    description: "Jeremy Harrau est en 4e année à Epitech (Lyon). Il est passionné de Web design et de programmation mobile"
+  eloiseau:
+    name: Evan Loiseau
+    display_name: Evan L.
+    avatar: 'assets/images/avatars/eloiseau.jpg'
+    email: evan.loiseau@epitech.eu
+    web: https://www.epitech.eu
+    twitter: https://twitter.com/eloiseau
+    description: "Evan L. est en 3e année à Epitech (Lyon). Il est passionné de programmation de jeux video"
+  troustan:
+    name: Thomas Roustan
+    display_name: Thomas R.
+    avatar: 'assets/images/avatars/troustan.jpg'
+    email: thomas.roustan@epitech.eu
+    web: https://www.epitech.eu
+    twitter: https://twitter.com/troustan
+    description: "Thomas R. est un étudiant en 3e année à Epitech (Lyon). Il est passionné de programmation de jeux video sous Unity et de Multimedia"  
+  csaunier:
+    name: Clément Saunier
+    display_name: Clément S.
+    avatar: 'assets/images/avatars/csaunier.jpg'
+    email: clement.saunier@epitech.eu
+    web: https://www.epitech.eu
+    twitter: https://twitter.com/csaunier
+    description: "Clément Saunier est un étudiant en 3e année à Epitech (Lyon). Il est passionné de programmation de jeux video sous Unity et de programmation mobile"
+  meynard-longuet:
+    name: Matthieu Eynard-Longuet
+    display_name: Matthieu E.-L.
+    avatar: 'assets/images/avatars/meynard-longuet.jpg'
+    email: matthieu.eynard-longuet@epitech.eu
+    web: https://www.epitech.eu
+    twitter: https://twitter.com/meynard-longuet
+    description: "Matthieu Eynard Longuet est un étudiant en 5e année à Epitech (Lyon). Il est passionné dela 3D et la VR/AR"
 
 # Plugins
 plugins:
