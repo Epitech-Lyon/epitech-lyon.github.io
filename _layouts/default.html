@@ -64,31 +64,22 @@ ga('send', 'pageview');
             <ul class="navbar-nav ml-auto">
 
                 {% if page.url == "/categories" %}
-                <li class="nav-item active">
+                <li class="nav-item dropdown active">
                 {% else %}
-                <li class="nav-item">
+                <li class="nav-item dropdown">
                 {% endif %}
-                <a class="nav-link" href="{{ site.baseurl }}/categories">All</a>
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Per Category</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="{{ site.baseurl }}/categories#talk"> Talks</a>
+                        <a class="dropdown-item" href="{{ site.baseurl }}/categories#workshop"> Workshops</a>
+                        <a class="dropdown-item" href="{{ site.baseurl }}/categories#hubproject"> Hub Projects</a>
+                    </div>                
                 </li>
-
                 <li class="nav-item">
-                <a class="nav-link" href="{{ site.baseurl }}/categories#talk"> Talks</a>
+                    <a class="nav-link" href="{{ site.baseurl }}/"><i class="far fa-newspaper"></i> Journal</a>
                 </li>
-
                 <li class="nav-item">
-                <a class="nav-link" href="{{ site.baseurl }}/categories#workshop"> Workshops</a>
-                </li>
-
-                <li class="nav-item">
-                <a class="nav-link" href="{{ site.baseurl }}/categories#hubproject"> Hub Projects</a>
-                </li>
-
-                <li class="nav-item">
-                <a class="nav-link" href="https://github.com/epitech-lyon"><i class="fab fa-github"></i> Github Repo</a>
-                </li>
-
-                <li class="nav-item">
-                <a class="nav-link" href="{{ site.baseurl }}/"><i class="far fa-newspaper"></i> Journal</a>
+                    <a class="nav-link" href="https://github.com/epitech-lyon"><i class="fab fa-github"></i> Github Repo</a>
                 </li>
 
                 {% include search-lunr.html %}
