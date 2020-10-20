@@ -149,7 +149,15 @@ authors:
     web: https://www.epitech.eu
     twitter: https://twitter.com/meynard-longuet
     description: "Matthieu Eynard Longuet est un étudiant en 5e année à Epitech (Lyon). Il est passionné dela 3D et la VR/AR"
-
+  lkaroubi:
+    name: Léo Karoubi
+    display_name: L. Karoubi
+    avatar: 'assets/images/avatars/lkaroubi.jpg'
+    email: leo.karoubi@epitech.eu
+    web: https://www.epitech.eu
+    twitter: https://twitter.com/lkaroubi
+    description: "Léo Karoubi est un étudiant en 3e année à Epitech (Lyon). Il est passionné de programmation bas niveau et les micro-processeurs"
+  
 # Plugins
 plugins:
   - jekyll-paginate
