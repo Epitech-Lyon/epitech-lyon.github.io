@@ -46,7 +46,9 @@ Une fois téléchargé, et installé, vous devriez arriver sur une fenêtre simi
 <div align="center">
 <a id="EGL_1"><img src="https://github.com/Epitech-Lyon/Unreal-Engine-4---Workshop-1/blob/develop/ressources_readme/EGL_1.jpg?raw=true" width="700" height="" /></a>
 </div>
-</br>
+
+<br>
+
 Pour le moment, rien de bien compliqué sur cette page ! Vous pouvez y retrouver les news importante en premier plan, les liens de news, channel YouTube d'Unreal, le StackOverflow d'Epic, le Forum et la Roadmap (pas la peine de développer une feature si une qui arrive vous convient ! :smirk:)
 
 En dessous, vous pourrez retrouver les informations récentes, et sur la droite, les projets de la communauté ! D'où son ancien nom : Communauté.
@@ -56,7 +58,8 @@ Le second onglet, l'onglet Apprendre, regroupe pas mal de choses !
 <div align="center">
 <a id="EGL_2"><img src="https://github.com/Epitech-Lyon/Unreal-Engine-4---Workshop-1/blob/develop/ressources_readme/EGL_2.jpg?raw=true" width="700" height="" /></a>
 </div>
-<br/>
+
+<br>
 
 - <a  href="https://docs.unrealengine.com/en-US/index.html">**Documentation**</a> : Comme son nom l'indique, vous trouverez toute la Documentation de l'Éditeur. Allant simplement de la création de votre premier projet, au scripting de l'éditeur, en passant par la création de test unitaire ou la modification du moteur ! Vous pourrez tout trouver ici.<br/>
 
@@ -71,7 +74,8 @@ Le troisième onglet, sûrement celui qui fera couler le plus d'encre, j'ai nomm
 <div align="center">
 <a id="EGL_3"><img src="https://github.com/Epitech-Lyon/Unreal-Engine-4---Workshop-1/blob/develop/ressources_readme/EGL_3.jpg?raw=true" width="700" height="" /></a>
 </div>
-</br>
+
+<br>
 
 Le marché est un onglet très intéressant si vous n'êtes pas un artiste dans l'âme. D'ailleurs si vous en êtes un aussi. Vous pouvez trouver énormément d'Assets gratuitement, d'autant plus qu'Epic Games en fourni chaque mois. De plus, rien ne vous empêche de modifier les assets achetés pour les adapter à votre jeu.
 
@@ -82,7 +86,8 @@ On arrive enfin aux choses sérieuses, ce qui nous va nous intéresser le plus d
 <div align="center">
 <a id="EGL_4"><img src="https://github.com/Epitech-Lyon/Unreal-Engine-4---Workshop-1/blob/develop/ressources_readme/EGL_4.jpg?raw=true" width="700" height="" /></a>
 </div>
-</br>
+
+<br>
 
 Je crois qu'ici, tout est explicite, sauf peut-être le **Coffre**. C'est ici que vous pourrez télécharger, ajouter au projet, et parfois créer des projets à partir de ce que vous avez acheté. Vous y retrouverez donc vos plugins, assets et autres démos.
 
@@ -94,7 +99,8 @@ Une fois l'Unreal Engine 4 lancé, vous  devriez arriver sur un écran similaire
 <div align="center">
 <a id="UEL_1"><img src="https://github.com/Epitech-Lyon/Unreal-Engine-4---Workshop-1/blob/develop/ressources_readme/UEL_1.jpg?raw=true" width="700" height="" /></a>
 </div>
-</br>
+
+<br>
 
 Créons donc notre premier projet.
 
@@ -106,7 +112,8 @@ Après création de votre projet, si vous n'arrivez pas sur une scène similaire
 <div align="center">
 <a id="UE_1"><img src="https://github.com/Epitech-Lyon/Unreal-Engine-4---Workshop-1/blob/develop/ressources_readme/UE_1.jpg/?raw=true" width="700" height="" /></a>
 </div>
-</br>
+
+<br>
 
 > 🔍 DÉCOUVERTE
 >
@@ -122,7 +129,8 @@ Le but est d'arriver à un résultat similaire aux images ci-dessous.
 <div align="center">
 <a id="UE_2"><img src="https://github.com/Epitech-Lyon/Unreal-Engine-4---Workshop-1/blob/develop/ressources_readme/UE_2.jpg?raw=true" width="700" height="" /></a>
 </div>
-</br>
+
+<br>
 
 > 💭 RÉFLEXION
 >
@@ -151,7 +159,8 @@ Voici à quoi cela ressemble !
 <div align="center">
 <a id="UE_3"><img src="https://github.com/Epitech-Lyon/Unreal-Engine-4---Workshop-1/blob/develop/ressources_readme/UE_3.jpg?raw=true" width="700" height="" /></a>
 </div>
-</br>
+
+<br>
 
 ### Votre premier Blueprint
 C'est maintenant que cela va devenir intéressant ! Nous allons créer le dernier sort des RPG à la mode ! Non en fait, nous allons simplement faire... Une porte automatique, activé par une **plaque de pression**.
@@ -271,11 +280,14 @@ Vous pourrez trouver tous ces liens à la fin.
 ## Comment est-ce que l'on crée un jeu ?
 
 Voici un modèle **très** simplifié que j'aime bien présenter : les étapes de création d'un jeu vidéo.
-</br>
+
+<br>
+
 <div align="center">
 <a id="UE_3"><img src="https://github.com/Epitech-Lyon/Unreal-Engine-4---Workshop-1/blob/develop/ressources_readme/GameDev.png?raw=true" width="1000" height="" /></a>
 </div>
-</br>
+
+<br>
 
 Alors oui, cela ne correpondra sûrement pas à la méthodologie qu'utilise Ubisoft, mais le principe est là, surtout pour une Game Jam.
 
@@ -299,12 +311,12 @@ Si vous avez une question, un retour à me faire, ou autre, contactez moi via <a
 
 Pour plus d'informations : <a href="https://matthieu.ehanor.fr/">**https://matthieu.ehanor.fr/**</a>.
 
-</br>
-</br>
+<br>
+
 <div align="center">
 <a id="UE_3" href="https://matthieu.ehanor.fr/"><img src="https://github.com/Epitech-Lyon/Unreal-Engine-4---Workshop-1/blob/develop/ressources_readme/Ehanor_Logo.png" width="150" height="" /></a>
 </div>
-</br>
+
 
 
 [1]: https://github.com/Epitech-Lyon/Unreal-Engine-4---Workshop-1
