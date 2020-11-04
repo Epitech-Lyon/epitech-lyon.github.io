@@ -68,7 +68,7 @@ ga('send', 'pageview');
                 <li class="nav-item">
                 {% endif %}
                 <div class="nav-item btn-group">
-                    <a href="{{ site.baseurl }}/categories" class="btn btn-secondary">Categories</a>
+                    <a href="{{ site.baseurl }}/categories" class="btn btn-success">Categories</a>
                     <button type="button" class="btn dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <span class="sr-only">Toggle Dropdown</span>
                     </button>
@@ -83,12 +83,12 @@ ga('send', 'pageview');
                 <li class="nav-item">
                     <a class="nav-link" href="https://github.com/epitech-lyon"><i class="fab fa-github"></i> Github Repo</a>
                 </li>
+                {% include search-lunr.html %}
 
                 <li class="nav-item">
                     <a class="nav-link" href="{{ site.baseurl }}/about"><i class="fa fa-info-circle" aria-hidden="true"></i> About</a>
                 </li>
 
-                {% include search-lunr.html %}
 
             </ul>
 
