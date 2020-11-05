@@ -6,10 +6,10 @@ logo: 'assets/images/epitech-logo-signature-noir.png'
 favicon: 'assets/images/epitech-logo-signature-noir.png'
 baseurl: ''
 google_analytics: 'UA-178278290-1'
-disqus: 'p4tth3c4t'
 mailchimp-list: 'https://github.us2.list-manage.com/subscribe?u=183f5527b6f815b09e0c6fcfe&id=5e645fad9e'
 include: ["_pages"]
 permalink: /:title/
+#disqus: 'p4tth3c4t'
 
 # Authors
 authors:
