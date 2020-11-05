@@ -157,6 +157,14 @@ authors:
     web: https://www.epitech.eu
     twitter: https://twitter.com/lkaroubi
     description: "Léo Karoubi est un étudiant en 3e année à Epitech (Lyon). Il est passionné de programmation bas niveau et les micro-processeurs"
+  j-aponchon:
+    name: Jamie Antoine Ponchon
+    display_name: J. A. Ponchon
+    avatar: 'assets/images/avatars/j-aponchon.jpg'
+    email: jamie-antoine.ponchon@epitech.eu
+    web: https://www.epitech.eu
+    twitter: https://twitter.com/j-aponchon
+    description: "Jamie Antoine Ponchon est un étudiant en 2e année à Epitech(Lyon). Il est passionnée le moile et la programmation de Jeux vidéo"
   
 # Plugins
 plugins:
