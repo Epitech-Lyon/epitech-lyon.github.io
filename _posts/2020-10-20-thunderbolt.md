@@ -4,6 +4,7 @@ title:  "Experiencing the AWS lambda functions"
 author: lkaroubi
 categories: [ experience ]
 image: assets/images/thunderbolt/affiche.jpg
+published: true
 ---
 
 Thunderbolt is a set of AWS lambda functions for AWS resources scheduling.
