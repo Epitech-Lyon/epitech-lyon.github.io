@@ -165,6 +165,14 @@ authors:
     web: https://www.epitech.eu
     twitter: https://twitter.com/j-aponchon
     description: "Jamie Antoine Ponchon est un étudiant en 2e année à Epitech(Lyon). Il est passionnée le moile et la programmation de Jeux vidéo"
+  rlo:
+    name: Rayane Lo
+    display_name: Rayane L.
+    avatar: 'assets/images/avatars/rlo.jpg'
+    email: rayane.lo@epitech.eu
+    web: https://www.epitech.eu
+    twitter: https://twitter.com/rlo
+    description: "Rayane Lo est en 4e année à Epitech (Lyon). Il est passionné par le web et la programmation mobile"
   
 # Plugins
 plugins:

@@ -4,6 +4,7 @@ title:  "Unreal Engine Workshop (1)"
 author: meynard-longuet
 categories: [ workshop ]
 image: assets/images/unreal/affiche.jpg
+published: true
 ---
 
 Bonjour et bienvenue à tous sur ce Post-Workshop. L'on m'a demandé de vous retranscrire ce Workshop pour pouvoir le reproduire de votre côté. Il évoluera certainement au fur et à mesure de vos retours si des choses sont à corriger par la suite. 

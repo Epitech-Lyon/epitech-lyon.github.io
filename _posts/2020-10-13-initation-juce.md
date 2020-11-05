@@ -4,6 +4,7 @@ title:  "Initiation à Juce"
 author: troustan
 categories: [ workshop ]
 image: assets/images/juce/affiche.jpg
+published: false
 ---
 
 [Juce][1] est une bibliothèque de développement multi-fonctionnelle qui permet de programmer de créer et manipuler des audios. Juce est écrite en C++ et portée par une importante communauté de développeurs et entrepreneurs de part le monde.

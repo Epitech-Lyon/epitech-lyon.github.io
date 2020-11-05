@@ -4,6 +4,7 @@ title:  "Les Microprocesseurs"
 author: mverdier
 categories: [ talk ]
 image: assets/images/microprocessor/affiche.jpg
+published: true
 ---
 
 ## Un peu d'histoire
@@ -12,7 +13,7 @@ Quelques repères historiques :
 - Avant 1970, ordinateurs non miniaturisés
 - Après 1970, on commence à miniaturiser
 
-La fabrication d'un microprocesseur est un processus industriel très complexes.
+La fabrication d'un microprocesseur est un processus industriel très complexe.
 
 ## Design
 
