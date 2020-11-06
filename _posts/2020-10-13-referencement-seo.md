@@ -7,7 +7,7 @@ image: assets/images/art-referencement/affiche.jpg
 published: true
 ---
 
-Dans le cadre d’un workshop réalisé pour les étudiants d’Epitech-Lyon, nous avons présenté et partager nos connaissances en référencement naturel, plus communément appelé [SEO][1] -- **S**earch **E**ngine **O**ptimisation.
+Dans le cadre d’un workshop réalisé pour les étudiants d’Epitech-Lyon, nous avons présenté et partagé nos connaissances en référencement naturel, plus communément appelé [SEO][1] -- **S**earch **E**ngine **O**ptimisation.
 
 ## Mais pourquoi avoir choisi le référencement naturel ?
 
@@ -17,7 +17,7 @@ Une évolution professionnelle dans le digital nécessite une curiosité sans é
 
 ## Mais finalement le SEO, qu’est-ce que c’est ?
 
-Le référencement naturel représente l’ensemble des méthodes et techniques permettant d’optimiser votre contenu web, site internet dans la majorité, son positionnement dans les résultats des moteurs de recherche comme Google.
+Le référencement naturel représente l’ensemble des méthodes et techniques permettant d’optimiser votre contenu web --- sites internet --- dans la majorité, son positionnement dans les résultats des moteurs de recherche comme Google.
 
 > Le référencement naturel représente l’ensemble des méthodes et techniques permettant d’optimiser votre contenu web
 
