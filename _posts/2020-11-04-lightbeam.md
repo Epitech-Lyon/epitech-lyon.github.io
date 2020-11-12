@@ -12,7 +12,8 @@ published: true
 ## Description
 
 If you want an OSdev introduction, [here is the bible](https://wiki.osdev.org/Expanded_Main_Page).
-I will not give explaination on the kernel architecture and development, the subject is too large.
+
+I will not give explanation on the kernel architecture and development, the subject is too large.
 
 As a small definition, a kernel is an interface between the human and the computer. It is the core of an Operating System and is composed principally of a bootstrap which allows the machine to boot and many components --- which work together --- to maintain the machine alive.
 
@@ -216,6 +217,7 @@ Documentation: [IA-32 manual](https://software.intel.com/content/www/us/en/devel
 ### Improve ?
 
 The goal was to discover several architectures, not to build a big and efficient kernel. The job was in part to create a maximum of shared code cross-architecture, unfortunately it hasn't been a success.
+
 I lost control of my code for several reasons, the main one is that while in learning phase I have modified the structure of the project to improve the coherence.
 
 A non-exhaustive list of improvements:
