@@ -7,14 +7,15 @@ image: assets/images/lightbeam/affiche.jpg
 published: true
 ---
 
-[LightBeam](https://github.com/le0kar0ub1/LightBeam) is a set of 4 kernels bootstrap on several platforms.
+[LightBeam](https://github.com/epitech-lyon/LightBeam) is a set of 4 kernels bootstrap on several platforms.
 
 ## Description
 
 If you want an OSdev introduction, [here is the bible](https://wiki.osdev.org/Expanded_Main_Page).
 I will not give explaination on the kernel architecture and development, the subject is too large.
 
-As a small definition, a kernel is an interface between the human and the computer. It is the core of an Operating System and is composed principaly of a bootstrap which allow the machine to boot and many components which work together to maintain the machine alive.
+As a small definition, a kernel is an interface between the human and the computer. It is the core of an Operating System and is composed principally of a bootstrap which allows the machine to boot and many components --- which work together --- to maintain the machine alive.
+
 So, the job in the OSdev is to make a bootstrap, the components 'drivers' (memory, threads, interrupts, ...) and a scheduler. Easy isn't it ?
 
 The OSdev is a wide and complex world with a deep beauty if you dig... long... with a diamond shovel.
@@ -43,19 +44,20 @@ As said LightBeam is a project which contain 4 micro-kernel.
 
 ### How ?
 
-The OS development require a big acquaintance obtained by reading a lot of documentation. yes, that's not sexy so far.
+The OS development require a big acquaintance obtained by reading a lot of documentation. Yes, that's not sexy so far.
 
-The compilation is assured our servitors GCC, GAS (bad choice, a compilation with GCC only would have been better) and make with a "coherent" (actually not incredible) project architecture.
+The compilation is assured our servitors GCC, GAS (bad choice, a compilation with GCC only would have been better) and made with a "coherent" (actually not incredible) project architecture.
 
 ## Technical side
 
-The following description are actually simplified, if you want to go further go on the [repository page](https://github.com/le0kar0ub1/LightBeam).
+The following description are actually simplified --- if you want to go further visit the [repository page](https://github.com/epitech-lyon/LightBeam).
 
 ### Raspi3
 
 The LightBeam raspi3 kernel is SMP (Symetric MultiProcessing) and in graphic mode (no text mode).
 
-As an interface for raspberry machines, I have built a (partial) driver for the bcm2837 (scalable and usable for others bcm version).
+As an interface for raspberry machines, I have built a (partial) driver for the bcm2837 (scalable and usable for others bcm version.
+
 The bcmXXXX [SoC](https://en.wikipedia.org/wiki/System_on_a_chip) are the core of the raspberryX.
 On top of that for the raspi3 I juste created some functions that I needed which use this driver.
 
@@ -115,7 +117,7 @@ Runtime screenshot of the kernel (run with *qemu*)
 
 Documentation: [ARM documentation](https://developer.arm.com/documentation/ddi0487/aa) and [Broadcom documentation](https://www.raspberrypi.org/documentation/hardware/raspberrypi/bcm2836/QA7_rev3.4.pdf).
 
-Oh, a last personal advice, for your mental health, don't work with Broadcom. (what ? It was not in your plans ?)
+Oh! A last personal advice, for your mental health, don't work with Broadcom. (what ? It was not in your plans ?)
 
 ### Sifive
 
