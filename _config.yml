@@ -36,7 +36,7 @@ authors:
     email: yann.magnin@epitech.eu
     web: https://www.epitech.eu
     linkedin: https://www.linkedin.com/in/yann-magnin/
-    description: "Yann M. est étudiant en 4e année à Epitech (Lyon). Il est passionné de Hardware, programmation bas niveau et"
+    description: "Yann M. est étudiant en 4e année à Epitech (Lyon). Il est passionné par le dardware et la programmation bas niveau"
   nmary:
     name: Nicolas Mary
     display_name: Nicolas M.
@@ -44,7 +44,7 @@ authors:
     email: nicolas.mary@epitech.eu
     web: https://www.epitech.eu
     linkedin: https://www.linkedin.com/in/nicolas-mary-hello-world/
-    description: "Nicolas M. est en 2e année à Epitech (Lyon). Il est passionné par le design et la programmation de jeux vidéos "
+    description: "Nicolas M. est en 2e année à Epitech (Lyon). Il est passionné par le design et la programmation de jeux vidéo "
   hbach:
     name: Hugo Bach
     display_name: Hugo B.
@@ -68,7 +68,7 @@ authors:
     email: pierre.coulon@epitech.eu
     web: https://www.epitech.eu
     linkedin: https://www.linkedin.com/in/pierre-coulon/
-    description: "P. Coulon est en 4e année à Epitech (Lyon). Il est passionné par la programmation web et les objects connectés"
+    description: "P. Coulon est en 4e année à Epitech (Lyon). Il est passionné par la programmation web et l'IoT"
   tpoisson:
     name: Tristan Poisson
     display_name: Tristan P.
@@ -76,7 +76,7 @@ authors:
     email: tristan.poisson@epitech.eu
     web: https://www.epitech.eu
     linkedin: https://www.linkedin.com/in/tristan-poisson-a02419188/
-    description: "Tristan P. est en 3e année à Epitech (Lyon). Il est passionné par la programmation mobile et les objects connectés"
+    description: "Tristan P. est en 3e année à Epitech (Lyon). Il est passionné par la programmation mobile et l'IoT"
   mverdier:
     name: Maugan Verdier
     display_name: Maugan V.
@@ -116,7 +116,7 @@ authors:
     email: jeremy.harrau@epitech.eu
     web: https://www.epitech.eu
     linkedin: https://www.linkedin.com/in/jeremy-harrau-08560417a/
-    description: "Jeremy Harrau est en 4e année à Epitech (Lyon). Il est passionné de Web design et de programmation mobile"
+    description: "Jeremy Harrau est en 4e année à Epitech (Lyon). Il est passionné par le Web design et la programmation mobile"
   eloiseau:
     name: Evan Loiseau
     display_name: Evan L.
@@ -124,7 +124,7 @@ authors:
     email: evan.loiseau@epitech.eu
     web: https://www.epitech.eu
     linkedin: https://www.linkedin.com/in/evan-loiseau-1200a618b/
-    description: "Evan L. est en 3e année à Epitech (Lyon). Il est passionné de programmation de jeux video"
+    description: "Evan L. est en 3e année à Epitech (Lyon). Il est passionné par la programmation de jeux video"
   troustan:
     name: Thomas Roustan
     display_name: Thomas R.
@@ -132,7 +132,7 @@ authors:
     email: thomas.roustan@epitech.eu
     web: https://www.epitech.eu
     linkedin: https://www.linkedin.com/in/thomas-roustan-6b9694161/
-    description: "Thomas R. est un étudiant en 3e année à Epitech (Lyon). Il est passionné de programmation de jeux video sous Unity et de Multimedia"  
+    description: "Thomas R. est un étudiant en 3e année à Epitech (Lyon). Il est passionné par la programmation de jeux video sous Unity et de la programmation Multimedia"  
   csaunier:
     name: Clément Saunier
     display_name: Clément S.
@@ -148,7 +148,7 @@ authors:
     email: matthieu.eynard-longuet@epitech.eu
     web: https://www.epitech.eu
     linkedin: https://www.linkedin.com/in/matthieu-eynard-longuet/
-    description: "Matthieu Eynard Longuet est un étudiant en 5e année à Epitech (Lyon). Il est passionné dela 3D et la VR/AR"
+    description: "Matthieu Eynard-Longuet est un étudiant en 5e année à Epitech (Lyon). Il est passionné par la 3D et la VR/AR"
   lkaroubi:
     name: Léo Karoubi
     display_name: L. Karoubi
@@ -156,7 +156,7 @@ authors:
     email: leo.karoubi@epitech.eu
     web: https://www.epitech.eu
     linkedin: https://www.linkedin.com/in/leo-karoubi-ab8510179/
-    description: "Léo Karoubi est un étudiant en 3e année à Epitech (Lyon). Il est passionné de programmation bas niveau et les micro-processeurs"
+    description: "Léo Karoubi est un étudiant en 3e année à Epitech (Lyon). Il est passionné par la programmation bas niveau et les micro-processeurs"
   j-aponchon:
     name: Jamie Antoine Ponchon
     display_name: J. A. Ponchon
@@ -164,7 +164,7 @@ authors:
     email: jamie-antoine.ponchon@epitech.eu
     web: https://www.epitech.eu
     linkedin: https://www.linkedin.com/in/jamie-ponchon/
-    description: "Jamie Antoine Ponchon est un étudiant en 2e année à Epitech(Lyon). Il est passionnée le moile et la programmation de Jeux vidéo"
+    description: "Jamie Antoine Ponchon est un étudiant en 2e année à Epitech(Lyon). Il est passionnée par la programmation mobile et la programmation de Jeux vidéo"
   rlo:
     name: Rayane Lo
     display_name: Rayane L.
