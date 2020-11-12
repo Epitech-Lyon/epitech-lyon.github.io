@@ -5,7 +5,7 @@ description: "scientific talks, workshops, hub projects"
 logo: 'assets/images/epitech-logo-signature-noir.png'
 favicon: 'assets/images/epitech-logo-signature-noir.png'
 baseurl: ""
-google_analytics: 'UA-178278290-1'
+google_analytics: 'G-44V7H5GGYF'
 mailchimp-list: 'https://github.us2.list-manage.com/subscribe?u=183f5527b6f815b09e0c6fcfe&id=5e645fad9e'
 include: ["_pages"]
 permalink: /:title/
