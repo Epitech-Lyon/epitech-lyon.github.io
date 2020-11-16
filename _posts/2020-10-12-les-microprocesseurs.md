@@ -4,7 +4,7 @@ title:  "Les Microprocesseurs"
 author: mverdier
 categories: [ talk ]
 image: assets/images/microprocessor/affiche.jpg
-published: true
+published: false
 ---
 
 ## Un peu d'histoire
@@ -35,8 +35,8 @@ Les composants d'un microprocesseur :
 - Horloge
 - Registres
 - Cache
-- unités de calcul
-- jeux d'instructions
+- Unités de calcul
+- Jeux d'instructions
 
 Il existe plusieurs familles de jeux d'instructions, par exemple :
 - CISC
@@ -58,19 +58,15 @@ Les caractéristiques d'un jeu d'instructions :
 - Mots
 - Endianness
 - Instructions
-- Assembleur
+- Assembler
 - Appels systèmes
 
 ## Multithreading et types de processeurs
-
-### Types de processeurs
 
 Les processeurs qui permettent de faire du multithreading:
 - Processeur scalaires
 - Processeurs superscalaires
 - Processeurs vectoriels
-
-### Explication simplifiée de threads
 
 ## Indicateurs de performance
 
@@ -92,6 +88,4 @@ Cet article avait pour but de présenter les microprocesseurs de manière simple
 - Les jeux d'instructions et leur type (ou famille de jeux d'instructions).
 - les indicateurs de performances
 - le multithreading
-
-## Ressources
 
