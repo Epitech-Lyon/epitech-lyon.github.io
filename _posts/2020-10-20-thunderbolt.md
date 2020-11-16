@@ -21,8 +21,7 @@ AWS Lambda is a service type FAAS (Function As A Service) which allows you to ru
 
 ### What ?
 
-Thunderbolt is a set of 3 lambda functions --- because that were the three I needed when I created the project --- used to manipulate Amazon RDS (SQL database), Amazon EC2 (Server), Amazon AppStream (application streaming).
-The manipulations are basically, *power on/off* and *change instance type* (number of cpus, memory allocated, ...) when relevant.
+Thunderbolt is a set of 3 lambda functions --- because that were the three functions I needed when I created the project --- used to manipulate Amazon RDS (SQL database), Amazon EC2 (Server), Amazon AppStream (application streaming). The manipulations are basically, *power on/off* and *change instance type* (number of cpus, memory allocated, ...) when relevant.
 
 ### Why ?
 
