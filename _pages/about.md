@@ -10,13 +10,13 @@ comments: true
     <div class="col-md-8 pr-5">
 
         <p>
-            This website is feeded by students of Epitech Lyon. Here you will find resources on :
+            This website is fed by students of Epitech Lyon. Here you will find resources on :
         </p>
         <ul>
             <li> <b>Scientific talks</b> : Conference of a pro or student / former alumni on a tech subject generally held in the HUB </li>
-            <li> <b>Workshops</b>: A few hours of experimentation to discover a tech project / concept </li>
+            <li> <b>Workshops</b>: Experimentation to discover a tech project / concept </li>
             <li> <b>R&D projects</b> : Ambitious project alone or in group, validated by a jury </li>
-            <li> <b>Experiences</b> : A simple project of discovering something technical </li>
+            <li> <b>Experiences</b> : Discovering a tool or a technique </li>
         </ul>
 
         <p class="mb-5" align="center">
