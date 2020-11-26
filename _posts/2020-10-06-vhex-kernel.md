@@ -70,7 +70,7 @@ Ce sera un gestionnaire de fenêtres de Vhex (un logiciel chargé de l'affichage
 
 ---
 
-### Ou est-ce que ça en est aujourd'hui ?
+### Où est-ce que ça en est aujourd'hui ?
 
 Je suis encore en train de mettre sur papier la nouvelle architecture du noyau histoire de voir toutes les possibilités qui pourraient être implémentées. Mais je suis confronté à plusieurs problèmes techniques assez complexes à résoudre proprement, notamment concernant le chargement des modules kernel (sans rentrer dans les détailles, la `toolchain` utilisée ne permet pas de générer des librairies dynamiques qui sont essentielles pour charger des bouts de code "à-la volée") ce qui est fort cocasse étant donnée que la nouvelle architecture du noyau repose dessus .
 
