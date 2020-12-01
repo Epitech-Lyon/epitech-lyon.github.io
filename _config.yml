@@ -9,7 +9,7 @@ google_analytics: 'G-44V7H5GGYF'
 mailchimp-list: 'https://github.us2.list-manage.com/subscribe?u=183f5527b6f815b09e0c6fcfe&id=5e645fad9e'
 include: ["_pages"]
 permalink: /:title/
-disqus: 'epitech-lyon.github.io'
+disqus: 'epitech-lyon-gh-pages'
 
 # Authors
 authors:
