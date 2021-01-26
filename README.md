@@ -1,4 +1,6 @@
 # [https://www.Epitech-Lyon.GitHub.io](https://epitech-lyon.github.io)
+
+![epitech-lyon-hub](https://www.epitech-lyon.github.io/assets/images/epitech-lyon-hub.png)
 <p>
     This website is fed by students of Epitech Lyon. Here you will find resources on :
 </p>
