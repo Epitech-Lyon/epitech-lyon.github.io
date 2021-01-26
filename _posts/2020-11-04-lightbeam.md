@@ -4,24 +4,26 @@ title:  "LightBeam project : Introduction to Kernel Development"
 author: lkaroubi
 categories: [ experience ]
 image: assets/images/lightbeam/affiche.jpg
-published: true
+published: false
 ---
 
-[LightBeam](https://github.com/le0kar0ub1/LightBeam) is a set of 4 kernels bootstrap on several platforms.
+[LightBeam](https://github.com/epitech-lyon/LightBeam) is a set of 4 kernels bootstrap on several platforms.
 
 ## Description
 
 If you want an OSdev introduction, [here is the bible](https://wiki.osdev.org/Expanded_Main_Page).
-I will not give explaination on the kernel architecture and development, the subject is too large.
 
-As a small definition, a kernel is an interface between the human and the computer. It is the core of an Operating System and is composed principaly of a bootstrap which allow the machine to boot and many components which work together to maintain the machine alive.
-So, the job in the OSdev is to make a bootstrap, the components 'drivers' (memory, threads, interrupts, ...) and a scheduler. Easy isn't it ?
+I will not give explanation on the kernel architecture and development, the subject is too large.
+
+As a small definition, a kernel is an interface between the human and the computer. It is the core of an Operating System and it is composed principally of a bootstrap, which allows the machine to boot, and many components, which work together to maintain the machine alive.
+
+So, the job in the [OSdev] is to make a bootstrap, the components 'drivers' (memory, threads, interrupts, ...) and a scheduler. Easy isn't it ?
 
 The OSdev is a wide and complex world with a deep beauty if you dig... long... with a diamond shovel.
 
 ### What ?
 
-As said LightBeam is a project which contain 4 micro-kernel.
+As said LightBeam is a project which contains 4 micro-kernel.
 
 
 |-------------------+-----------------------+---------------------------------------|
@@ -43,21 +45,22 @@ As said LightBeam is a project which contain 4 micro-kernel.
 
 ### How ?
 
-The OS development require a big acquaintance obtained by reading a lot of documentation. yes, that's not sexy so far.
+The OS development requires a big acquaintance obtained by reading a lot of documentation. Yes, that's not sexy so far.
 
-The compilation is assured our servitors GCC, GAS (bad choice, a compilation with GCC only would have been better) and make with a "coherent" (actually not incredible) project architecture.
+The compilation is assured our servitors GCC, GAS (bad choice, a compilation with GCC only would have been better) and made with a "coherent" (actually not incredible) project architecture.
 
 ## Technical side
 
-The following description are actually simplified, if you want to go further go on the [repository page](https://github.com/le0kar0ub1/LightBeam).
+The following description is actually simplified --- if you want to go further visit the [repository page](https://github.com/epitech-lyon/LightBeam).
 
 ### Raspi3
 
 The LightBeam raspi3 kernel is SMP (Symetric MultiProcessing) and in graphic mode (no text mode).
 
-As an interface for raspberry machines, I have built a (partial) driver for the bcm2837 (scalable and usable for others bcm version).
-The bcmXXXX [SoC](https://en.wikipedia.org/wiki/System_on_a_chip) are the core of the raspberryX.
-On top of that for the raspi3 I juste created some functions that I needed which use this driver.
+As an interface for raspberry machines, I have built a (partial) driver for the bcm2837 (scalable and usable for other bcm version).
+
+The bcmXXXX [SoC](https://en.wikipedia.org/wiki/System_on_a_chip) is the core of the raspberryX.
+On top of that, for the raspi3, I just created some functions that I needed which use this driver.
 
 Abstract steps:
   * SMP init, cpu config, escape from the chaos
@@ -115,11 +118,11 @@ Runtime screenshot of the kernel (run with *qemu*)
 
 Documentation: [ARM documentation](https://developer.arm.com/documentation/ddi0487/aa) and [Broadcom documentation](https://www.raspberrypi.org/documentation/hardware/raspberrypi/bcm2836/QA7_rev3.4.pdf).
 
-Oh, a last personal advice, for your mental health, don't work with Broadcom. (what ? It was not in your plans ?)
+Oh! A last personal advice, for your mental health, don't work with Broadcom. (what ? It was not in your plans ?)
 
 ### Sifive
 
-Sifive is a litte embedded machine with a RISC-V 64 cpu architecture.
+Sifive is a little embedded machine with a RISC-V 64 cpu architecture.
 
 LightBeam sifive kernel is SMP.
 
@@ -129,7 +132,7 @@ Abstract steps:
   * UART driver
   * CPUS routines
 
-Sample of the sifive boot code. This is a dichotomy between cpu cores. The core 0 boot others which are waiting for his signal. Then, if the core acquire that he is running, we can configure him.
+Sample of the sifive boot code. This is a dichotomy between cpu cores. The core `0` boot others which are waiting for his signal. Then, if the core acquire that it is running, we can configure it.
 
 ```asm
  # cpu get id and dichotomy
@@ -213,18 +216,19 @@ Documentation: [IA-32 manual](https://software.intel.com/content/www/us/en/devel
 
 ### Improve ?
 
-The goal was to discover several architectures, not to build a big and efficient kernel. The job was in part to create a maximum of shared code cross-architecture, unfortunately it hasn't been a success.
+The goal was to discover several architectures, not to build a big and efficient kernel. The job was in part to create a maximum of shared cross-architecture code, unfortunately it hasn't been a success.
+
 I lost control of my code for several reasons, the main one is that while in learning phase I have modified the structure of the project to improve the coherence.
 
 A non-exhaustive list of improvements:
   * Best project architecture
   * Handle more platforms
-  * Bigger kernel for each platforms
+  * Bigger kernel for each platform
   * and so on...
 
 ## What's next
 
-After a little trip in the OS development, my goal is to create a x86_64 kernel more or less (but not the most) big which goes up to TTY interface.
+After a little trip in the OS development, my goal is to create a x86_64 kernel that goes up to TTY interface.
 
 Here is the link of [Cosmos](https://github.com/Epitech-Lyon/Cosmos) kernel with a road map and the source code.
 
