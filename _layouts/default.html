@@ -1,3 +1,7 @@
+---
+# default.html
+---
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,13 +26,13 @@
 
 {% if jekyll.environment == 'production' %}
 <!-- change your GA id in _config.yml -->
+<script async src="https://www.googletagmanager.com/gtag/js?id={{site.google_analytics}}"></script>
 <script>
-(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-ga('create', '{{site.google_analytics}}', 'auto');
-ga('send', 'pageview');
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag("js", new Date());
+
+  gtag('config', '{{site.google_analytics}}');
 </script>
 {% endif %}
 
@@ -48,7 +52,7 @@ ga('send', 'pageview');
     <div class="container pr-0">
 
     <!-- Begin Logo -->
-    <a class="navbar-brand" href="{{ site.baseurl }}/about">
+    <a class="navbar-brand" href="{{ site.baseurl }}/">
     <img src="{{ site.baseurl }}/{{ site.logo }}" alt="{{ site.name }}">
     </a>
     <!-- End Logo -->
@@ -62,27 +66,33 @@ ga('send', 'pageview');
         <!-- Begin Menu -->
 
             <ul class="navbar-nav ml-auto">
-
                 {% if page.url == "/categories" %}
-                <li class="nav-item dropdown active">
+                <li class="nav-item active">
                 {% else %}
-                <li class="nav-item dropdown">
+                <li class="nav-item">
                 {% endif %}
-                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Per Category</a>
+                <div class="nav-item btn-group">
+                    <a href="{{ site.baseurl }}/categories" class="btn btn-info">Categories</a>
+                    <button type="button" class="btn dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <span class="sr-only">Toggle Dropdown</span>
+                    </button>
                     <div class="dropdown-menu">
+                        <a class="dropdown-item" href="{{ site.baseurl }}/categories#hubproject"> Hub Projects</a>
                         <a class="dropdown-item" href="{{ site.baseurl }}/categories#talk"> Talks</a>
                         <a class="dropdown-item" href="{{ site.baseurl }}/categories#workshop"> Workshops</a>
-                        <a class="dropdown-item" href="{{ site.baseurl }}/categories#hubproject"> Hub Projects</a>
-                    </div>                
+                    </div> 
+                </div>              
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ site.baseurl }}/"><i class="far fa-newspaper"></i> Journal</a>
-                </li>
+
                 <li class="nav-item">
                     <a class="nav-link" href="https://github.com/epitech-lyon"><i class="fab fa-github"></i> Github Repo</a>
                 </li>
-
                 {% include search-lunr.html %}
+
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ site.baseurl }}/about"><i class="fa fa-info-circle" aria-hidden="true"></i> About</a>
+                </li>
+
 
             </ul>
 

@@ -4,6 +4,7 @@ title:  "Vhex (Kernel pour les calculatrices Casio)"
 author: ymagnin
 categories: [ hubproject ]
 image: assets/images/vhex/vhex.jpg
+published: true
 ---
 
 L'année dernière, j'ai choisi de faire comme [projet Hub][4] un kernel pour les calculatrices Casio. Comme le projet est toujours d'actualité et que j'ai l'opportunité de partager mes prévisions pour la suite, je vais essayer d'expliquer le plus possible l'objectif derrière ce noyau.
@@ -69,17 +70,17 @@ Ce sera un gestionnaire de fenêtres de Vhex (un logiciel chargé de l'affichage
 
 ---
 
-### Ou est-ce que ça en est aujourd'hui ?
+### Où est-ce que ça en est aujourd'hui ?
 
 Je suis encore en train de mettre sur papier la nouvelle architecture du noyau histoire de voir toutes les possibilités qui pourraient être implémentées. Mais je suis confronté à plusieurs problèmes techniques assez complexes à résoudre proprement, notamment concernant le chargement des modules kernel (sans rentrer dans les détailles, la `toolchain` utilisée ne permet pas de générer des librairies dynamiques qui sont essentielles pour charger des bouts de code "à-la volée") ce qui est fort cocasse étant donnée que la nouvelle architecture du noyau repose dessus .
 
 Aussi, je suis en train de documenter la machine le plus possible avant de me replonger dans le développement des projets.
 J'ai plusieurs cibles notamment :
 * Fugue, le "nouveau" système de ficher propriétaire utiliser par les "nouvelles générations" de calculatrice Casio.
-* Le driver USB de Casio. Grâce à Lephenixnoir (un illustre ami et administrateurde Planète Casio), on a pu certifier que le module hardware qui gère l'USB et pratiquement le même que sur le processeur `SH7724` mais je n'arrive toujours pas avoir les infos sur le bus ainsi que de notifier l'hôte que je suis connecté.
+* Le driver USB de Casio. Grâce à Lephenixnoir (un illustre ami et administrateur de Planète Casio), on a pu certifier que le module hardware qui gère l'USB et pratiquement le même que sur le processeur `SH7724` mais je n'arrive toujours pas avoir les infos sur le bus ainsi que de notifier l'hôte que je suis connecté.
 * l'ABI de la Graph90+E, qui n'est pas aussi biens connu que sur monochrome.
 
-À part ça, j'ai commencé à créer la `fxlibc`, la librairie C standard que j'utiliserai pour mes projets. Je sais que Memallox a porté `newlib` sur la calculatrice mais j'ai besoin d'avoir quelque chose de suffisamment modulaire pour choisir quel ABI je veux utiliser (CASIOABS, Vhex ou FixOS) ainsi que le format de la librairie (statique '.a' ou dynamique '.so'). J'ai encore quelques hésitations sur le comment architecturer tout ça mais je ferrai un topic quand j'aurais à nouveau du temps devant moi. Dites-vous que le prototype est quasiment finis, il manque juste énormément de fonction (que j'ajouterai au fur et à mesure de mes besoins) ainsi que de l'optimisation sur toutes les fonctions.
+À part ça, j'ai commencé à créer la [fxlibc][5], la librairie C standard que j'utiliserai pour mes projets. Je sais que Memallox a porté `newlib` sur la calculatrice mais j'ai besoin d'avoir quelque chose de suffisamment modulaire pour choisir quel ABI je veux utiliser (CASIOABS, Vhex ou FixOS) ainsi que le format de la librairie (statique '.a' ou dynamique '.so'). J'ai encore quelques hésitations sur le comment architecturer tout ça mais je ferrai un topic quand j'aurais à nouveau du temps devant moi. Dites-vous que le prototype est quasiment finis, il manque juste énormément de fonction (que j'ajouterai au fur et à mesure de mes besoins) ainsi que de l'optimisation sur toutes les fonctions.
 
 J'ai aussi commencé à poser sur papier les features du bootloader ainsi que sa documentation. Une fois le prototype de la `fxlibc` finie ce sera ma priorité. Là aussi je ferrais un topic quand j'aurais commencé a dev quelque chose. Tous ce que je peux dire pour l'instant c'est qu'il reposera uniquement sur les fonctionnalités de l'OS de Casio pour faciliter son portage.
 
@@ -108,3 +109,4 @@ J'espère sincèrement que le projet prendra vie et arrivera à maturité. Dans 
 [2]: https://gitea.planet-casio.com/Yatis/Vhex-kernel
 [3]: https://bible.planet-casio.com/yatis
 [4]: https://github.com/Epitech-Lyon/Vhex-kernel
+[5]: https://github.com/Epitech-Lyon/fxlibc

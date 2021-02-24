@@ -4,15 +4,16 @@ title:  "Experiencing the AWS lambda functions"
 author: lkaroubi
 categories: [ experience ]
 image: assets/images/thunderbolt/affiche.jpg
+published: true
 ---
 
 [Thunderbolt][1] is a set of AWS lambda functions for AWS resources scheduling. It is part of a bigger AWS project I am working on, named [ParadigmShift](https://github.com/le0kar0ub1/ParadigmShift), which was intended to be a global and high level AWS resources scheduler, it is well documented in the link above.
 
 ## First things first : AWS
 
-For those who are not familiar with AWS, it is a [cloud provider](https://fr.wikipedia.org/wiki/Cloud_computing) which provides a large list of services (examples : databases, server, IA, storage).
+AWS is a [cloud provider](https://fr.wikipedia.org/wiki/Cloud_computing) which provides a large list of services (databases/server/IA/storage/...).
 
-AWS Lambda is a service type FAAS --- Function As A Service --- which allows you to run small code with a total abstraction of the under-layers. To be clear, you can put your code in the service and then trigger it by multiple ways. Lambda is the core of the serverless model on AWS.
+AWS Lambda is a FAAS (Function As A Service) which allows you to run small code with a total abstraction of the under-layers. To be clear, you can put your code in the service and then trigger it by multiple ways. Lambda is the core of the serverless model on AWS.
 
 ![serverless_asw_lambda](https://ucarecdn.com/889eff87-74c6-4447-907a-0feb2fc041d8/-/resize/1050/)
 
@@ -20,22 +21,21 @@ AWS Lambda is a service type FAAS --- Function As A Service --- which allows you
 
 ### What is it?
 
-Thunderbolt is a set of 3 lambda functions that I needed when I created the [project][1]. Those functions are meant to manipulate :
-1. an Amazon RDS (SQL database)
-2. an Amazon EC2 (Server)
-3. an Amazon AppStream (application streaming)
-   
-The manipulation are basically, power on/off and change instance type (number of cpus, memory allocated, ...) when relevant.
+Thunderbolt is a set of 3 lambda functions --- because that were the three functions I needed when I created the project --- used to manipulate Amazon RDS (SQL database), Amazon EC2 (Server), Amazon AppStream (application streaming). The manipulations are basically, *power on/off* and *change instance type* (number of cpus, memory allocated, ...) when relevant.
+
+### Why ?
+
+In fact Thunderbolt is used as a git submodule in a bigger AWS project named [ParadigmShift](https://github.com/le0kar0ub1/ParadigmShift). *ParadigmShift* was intended to be a global and high level AWS resources scheduler, it is well documented in the link above.
 
 ### How ?
 
-The project, even if it is included in other can be deployed as is. The deployment is assured by AWS cloudformation which is a powerful IaC (Infrastructure as Code) integrator. So, pragmatically you can describe your resources in a file as text, and the CloudFormation service will interpret and generate the given ones.
+Even if it is included in a bigger scheme, the project actually can be deployed as is. The deployment is insured by AWS cloudformation which is a powerful IaC (Infrastructure as code) integrator. So pragmatically you can describe your resources in a text file and the CloudFormation service will interpret and generate your requests.
 
 ![cfm](https://blogs.vmware.com/management/files/2019/10/image002.png)
 
 ## Technical side
 
-Here is a sample of the deployment script which use an AWS Cloudformation template (SAM template to be accurate, but this is in the same idea).
+A sample of the deployment script which uses an AWS Cloudformation template (SAM template to be accurate, but this is in the same idea).
 
 ```sh
 ...
@@ -75,8 +75,8 @@ CLEANUP
 trap - EXIT
 ```
 
-Below, a sample of the template which describe the lambda which handle the RDS and his role.
-The role is assigned to the lambda and allow the manipulation of others AWS services.
+A sample of the template which describes the lambda that handles the RDS and its role.
+The role is assigned to the lambda and allows the manipulation of other AWS services.
 
 ```yml
   # describe the role: the rights on others AWS services and resources which can be affected
@@ -128,7 +128,7 @@ The role is assigned to the lambda and allow the manipulation of others AWS serv
               Project: !Sub "${Project}"
 ```
 
-Finally, an example of function in this RDS lambda which stops a RDS instance. The lambda is written in node.js.
+An example of function in this RDS lambda which stops a RDS instance. The lambda is written in node.js.
 
 ```js
 function rds_stop(id)
@@ -150,10 +150,8 @@ function rds_stop(id)
 }
 ```
 
-For further, [follow the repository page](https://github.com/le0kar0ub1/Thunderbolt/tree/master/aws).
+For those who whant to go further, [follow the repository page](https://github.com/le0kar0ub1/Thunderbolt/tree/master/aws).
 
 ### Improve ?
 
-Handle More services and manipulations, if they are relevant for ParadigmShift project.
-
-[1]:https://github.com/Epitech-Lyon/Thunderbolt
+Handle more services and manipulations, if they are relevant for ParadigmShift project.

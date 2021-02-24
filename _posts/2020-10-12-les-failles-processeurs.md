@@ -4,6 +4,7 @@ title:  "Les failles des microprocesseurs"
 author: mverdier
 categories: [ talk ]
 image: assets/images/failles/affiche.jpg
+published: false
 ---
 
 ## Présentation

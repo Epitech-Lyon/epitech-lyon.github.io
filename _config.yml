@@ -4,12 +4,12 @@ title: "Epitech-Lyon"
 description: "scientific talks, workshops, hub projects"
 logo: 'assets/images/epitech-logo-signature-noir.png'
 favicon: 'assets/images/epitech-logo-signature-noir.png'
-baseurl: ''
-google_analytics: 'UA-178278290-1'
-disqus: 'p4tth3c4t'
+baseurl: ""
+google_analytics: 'G-44V7H5GGYF'
 mailchimp-list: 'https://github.us2.list-manage.com/subscribe?u=183f5527b6f815b09e0c6fcfe&id=5e645fad9e'
 include: ["_pages"]
 permalink: /:title/
+disqus: 'epitech-lyon-gh-pages'
 
 # Authors
 authors:
@@ -19,7 +19,7 @@ authors:
     email: patrick.simokanmeugne@epitech.eu
     web: https://kanmeugne.github.io
     avatar: 'assets/images/avatars/kanmeugne.jpg'
-    twitter: https://twitter.com/patricksimok
+    linkedin: https://www.linkedin.com/in/patrick-simo-kanmeugne-127b5281/
     description: "IA (distruted) Scientist. Scientific blogger, multi agents system enthousiast."
   jhouvenaghel:
     name: Juliette Houvenaghel
@@ -27,7 +27,7 @@ authors:
     avatar: 'assets/images/avatars/jhouvenaghel.jpg'
     email: juliette.houvenaghel@epitech.eu
     web: https://www.epitech.eu
-    twitter: https://twitter.com/jhouvenaghel
+    linkedin: https://www.linkedin.com/in/juliette-houvenaghel/
     description: "Juliette H. est une étudiante en 4e année à Epitech (Lyon). Elle est passionnée par le Web, le design et le développement mobile."
   ymagnin:
     name: Yann Magnin
@@ -35,31 +35,31 @@ authors:
     avatar: 'assets/images/avatars/ymagnin.jpg'
     email: yann.magnin@epitech.eu
     web: https://www.epitech.eu
-    twitter: https://twitter.com/ymagnin
-    description: "Yann M. est étudiant en 4e année à Epitech (Lyon). Il est passionné de Hardware, programmation bas niveau et"
+    linkedin: https://www.linkedin.com/in/yann-magnin/
+    description: "Yann M. est étudiant en 3e année à Epitech (Lyon). Il est passionné par le Hardware et la programmation bas niveau"
   nmary:
     name: Nicolas Mary
     display_name: Nicolas M.
     avatar: 'assets/images/avatars/nmary.jpg'
     email: nicolas.mary@epitech.eu
     web: https://www.epitech.eu
-    twitter: https://twitter.com/nmary
-    description: "Nicolas M. est en 2e année à Epitech (Lyon). Il est passionné par le design et la programmation de jeux vidéos "
+    linkedin: https://www.linkedin.com/in/nicolas-mary-hello-world/
+    description: "Nicolas M. est en 2e année à Epitech (Lyon). Il est passionné par le design et la programmation de jeux vidéo "
   hbach:
-      name: Hugo Bach
-      display_name: Hugo B.
-      avatar: 'assets/images/avatars/hbach.jpg'
-      email: hugo.bach@epitech.eu
-      web: https://www.epitech.eu
-      twitter: https://twitter.com/hbach
-      description: "Hugo B. est en 3e année à Epitech (Lyon). Il est passionné de cybersécurité, back-end et devops"
+    name: Hugo Bach
+    display_name: Hugo B.
+    avatar: 'assets/images/avatars/hbach.jpg'
+    email: hugo.bach@epitech.eu
+    web: https://www.epitech.eu
+    linkedin: https://www.linkedin.com/in/hugo-bach/
+    description: "Hugo B. est en 3e année à Epitech (Lyon). Il est passionné de cybersécurité, back-end et devops"
   llhuile:
     name: Leo Lhuile
     display_name: Leo L.
     avatar: 'assets/images/avatars/llhuile.jpg'
     email: leo.lhuile@epitech.eu
     web: https://www.epitech.eu
-    twitter: https://twitter.com/llhuile
+    linkedin: https://www.linkedin.com/in/l%C3%A9o-lhuile-062882156/
     description: "Leo L. est en 4e année à Epitech (Lyon). Il est passionné par la programmation des jeux video et le développement Web "
   pcoulon:
     name: Pierre Coulon
@@ -67,23 +67,23 @@ authors:
     avatar: 'assets/images/avatars/pcoulon.jpg'
     email: pierre.coulon@epitech.eu
     web: https://www.epitech.eu
-    twitter: https://twitter.com/pcoulon
-    description: "P. Coulon est en 4e année à Epitech (Lyon). Il est passionné par la programmation web et les objects connectés"
+    linkedin: https://www.linkedin.com/in/pierre-coulon/
+    description: "P. Coulon est en 4e année à Epitech (Lyon). Il est passionné par la programmation web et l'IoT"
   tpoisson:
     name: Tristan Poisson
     display_name: Tristan P.
     avatar: 'assets/images/avatars/tpoisson.jpg'
     email: tristan.poisson@epitech.eu
     web: https://www.epitech.eu
-    twitter: https://twitter.com/tpoisson
-    description: "Tristan P. est en 3e année à Epitech (Lyon). Il est passionné par la programmation mobile et les objects connectés"
+    linkedin: https://www.linkedin.com/in/tristan-poisson-a02419188/
+    description: "Tristan P. est en 3e année à Epitech (Lyon). Il est passionné par la programmation mobile et l'IoT"
   mverdier:
     name: Maugan Verdier
     display_name: Maugan V.
     avatar: 'assets/images/avatars/mverdier.jpg'
     email: maugan.verdier@epitech.eu
     web: https://www.epitech.eu
-    twitter: https://twitter.com/mverdier
+    linkedin: https://www.linkedin.com/in/maugan-verdier
     description: "Maugan V. est en 3e année à Epitech (Lyon). Il est passionné par le hardware et la programmation bas niveau"
   mbelleville:
     name: Matheo Belleville
@@ -91,7 +91,7 @@ authors:
     avatar: 'assets/images/avatars/mbelleville.jpg'
     email: matheo.belleville@epitech.eu
     web: https://www.epitech.eu
-    twitter: https://twitter.com/mbelleville
+    linkedin: https://www.linkedin.com/in/math%C3%A9o-belleville-308987186/
     description: "Matheo B. est en 3e année à Epitech (Lyon). Il est passionné par le jeu video et la programmation sous unity"  
   mhechaichi:
     name: Moussa Hechaichi
@@ -99,7 +99,7 @@ authors:
     avatar: 'assets/images/avatars/mhechaichi.jpg'
     email: moussa.hechaichi@epitech.eu
     web: https://www.epitech.eu
-    twitter: https://twitter.com/mheichaichi
+    linkedin: https://www.linkedin.com/in/moussahe/
     description: "Moussa Hechaichi est en 4e année à Epitech (Lyon). Il est passionné par le web et la programmation mobile"
   mbarbet:
     name: Max Barbet
@@ -107,7 +107,7 @@ authors:
     avatar: 'assets/images/avatars/mbarbet.jpg'
     email: max.barbet@epitech.eu
     web: https://www.epitech.eu
-    twitter: https://twitter.com/mbarbet
+    linkedin: https://www.linkedin.com/in/max-barbet-603832175/
     description: "M. Barbet est en 3e année à Epitech (Lyon). Il est passionné d'IA et de programation Web"
   jharrau:
     name: Jeremy Harrau
@@ -115,31 +115,31 @@ authors:
     avatar: 'assets/images/avatars/jharrau.jpg'
     email: jeremy.harrau@epitech.eu
     web: https://www.epitech.eu
-    twitter: https://twitter.com/jharrau
-    description: "Jeremy Harrau est en 4e année à Epitech (Lyon). Il est passionné de Web design et de programmation mobile"
+    linkedin: https://www.linkedin.com/in/jeremy-harrau-08560417a/
+    description: "Jeremy Harrau est en 4e année à Epitech (Lyon). Il est passionné par le Web design et la programmation mobile"
   eloiseau:
     name: Evan Loiseau
     display_name: Evan L.
     avatar: 'assets/images/avatars/eloiseau.jpg'
     email: evan.loiseau@epitech.eu
     web: https://www.epitech.eu
-    twitter: https://twitter.com/eloiseau
-    description: "Evan L. est en 3e année à Epitech (Lyon). Il est passionné de programmation de jeux video"
+    linkedin: https://www.linkedin.com/in/evan-loiseau-1200a618b/
+    description: "Evan L. est en 3e année à Epitech (Lyon). Il est passionné par la programmation de jeux video"
   troustan:
     name: Thomas Roustan
     display_name: Thomas R.
     avatar: 'assets/images/avatars/troustan.jpg'
     email: thomas.roustan@epitech.eu
     web: https://www.epitech.eu
-    twitter: https://twitter.com/troustan
-    description: "Thomas R. est un étudiant en 3e année à Epitech (Lyon). Il est passionné de programmation de jeux video sous Unity et de Multimedia"  
+    linkedin: https://www.linkedin.com/in/thomas-roustan-6b9694161/
+    description: "Thomas R. est un étudiant en 3e année à Epitech (Lyon). Il est passionné par la programmation de jeux video sous Unity et de la programmation Multimedia"  
   csaunier:
     name: Clément Saunier
     display_name: Clément S.
     avatar: 'assets/images/avatars/csaunier.jpg'
     email: clement.saunier@epitech.eu
     web: https://www.epitech.eu
-    twitter: https://twitter.com/csaunier
+    linkedin: https://www.linkedin.com/in/cl%C3%A9ment-saunier-211453156/
     description: "Clément Saunier est un étudiant en 3e année à Epitech (Lyon). Il est passionné de programmation de jeux video sous Unity et de programmation mobile"
   meynard-longuet:
     name: Matthieu Eynard-Longuet
@@ -147,16 +147,32 @@ authors:
     avatar: 'assets/images/avatars/meynard-longuet.jpg'
     email: matthieu.eynard-longuet@epitech.eu
     web: https://www.epitech.eu
-    twitter: https://twitter.com/meynard-longuet
-    description: "Matthieu Eynard Longuet est un étudiant en 5e année à Epitech (Lyon). Il est passionné dela 3D et la VR/AR"
+    linkedin: https://www.linkedin.com/in/matthieu-eynard-longuet/
+    description: "Matthieu Eynard-Longuet est un étudiant en 5e année à Epitech (Lyon). Il est passionné par la 3D et la VR/AR"
   lkaroubi:
     name: Léo Karoubi
     display_name: L. Karoubi
     avatar: 'assets/images/avatars/lkaroubi.jpg'
     email: leo.karoubi@epitech.eu
     web: https://www.epitech.eu
-    twitter: https://twitter.com/lkaroubi
-    description: "Léo Karoubi est un étudiant en 3e année à Epitech (Lyon). Il est passionné de programmation bas niveau et les micro-processeurs"
+    linkedin: https://www.linkedin.com/in/leo-karoubi-ab8510179/
+    description: "Léo Karoubi est un étudiant en 3e année à Epitech (Lyon). Il est passionné par la programmation bas niveau et les micro-processeurs"
+  j-aponchon:
+    name: Jamie Antoine Ponchon
+    display_name: J. A. Ponchon
+    avatar: 'assets/images/avatars/j-aponchon.jpg'
+    email: jamie-antoine.ponchon@epitech.eu
+    web: https://www.epitech.eu
+    linkedin: https://www.linkedin.com/in/jamie-ponchon/
+    description: "Jamie Antoine Ponchon est un étudiant en 2e année à Epitech(Lyon). Il est passionnée par la programmation mobile et la programmation de Jeux vidéo"
+  rlo:
+    name: Rayane Lo
+    display_name: Rayane L.
+    avatar: 'assets/images/avatars/rlo.jpg'
+    email: rayane.lo@epitech.eu
+    web: https://www.epitech.eu
+    linkedin: https://www.linkedin.com/in/rayane-lo-546914185/
+    description: "Rayane Lo est en 4e année à Epitech (Lyon). Il est passionné par le web et la programmation mobile"
   
 # Plugins
 plugins:

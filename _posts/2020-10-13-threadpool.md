@@ -4,6 +4,7 @@ title:  "ThreadPool I : become a Thread Super Hero"
 author: eloiseau
 categories: [ workshop ]
 image: assets/images/threadpool/affiche.jpg
+published: false
 ---
 
 Les thread en C++ sont un outil de programmation super puissant pour optimiser les temps de calcul et paralléliser les tâches. J'ai fait ce petit tutoriel pour faciliter la prise en main des threads en C++.
