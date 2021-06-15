@@ -7,9 +7,9 @@ image: assets/images/thunderbolt/affiche.jpg
 published: true
 ---
 
-Thunderbolt is a set of AWS lambda functions for AWS resources scheduling.
+[Thunderbolt][1] is a set of AWS lambda functions for AWS resources scheduling. It is part of a bigger AWS project I am working on, named [ParadigmShift](https://github.com/le0kar0ub1/ParadigmShift), which was intended to be a global and high level AWS resources scheduler, it is well documented in the link above.
 
-## AWS ? AWS ... Lambda ? eh ?
+## First things first : AWS
 
 AWS is a [cloud provider](https://fr.wikipedia.org/wiki/Cloud_computing) which provides a large list of services (databases/server/IA/storage/...).
 
@@ -17,9 +17,9 @@ AWS Lambda is a FAAS (Function As A Service) which allows you to run small code 
 
 ![serverless_asw_lambda](https://ucarecdn.com/889eff87-74c6-4447-907a-0feb2fc041d8/-/resize/1050/)
 
-## Description
+## Thunderbolt
 
-### What ?
+### What is it?
 
 Thunderbolt is a set of 3 lambda functions --- because that were the three functions I needed when I created the project --- used to manipulate Amazon RDS (SQL database), Amazon EC2 (Server), Amazon AppStream (application streaming). The manipulations are basically, *power on/off* and *change instance type* (number of cpus, memory allocated, ...) when relevant.
 
@@ -41,6 +41,7 @@ A sample of the deployment script which uses an AWS Cloudformation template (SAM
 ...
 echo "-------- Create SAM bucket --------"
 
+# Create the S3 bucket (storage in cloud as filesystem) which will be used for the deployment
 aws s3api create-bucket                                         \
     --bucket $bucket                                            \
     --region $region                                            \
@@ -49,13 +50,16 @@ aws s3api create-bucket                                         \
 
 echo "-------- Deploy lambas --------"
 
+# Create the build
 sam build --profile $awsprofile
 
+# Package the build in the created bucket
 sam package                                     \
     --s3-bucket $bucket                         \
     --output-template-file build/package.yml    \
     --profile $awsprofile
 
+# Finally deploy the resources on the targeted AWS account
 sam deploy                                      \
     --template-file build/package.yml           \
     --stack-name $project                       \
@@ -75,6 +79,7 @@ A sample of the template which describes the lambda that handles the RDS and its
 The role is assigned to the lambda and allows the manipulation of other AWS services.
 
 ```yml
+  # describe the role: the rights on others AWS services and resources which can be affected
   rdsLamdaRole:
     Type: AWS::IAM::Role
     Properties:
@@ -98,6 +103,7 @@ The role is assigned to the lambda and allows the manipulation of other AWS serv
                   - logs:CreateLogStream
                   - logs:PutLogEvents
                 Resource: "*"
+        # The important one, right to start/stop/modify RDS instance
         - PolicyName: rdsPolicy
           PolicyDocument:
             Version: '2012-10-17'
@@ -108,7 +114,7 @@ The role is assigned to the lambda and allows the manipulation of other AWS serv
                   - rds:stopDBInstance,
                   - rds:modifyDBInstance
                 Resource: "*"
-
+  # describe the function and give the source code path
   rdsLambdaFunction:
       Type: AWS::Serverless::Function
       Properties:
@@ -131,6 +137,9 @@ function rds_stop(id)
         const params = {
             DBInstanceIdentifier: id
         };
+        /* 
+         * call to AWS SDK
+         **/
         rds.stopDBInstance(params, function(err, data) {
             if (err)
                 return reject(err);
