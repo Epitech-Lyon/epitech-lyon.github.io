@@ -164,7 +164,7 @@ authors:
     email: jamie-antoine.ponchon@epitech.eu
     web: https://www.epitech.eu
     linkedin: https://www.linkedin.com/in/jamie-ponchon/
-    description: "Jamie Antoine Ponchon est un étudiant en 2e année à Epitech(Lyon). Il est passionnée par la programmation mobile et la programmation de Jeux vidéo"
+    description: "Jamie Antoine Ponchon est un étudiant en 2e année à Epitech (Lyon). Il est passionnée par la programmation mobile et la programmation de Jeux vidéo"
   rlo:
     name: Rayane Lo
     display_name: Rayane L.
@@ -173,6 +173,14 @@ authors:
     web: https://www.epitech.eu
     linkedin: https://www.linkedin.com/in/rayane-lo-546914185/
     description: "Rayane Lo est en 4e année à Epitech (Lyon). Il est passionné par le web et la programmation mobile"
+  mrobert:
+    name: Mathieu Robert
+    display_name: M. Robert
+    avatar: 'assets/images/avatars/mrobert.jpg'
+    email: mathieu.robert@epitech.eu
+    web: https://www.epitech.eu
+    linkedin: https://www.linkedin.com/in/mathi-robert/
+    description: "Mathieu Robert est étudiant en 2e année à Epitech. Il est passionné par la cybersécurité et les crypto monnaies"
   
 # Plugins
 plugins:
