@@ -10,9 +10,9 @@
 <meta name="google-site-verification" content="8ReVRUGA1gBtZA2LkknCb7A6jQ_g_Btr3I8aNLYPI_o" />
 <link rel="icon" href="{{ site.baseurl }}/assets/images/epitech-logo-signature-noir.png">
 
-<title>{{ page.title }} | {{site.name}}</title>
-
 {% seo %}
+
+<title>{{ page.title }} | {{site.name}}</title>
 
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     
@@ -121,7 +121,7 @@
 <!-- Content
 ================================================== -->
 <div class="main-content">
-    {{ content }}
+    {{ content | extlinks }}
 </div>
 
 {% if site.mailchimp-list %}
