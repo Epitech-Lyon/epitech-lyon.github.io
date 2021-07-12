@@ -1,7 +1,8 @@
 ---
 layout: post
 title:  "Cryptocurrency : A modern way to make transactions"
-author: mrobert
+author:
+    - mathieu.robert@epitech.eu
 categories: [ talk ]
 image: assets/images/blockchain/cryptocurrency.png
 published: false

@@ -1,7 +1,8 @@
 ---
 layout: post
 title:  "ThreadPool I : become a Thread Super Hero"
-author: eloiseau
+author:
+    - evan.loiseau@epitech.eu
 categories: [ workshop ]
 image: assets/images/threadpool/affiche.jpg
 published: false

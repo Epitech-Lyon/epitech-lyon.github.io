@@ -1,7 +1,8 @@
 ---
 layout: post
 title:  "Experiencing the AWS lambda functions"
-author: lkaroubi
+author:
+    - leo.karoubi@epitech.eu
 categories: [ experience ]
 image: assets/images/thunderbolt/affiche.jpg
 published: true

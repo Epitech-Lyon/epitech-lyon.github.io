@@ -1,7 +1,8 @@
 ---
 layout: post
 title:  "Présentation d'un jeu vidéo pour sensibiliser à l'écologie"
-author: araynaud
+author:
+    - araynaud
 categories: [ talk ]
 image: assets/images/top2_gamejam/top2.png
 published: false

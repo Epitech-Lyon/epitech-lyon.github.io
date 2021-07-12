@@ -1,7 +1,8 @@
 ---
 layout: post
 title:  "Plateforme CyberSécu Challenge"
-author: hbach
+author:
+    - hugo.bach@epitech.eu
 categories: [ hubproject ]
 image: assets/images/cybersecu/cybersecu.jpg
 published: false

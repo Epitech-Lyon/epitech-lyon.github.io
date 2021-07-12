@@ -1,7 +1,8 @@
 ---
 layout: post
 title:  "Initiation à Juce"
-author: troustan
+author:
+    - thomas.roustan@epitech.eu
 categories: [ workshop ]
 image: assets/images/juce/affiche.jpg
 published: false

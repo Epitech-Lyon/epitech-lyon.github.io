@@ -1,7 +1,8 @@
 ---
 layout: post
 title:  "Freelance : Comment faire?"
-author: jharrau
+author:
+    - jeremy.harrau@epitech.eu
 categories: [ talk ]
 image: assets/images/freelance/affiche.jpg
 published: false

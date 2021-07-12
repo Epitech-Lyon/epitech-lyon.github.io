@@ -1,7 +1,8 @@
 ---
 layout: post
 title:  "Set-Up minimal pour programmer un jeu sous unity"
-author: mbelleville
+author:
+    - matheo.belleville@epitech.eu
 categories: [ workshop ]
 image: assets/images/setup-unity/affiche.jpg
 published: false

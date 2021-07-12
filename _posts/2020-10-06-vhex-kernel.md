@@ -1,7 +1,8 @@
 ---
 layout: post
 title:  "Vhex (Kernel pour les calculatrices Casio)"
-author: ymagnin
+author:
+    - yann.magnin@epitech.eu
 categories: [ hubproject ]
 image: assets/images/vhex/vhex.jpg
 published: true

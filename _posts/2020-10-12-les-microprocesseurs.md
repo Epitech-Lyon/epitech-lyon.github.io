@@ -1,7 +1,8 @@
 ---
 layout: post
 title:  "Les Microprocesseurs"
-author: mverdier
+author:
+    - matheo.belleville@epitech.eu
 categories: [ talk ]
 image: assets/images/microprocessor/affiche.jpg
 published: false

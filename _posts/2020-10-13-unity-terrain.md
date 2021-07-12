@@ -1,7 +1,8 @@
 ---
 layout: post
 title:  "Generation procédurale de terrain sous unity"
-author: csaunier
+author:
+    - clement.saunier@epitech.eu
 categories: [ workshop ]
 image: assets/images/terrain-unity/affiche.jpg
 published: false

@@ -1,7 +1,8 @@
 ---
 layout: post
 title:  "IA : les modèles Random Forest pour l'apprentissage automatique"
-author: mbarbet
+author:
+    - max.barbet@epitech.eu
 categories: [ workshop ]
 image: assets/images/iatech/affiche.jpg
 published: false
