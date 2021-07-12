@@ -13,7 +13,7 @@ disqus: 'epitech-lyon-gh-pages'
 
 # Authors
 authors:
-  kanmeugne:
+  patrick.simo-kanmeugne@epitech.eu:
     name: Patrick S. Kanmeugne
     display_name: Patrick S. Kanmeugne
     email: patrick.simo-kanmeugne@epitech.eu
@@ -21,7 +21,7 @@ authors:
     avatar: 'assets/images/avatars/kanmeugne.jpg'
     linkedin: https://www.linkedin.com/in/patrick-simo-kanmeugne-127b5281/
     description: "IA (distruted) Scientist. Scientific blogger, multi agents system enthousiast."
-  jhouvenaghel:
+  juliette.houvenaghel@epitech.eu:
     name: Juliette Houvenaghel
     display_name: Juliette H.
     avatar: 'assets/images/avatars/jhouvenaghel.jpg'
@@ -29,7 +29,7 @@ authors:
     web: https://www.epitech.eu
     linkedin: https://www.linkedin.com/in/juliette-houvenaghel/
     description: "Juliette H. est une étudiante de la promotion 2022 d'Epitech (Lyon). Elle est passionnée par le Web, le design et le développement mobile."
-  ymagnin:
+  yann.magnin@epitech.eu:
     name: Yann Magnin
     display_name: Yann M.
     avatar: 'assets/images/avatars/ymagnin.jpg'
@@ -37,15 +37,15 @@ authors:
     web: https://www.epitech.eu
     linkedin: https://www.linkedin.com/in/yann-magnin/
     description: "Yann M. est étudiant de la promotion 2023 d'Epitech (Lyon). Il est passionné par le Hardware et la programmation bas niveau"
-  nmary:
+  nicolas.mary@epitech.eu:
     name: Nicolas Mary
     display_name: Nicolas M.
     avatar: 'assets/images/avatars/nmary.jpg'
     email: nicolas.mary@epitech.eu
     web: https://www.epitech.eu
     linkedin: https://www.linkedin.com/in/nicolas-mary-hello-world/
-    description: "Nicolas M. est de la promotion 2024 d'Epitech (Lyon). Il est passionné par le design et la programmation de jeux vidéo "
-  hbach:
+    description: "Nicolas M. est de la promotion 2024 d'Epitech (Lyon). Il est passionné par le design et la programmation de jeux vidéo"
+  hugo.bach@epitech.eu:
     name: Hugo Bach
     display_name: Hugo B.
     avatar: 'assets/images/avatars/hbach.jpg'
@@ -53,7 +53,7 @@ authors:
     web: https://www.epitech.eu
     linkedin: https://www.linkedin.com/in/hugo-bach/
     description: "Hugo B. est de la promotion 2023 d'Epitech (Lyon). Il est passionné de cybersécurité, back-end et devops"
-  llhuile:
+  leo.lhuile@epitech.eu:
     name: Leo Lhuile
     display_name: Leo L.
     avatar: 'assets/images/avatars/llhuile.jpg'
@@ -61,7 +61,7 @@ authors:
     web: https://www.epitech.eu
     linkedin: https://www.linkedin.com/in/l%C3%A9o-lhuile-062882156/
     description: "Leo L. est de la promotion 2022 d'Epitech (Lyon). Il est passionné par la programmation des jeux video et le développement Web "
-  pcoulon:
+  pierre.coulon@epitech.eu:
     name: Pierre Coulon
     display_name: Pierre C.
     avatar: 'assets/images/avatars/pcoulon.jpg'
@@ -69,7 +69,7 @@ authors:
     web: https://www.epitech.eu
     linkedin: https://www.linkedin.com/in/pierre-coulon/
     description: "P. Coulon est de la promotion 2022 d'Epitech (Lyon). Il est passionné par la programmation web et l'IoT"
-  tpoisson:
+  tristan.poisson@epitech.eu:
     name: Tristan Poisson
     display_name: Tristan P.
     avatar: 'assets/images/avatars/tpoisson.jpg'
@@ -77,7 +77,7 @@ authors:
     web: https://www.epitech.eu
     linkedin: https://www.linkedin.com/in/tristan-poisson-a02419188/
     description: "Tristan P. est de la promotion 2023 d'Epitech (Lyon). Il est passionné par la programmation mobile et l'IoT"
-  mverdier:
+  maugan.verdier@epitech.eu:
     name: Maugan Verdier
     display_name: Maugan V.
     avatar: 'assets/images/avatars/mverdier.jpg'
@@ -85,7 +85,7 @@ authors:
     web: https://www.epitech.eu
     linkedin: https://www.linkedin.com/in/maugan-verdier
     description: "Maugan V. est de la promotion 2023 d'Epitech (Lyon). Il est passionné par le hardware et la programmation bas niveau"
-  mbelleville:
+  matheo.belleville@epitech.eu:
     name: Matheo Belleville
     display_name: Matheo B.
     avatar: 'assets/images/avatars/mbelleville.jpg'
@@ -93,7 +93,7 @@ authors:
     web: https://www.epitech.eu
     linkedin: https://www.linkedin.com/in/math%C3%A9o-belleville-308987186/
     description: "Matheo B. est de la promotion 2023 d'Epitech (Lyon). Il est passionné par le jeu video et la programmation sous unity"  
-  mhechaichi:
+  moussa.hechaichi@epitech.eu:
     name: Moussa Hechaichi
     display_name: Moussa H.
     avatar: 'assets/images/avatars/mhechaichi.jpg'
@@ -101,7 +101,7 @@ authors:
     web: https://www.epitech.eu
     linkedin: https://www.linkedin.com/in/moussahe/
     description: "Moussa Hechaichi est de la promotion 2022 d'Epitech (Lyon). Il est passionné par le web et la programmation mobile"
-  mbarbet:
+  max.barbet@epitech.eu:
     name: Max Barbet
     display_name: Max B.
     avatar: 'assets/images/avatars/mbarbet.jpg'
@@ -109,7 +109,7 @@ authors:
     web: https://www.epitech.eu
     linkedin: https://www.linkedin.com/in/max-barbet-603832175/
     description: "M. Barbet est de la promotion 2023 d'Epitech (Lyon). Il est passionné d'IA et de programation Web"
-  jharrau:
+  jeremy.harrau@epitech.eu:
     name: Jeremy Harrau
     display_name: Jeremy H.
     avatar: 'assets/images/avatars/jharrau.jpg'
@@ -117,7 +117,7 @@ authors:
     web: https://www.epitech.eu
     linkedin: https://www.linkedin.com/in/jeremy-harrau-08560417a/
     description: "Jeremy Harrau est de la promotion 2022 d'Epitech (Lyon). Il est passionné par le Web design et la programmation mobile"
-  eloiseau:
+  evan.loiseau@epitech.eu:
     name: Evan Loiseau
     display_name: Evan L.
     avatar: 'assets/images/avatars/eloiseau.jpg'
@@ -125,7 +125,7 @@ authors:
     web: https://www.epitech.eu
     linkedin: https://www.linkedin.com/in/evan-loiseau-1200a618b/
     description: "Evan L. est de la promotion 2023 d'Epitech (Lyon). Il est passionné par la programmation de jeux video"
-  troustan:
+  thomas.roustan@epitech.eu:
     name: Thomas Roustan
     display_name: Thomas R.
     avatar: 'assets/images/avatars/troustan.jpg'
@@ -133,7 +133,7 @@ authors:
     web: https://www.epitech.eu
     linkedin: https://www.linkedin.com/in/thomas-roustan-6b9694161/
     description: "Thomas R. est un étudiant de la promotion 2023 d'Epitech (Lyon). Il est passionné par la programmation de jeux video sous Unity et de la programmation Multimedia"  
-  csaunier:
+  clement.saunier@epitech.eu:
     name: Clément Saunier
     display_name: Clément S.
     avatar: 'assets/images/avatars/csaunier.jpg'
@@ -141,7 +141,7 @@ authors:
     web: https://www.epitech.eu
     linkedin: https://www.linkedin.com/in/cl%C3%A9ment-saunier-211453156/
     description: "Clément Saunier est un étudiant de la promotion 2023 d'Epitech (Lyon). Il est passionné de programmation de jeux video sous Unity et de programmation mobile"
-  meynard-longuet:
+  matthieu.eynard-longuet@epitech.eu:
     name: Matthieu Eynard-Longuet
     display_name: Matthieu E.-L.
     avatar: 'assets/images/avatars/meynard-longuet.jpg'
@@ -149,7 +149,7 @@ authors:
     web: https://www.epitech.eu
     linkedin: https://www.linkedin.com/in/matthieu-eynard-longuet/
     description: "Matthieu Eynard-Longuet est un étudiant de la promotion 2021 d'Epitech (Lyon). Il est passionné par la 3D et la VR/AR"
-  lkaroubi:
+  leo.karoubi@epitech.eu:
     name: Léo Karoubi
     display_name: L. Karoubi
     avatar: 'assets/images/avatars/lkaroubi.jpg'
@@ -157,7 +157,7 @@ authors:
     web: https://www.epitech.eu
     linkedin: https://www.linkedin.com/in/leo-karoubi-ab8510179/
     description: "Léo Karoubi est un étudiant de la promotion 2023 d'Epitech (Lyon). Il est passionné par la programmation bas niveau et les micro-processeurs"
-  j-aponchon:
+  jamie-antoine.ponchon@epitech.eu:
     name: Jamie Antoine Ponchon
     display_name: J. A. Ponchon
     avatar: 'assets/images/avatars/j-aponchon.jpg'
@@ -165,7 +165,7 @@ authors:
     web: https://www.epitech.eu
     linkedin: https://www.linkedin.com/in/jamie-ponchon/
     description: "Jamie Antoine Ponchon est un étudiant de la promotion 2024 d'Epitech (Lyon). Il est passionnée par la programmation mobile et la programmation de Jeux vidéo"
-  rlo:
+  rayane.lo@epitech.eu:
     name: Rayane Lo
     display_name: Rayane L.
     avatar: 'assets/images/avatars/rlo.jpg'
@@ -173,7 +173,7 @@ authors:
     web: https://www.epitech.eu
     linkedin: https://www.linkedin.com/in/rayane-lo-546914185/
     description: "Rayane Lo est de la promotion 2022 d'Epitech (Lyon). Il est passionné par le web et la programmation mobile"
-  mrobert:
+  mathieu.robert@epitech.eu:
     name: Mathieu Robert
     display_name: M. Robert
     avatar: 'assets/images/avatars/mrobert.jpg'
