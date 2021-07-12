@@ -5,6 +5,7 @@ author: mrobert
 categories: [ talk ]
 image: assets/images/blockchain/cryptocurrency.png
 published: false
+comments: false
 ---
 
 Today the concept of cryptocurrency is very popular, but what are they really ? 

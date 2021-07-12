@@ -5,6 +5,7 @@ author: ymagnin
 categories: [ hubproject ]
 image: assets/images/vhex/vhex.jpg
 published: true
+comments: false
 ---
 
 L'année dernière, j'ai choisi de faire comme [projet Hub][4] un kernel pour les calculatrices Casio. Comme le projet est toujours d'actualité et que j'ai l'opportunité de partager mes prévisions pour la suite, je vais essayer d'expliquer le plus possible l'objectif derrière ce noyau.

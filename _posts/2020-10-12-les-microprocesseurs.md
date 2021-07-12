@@ -5,6 +5,7 @@ author: mverdier
 categories: [ talk ]
 image: assets/images/microprocessor/affiche.jpg
 published: false
+comments: false
 ---
 
 ## Un peu d'histoire
