@@ -5,6 +5,7 @@ author: jharrau
 categories: [ talk ]
 image: assets/images/freelance/affiche.jpg
 published: false
+comments: false
 ---
 
 La mode freelance se répand de plus en plus chez les développeurs informatiques. Pour ceux qui se posent la question de savoir si cette mode est faite pour eux, ce petit article pourra vous aider à y voir plus clair.

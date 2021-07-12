@@ -5,6 +5,7 @@ author: lkaroubi
 categories: [ experience ]
 image: assets/images/thunderbolt/affiche.jpg
 published: true
+comments: false
 ---
 
 [Thunderbolt][1] is a set of AWS lambda functions for AWS resources scheduling. It is part of a bigger AWS project I am working on, named [ParadigmShift](https://github.com/le0kar0ub1/ParadigmShift), which was intended to be a global and high level AWS resources scheduler, it is well documented in the link above.

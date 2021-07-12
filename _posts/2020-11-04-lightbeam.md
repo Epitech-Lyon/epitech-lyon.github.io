@@ -5,6 +5,7 @@ author: lkaroubi
 categories: [ experience ]
 image: assets/images/lightbeam/affiche.jpg
 published: false
+comments: false
 ---
 
 [LightBeam](https://github.com/epitech-lyon/LightBeam) is a set of 4 kernels bootstrap on several platforms.

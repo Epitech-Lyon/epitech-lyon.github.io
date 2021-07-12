@@ -5,6 +5,7 @@ author: csaunier
 categories: [ workshop ]
 image: assets/images/terrain-unity/affiche.jpg
 published: false
+comments: false
 ---
 
 [Unity][1] est un moteur très puissant pour la programmation et le déploiement de jeux video multiplateformes. Les fonctionnalité permettre de générer des avatar et des environnement de manière procédurale pour enrichir les scénarii de jeux.

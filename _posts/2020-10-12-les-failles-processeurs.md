@@ -5,6 +5,7 @@ author: mverdier
 categories: [ talk ]
 image: assets/images/failles/affiche.jpg
 published: false
+comments: false
 ---
 
 ## Présentation

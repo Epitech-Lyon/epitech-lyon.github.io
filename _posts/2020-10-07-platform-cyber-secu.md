@@ -5,6 +5,7 @@ author: hbach
 categories: [ hubproject ]
 image: assets/images/cybersecu/cybersecu.jpg
 published: false
+comments: false
 ---
 
 Notre projet vise à sensibiliser les étudiants sur les risques d’une éventuelle faille de sécurité, tant sur le plan personnel que sur le plan professionnel.
