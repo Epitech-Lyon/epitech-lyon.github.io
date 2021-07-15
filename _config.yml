@@ -173,13 +173,19 @@ authors:
     web: https://www.epitech.eu
     linkedin: https://www.linkedin.com/in/rayane-lo-546914185/
     description: "Rayane Lo est de la promotion 2022 d'Epitech (Lyon). Il est passionné par le web et la programmation mobile"
+  lia1.perochaud@epitech.eu:
+    name: Lia Perochaud
+    display_name: L. Perochaud
+    email: lia1.perochaud@epitech.eu
+    web: https://www.linkedin.com/in/lia-perochaud/
+    description: "Lia est étudiante de la promotion 2024 d'Epitech (Lyon). Elle est passionnée de par le Design et l'Animation 2D"
   mathieu.robert@epitech.eu:
     name: Mathieu Robert
     display_name: M. Robert
     avatar: 'assets/images/avatars/mrobert.jpg'
     email: mathieu.robert@epitech.eu
     web: https://www.epitech.eu
-    linkedin: https://www.linkedin.com/in/mathi-robert/
+    linkedin: https://www.linkedin.com/in/lia-perochaud/
     description: "Mathieu Robert est étudiant de la promotion 2024 d'Epitech (Lyon). Il est passionné par la cybersécurité et les crypto monnaies"
   
 # Plugins
