@@ -187,6 +187,13 @@ authors:
     web: https://www.epitech.eu
     linkedin: https://www.linkedin.com/in/lia-perochaud/
     description: "Mathieu Robert est étudiant de la promotion 2024 d'Epitech (Lyon). Il est passionné par la cybersécurité et les crypto monnaies"
+  kevin.melinon@epitech.eu:
+    name: Kevin Mélinon
+    display_name: K. Mélinon
+    email: kevin.melinon@epitech.eu
+    web: https://www.linkedin.com/in/kevin-melinon-2271561a0/
+    linkedin: https://www.linkedin.com/in/kevin-melinon-2271561a0/
+    description: "Kévin Mélinon est étudiants de la promotion 2024 d'Epitech (Lyon). Il est passionné par les technologies Web et la modélisation 3D"
   
 # Plugins
 plugins:

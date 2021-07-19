@@ -9,11 +9,11 @@ published: true
 comments: false
 ---
 
-[Thunderbolt][1] is a set of AWS lambda functions for AWS resources scheduling. It is part of a bigger AWS project I am working on, named [ParadigmShift](https://github.com/le0kar0ub1/ParadigmShift), which was intended to be a global and high level AWS resources scheduler, it is well documented in the link above.
+[Thunderbolt][1] is a set of AWS lambda functions for AWS resources scheduling. It is part of a bigger AWS project I am working on, named [ParadigmShift][2], which was intended to be a global and high level AWS resources scheduler, it is well documented in the link above.
 
 ## First things first : AWS
 
-AWS is a [cloud provider](https://fr.wikipedia.org/wiki/Cloud_computing) which provides a large list of services (databases/server/IA/storage/...).
+AWS is a [cloud provider][3] which provides a large list of services (databases/server/IA/storage/...).
 
 AWS Lambda is a FAAS (Function As A Service) which allows you to run small code with a total abstraction of the under-layers. To be clear, you can put your code in the service and then trigger it by multiple ways. Lambda is the core of the serverless model on AWS.
 
@@ -27,7 +27,7 @@ Thunderbolt is a set of 3 lambda functions --- because that were the three funct
 
 ### Why ?
 
-In fact Thunderbolt is used as a git submodule in a bigger AWS project named [ParadigmShift](https://github.com/le0kar0ub1/ParadigmShift). *ParadigmShift* was intended to be a global and high level AWS resources scheduler, it is well documented in the link above.
+In fact Thunderbolt is used as a git submodule in a bigger AWS project named [ParadigmShift][2]. *ParadigmShift* was intended to be a global and high level AWS resources scheduler, it is well documented in the link above.
 
 ### How ?
 
@@ -152,8 +152,12 @@ function rds_stop(id)
 }
 ```
 
-For those who whant to go further, [follow the repository page](https://github.com/le0kar0ub1/Thunderbolt/tree/master/aws).
+For those who whant to go further, [follow the repository page][1].
 
 ### Improve ?
 
-Handle more services and manipulations, if they are relevant for ParadigmShift project.
+Handle more services and manipulations, if they are relevant for [ParadigmShift project][2].
+
+[1]: https://github.com/le0kar0ub1/Thunderbolt/tree/master/aws
+[2]: https://github.com/le0kar0ub1/ParadigmShift
+[3]: https://fr.wikipedia.org/wiki/Cloud_computing
