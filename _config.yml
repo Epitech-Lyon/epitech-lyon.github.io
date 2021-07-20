@@ -193,7 +193,35 @@ authors:
     email: kevin.melinon@epitech.eu
     web: https://www.linkedin.com/in/kevin-melinon-2271561a0/
     linkedin: https://www.linkedin.com/in/kevin-melinon-2271561a0/
-    description: "Kévin Mélinon est étudiants de la promotion 2024 d'Epitech (Lyon). Il est passionné par les technologies Web et la modélisation 3D"
+    description: "Kévin Mélinon est étudiants de la promotion 2024 d'Epitech (Lyon). Il est passionné par les technologies Web et la modélisation 3D"  
+  corentin.mazabrard@epitech.eu:
+    name: Corentin Mazabrard
+    display_name: C. Mazabrard
+    email: corentin.mazabrard@epitech.eu
+    web: https://www.linkedin.com/in/corentin-mazabrard-54625a1a1/
+    linkedin: https://www.linkedin.com/in/corentin-mazabrard-54625a1a1/
+    description: "Corentin est un étudiant de la promotion 2024 d'Epitech (Lyon). Il est passionné par la data et la programmation web"
+  maxime.simon@epitech.eu:
+    name: Maxime Simon
+    display_name: M. Simon
+    email: maxime.simon@epitech.eu
+    web: https://www.linkedin.com/in/maxime-simon-3146a01a0/
+    linkedin: https://www.linkedin.com/in/maxime-simon-3146a01a0/
+    description: "Maxime est un étudiant de la promotion 2024 d'Epitech (Lyon). Il est passionné par la programmation mobile et le web"
+  clement.madzar@epitech.eu:
+    name: Clément Madzar
+    display_name: C. Madzar
+    email: clement.madzar@epitech.eu
+    web: https://www.linkedin.com/in/cl%C3%A9ment-madzar-3269b213b/
+    linkedin: https://www.linkedin.com/in/cl%C3%A9ment-madzar-3269b213b/
+    description: "Clément est un étudiant de la promotion 2024 d'Epitech (Lyon). Il est passionné par la programmation par la programmation web"
+  thomas.grand@epitech.eu:
+    name: Thomas Grand
+    display_name: T. Madzar
+    email: thomas.grand@epitech.eu
+    web: https://www.linkedin.com/in/thomas-grand-b743211a1/
+    linkedin: https://www.linkedin.com/in/thomas-grand-b743211a1/
+    description: "Thomas est un étudiant de la promotion 2024 d'Epitech (Lyon). Il est passionné par la programmation mobile"
   
 # Plugins
 plugins:
