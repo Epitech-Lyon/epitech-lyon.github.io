@@ -150,7 +150,7 @@ Vous pouvez aussi spécifier l'*addon*' que vous souhaitez par interface, et ég
 Nous allons maintenant monter la machine virtuelle qui va me servir de *firewall*. J'ai choisi *alpine linux*[^alpine-linux] pour sa légèreté, sa sécurité et sa faible consommation de ressources. J'ai donc téléchargé la dernière *iso*[^iso] sur le site officiel de *alpine linux* sur le disque du serveur, et avec
 
 ```sh   
-osinfo-query *OS*
+osinfo-query os
 ```
 
 j'ai pu récupérer le *short-id* de l'*OS* que je veux installer.
@@ -321,7 +321,7 @@ Mon envie à l'avenir avec ce serveur :
 [^nat]: NAT, Network Adress Transcripteur
 [^hyperviseur]: Micrologiciel ou matériel qui crée et exécute machines virtuelles
 [^bridge]: Passerelle entre deux réseaux informatiques
-[^eth0]: Nom traditionnellement donnée au pilote de la carte physique réseau sur un système Linux
+[^eth0]: Nom traditionnellement donné au pilote de la carte physique réseau sur un système Linux
 [^uefi]: Unified Extensible Firmware Interface
 [^ipv4]: IPV4, Internet Protocol Version 4
 [^ipv6]: IPV6, Internet Protocol Version 6

@@ -6,6 +6,7 @@ author:
 categories: [ workshop ]
 image: assets/images/unreal/affiche.jpg
 published: true
+featured: true
 comments: false
 ---
 
