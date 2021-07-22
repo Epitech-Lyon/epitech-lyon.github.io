@@ -193,7 +193,14 @@ authors:
     email: kevin.melinon@epitech.eu
     web: https://www.linkedin.com/in/kevin-melinon-2271561a0/
     linkedin: https://www.linkedin.com/in/kevin-melinon-2271561a0/
-    description: "Kévin Mélinon est étudiant de la promotion 2024 d'Epitech (Lyon). Il est passionné par les technologies Web et la modélisation 3D"
+    description: "Kévin Mélinon est étudiant de la promotion 2024 d'Epitech (Lyon). Il est passionné par les technologies Web et la modélisation 3D"  
+  zacharie.corniere@epitech.eu:
+    name: Zacharie Cornière
+    display_name: Z. Cornière
+    email: zacharie.corniere@epitech.eu
+    web: https://www.linkedin.com/in/zacharie-corniere-375170185/
+    linkedin: https://www.linkedin.com/in/zacharie-corniere-375170185/
+    description: "Zacharie Cornière est étudiant de la promotion 2023 d'Epitech (Lyon). Il est passionné par les langages de programmation et le développement de jeux vidéos."
   
 # Plugins
 plugins:
