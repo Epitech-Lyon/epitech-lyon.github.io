@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Developping a Descent FPS Game Using SFML "
+title:  "Developing a Descent FPS Game Using SFML "
 author:
     - zacharie.corniere@epitech.eu
 categories: [ experience ]
