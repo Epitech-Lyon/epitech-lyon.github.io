@@ -201,6 +201,28 @@ authors:
     web: https://www.linkedin.com/in/zacharie-corniere-375170185/
     linkedin: https://www.linkedin.com/in/zacharie-corniere-375170185/
     description: "Zacharie Cornière est étudiant de la promotion 2023 d'Epitech (Lyon). Il est passionné par les langages de programmation et le développement de jeux vidéos."
+  daniel.tirrier@epitech.eu:
+    name: Daniel Tirrier
+    display_name: Daniel T.
+    email: daniel.tirrier@epitech.eu
+    web: https://www.linkedin.com/in/daniel-tirrier-69aa39202/
+    linkedin: https://www.linkedin.com/in/daniel-tirrier-69aa39202/
+    description: "Daniel Tirrier est de la promotion 2024 d'Epitech (Lyon). Il est passionné par la programmation web"
+  tom.debout@epitech.eu:
+    name: Tom Debout
+    display_name: Tom D.
+    email: tom.debout@epitech.eu
+    web: https://www.linkedin.com/in/tom-debout-2a6608202/
+    linkedin: https://www.linkedin.com/in/tom-debout-2a6608202/
+    description: "Tom Debout est de la promotion 2024 d'Epitech (Lyon). Il est passionné par la programmation web"
+  matheo.robert@epitech.eu:
+    name: Mathéo Robert
+    display_name: Matheo R.
+    email: matheo.robert@epitech.eu
+    web: https://www.linkedin.com/in/math%C3%A9o-robert-3490271b8/
+    linkedin: https://www.linkedin.com/in/math%C3%A9o-robert-3490271b8/
+    description: "Mathéo Robert est de la promotion 2024 d'Epitech (Lyon). Il est passionné par la programmation web"
+  
   
 # Plugins
 plugins:
