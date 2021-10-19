@@ -6,7 +6,7 @@ author:
 categories: [ hubproject ]
 image: assets/images/vhex/vhex.jpg
 published: true
-featured: true
+featured: false
 comments: false
 ---
 

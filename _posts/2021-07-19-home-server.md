@@ -7,7 +7,7 @@ categories: [ experience ]
 image: assets/images/homeserver/poster.jpg
 published: true
 comments: false
-featured: true
+featured: false
 ---
 
 Durant mon temps libre, j'ai eu besoin de mettre en place des machines linux pour différentes raisons :   
