@@ -28,7 +28,7 @@ Suite à notre entretien, nous avons vite reconnu qu’il y avait un certain man
 
 Les demandes étaient envoyées depuis un Google Form, récupérées par mail, transférées sur un excel, puis re-transférées sur un autre excel une fois qu’une livraison était programmée, puis envoyée sur un groupe WhatsApp dans lequel les livreurs s'inscrivaient pour effectuer la livraison.
 
-Bref, en voyant ce processus énergivore et pouvant engendrer certaines erreurs humaines, nous nous sommes fixé pour objectif de mettre à disposition nos compétences pour essayer d’améliorer ce processus. 
+Bref, en voyant ce processus énergivore et pouvant engendrer certaines erreurs humaines, nous nous sommes fixés pour objectif de mettre à disposition nos compétences pour essayer d’améliorer ce processus. 
    
 ## Notre solution
 
