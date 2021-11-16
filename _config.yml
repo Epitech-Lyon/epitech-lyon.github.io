@@ -222,6 +222,34 @@ authors:
     web: https://www.linkedin.com/in/math%C3%A9o-robert-3490271b8/
     linkedin: https://www.linkedin.com/in/math%C3%A9o-robert-3490271b8/
     description: "Mathéo Robert est de la promotion 2024 d'Epitech (Lyon). Il est passionné par la programmation web"
+  jonathan-emmanuel.jose@epitech.eu:
+    name: Jonathan-Emmanuel José
+    display_name: Jonathan-Emmanuel J.
+    email: jonathan-emmanuel.jose@epitech.eu
+    web: https://www.linkedin.com/in/jose-jonathan-emmanuel/
+    linkedin: https://www.linkedin.com/in/jose-jonathan-emmanuel/
+    description: "Jonathan-Emmanuel est de la promotion 2024 d'Epitech (Lyon). Il est passionné par la programmation mobile et audio"
+  lucas.guichard@epitech.eu:
+    name: Lucas Guichard
+    display_name: Lucas G.
+    email: lucas.guichard@epitech.eu
+    web: https://www.linkedin.com/in/lucas-guichard0/
+    linkedin: https://www.linkedin.com/in/lucas-guichard0/
+    description: "Lucas est de la promotion 2024 d'Epitech (Lyon). Il est passionné par le hardware et la programmation mobile"
+  mehdi.zehri@epitech.eu:
+    name: Mehdi Zehri
+    display_name: Mehdi Z.
+    email: mehdi.zehri@epitech.eu
+    web: https://www.linkedin.com/in/mehdz/
+    linkedin: https://www.linkedin.com/in/mehdz/
+    description: "Mehdi est de la promotion 2024 d'Epitech (Lyon). Il est passionné par la programmation web"
+  mohamed1.mrabet@epitech.eu:
+    name: Mohamed Mrabet
+    display_name: Mohamed M.
+    email: mohamed1.mrabet@epitech.eu
+    web: https://www.linkedin.com/in/mohamed-mrabet-epitech/
+    linkedin: https://www.linkedin.com/in/mohamed-mrabet-epitech/
+    description: "Mohamed est de la promotion 2021 d'Epitech (Lyon). Il est passionné de programmation web fullstack"
   
   
 # Plugins
