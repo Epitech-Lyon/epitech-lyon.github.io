@@ -42,7 +42,7 @@ Vous avez ici la vue d'ensemble des projets :
 ------------------------------------------------------------
 ```
 
-Chaque partie que vous voyez la sera indépendante pour permettre à quiconque le souhaite de participer au projet.
+Chaque partie sera indépendante pour permettre à quiconque le souhaite de participer au projet.
 
 ---
 
