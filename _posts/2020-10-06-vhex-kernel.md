@@ -26,7 +26,7 @@ Par contre, je préfère mettre les choses au clair dès le début, le projet n'
 
 ### Explication du projet
 
-Pour en revenir au sujet, mon envie première est de mettre en place plusieurs projets qui sont plus ou moins "liés" entre eux et qui ont pour objectif principal de fournir un kernel UNIX-like libre pour les calculatrices Casio (mais je pense qu'avec une bonne organisation, il ne devrait pas y avoir trop de difficulté à porter le projet sur une architecture différente).
+Pour en revenir au sujet, mon envie première est de mettre en place plusieurs projets qui sont plus ou moins "liés" entre eux et qui ont pour objectif principal de fournir un kernel UNIX-like libre pour les calculatrices Casio (mais je pense qu'avec une bonne organisation, il ne devrait pas y avoir trop de difficultés à porter le projet sur une architecture différente).
 
 Vous avez ici la vue d'ensemble des projets :
 
@@ -42,7 +42,7 @@ Vous avez ici la vue d'ensemble des projets :
 ------------------------------------------------------------
 ```
 
-Chaque partie que vous voyez la sera indépendantes pour permettre à quiconque le souhaite de participer au projet.
+Chaque partie que vous voyez la sera indépendante pour permettre à quiconque le souhaite de participer au projet.
 
 ---
 
