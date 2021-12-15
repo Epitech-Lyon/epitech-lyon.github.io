@@ -250,6 +250,13 @@ authors:
     web: https://www.linkedin.com/in/mohamed-mrabet-epitech/
     linkedin: https://www.linkedin.com/in/mohamed-mrabet-epitech/
     description: "Mohamed est de la promotion 2024 d'Epitech (Lyon). Il est passionné de programmation web fullstack"
+  bogdan.guillemoles@epitech.eu:
+    name: Bogdan Guillemoles
+    display_name: Bogdan G.
+    email: bogdan.guillemoles@epitech.eu
+    web: https://www.malt.fr/profile/bogdanguillemoles
+    linkedin: https://www.linkedin.com/in/bogdan-guillemoles-807b941b1/
+    description: "Bogdan est de la promotion 2024 d'Epitech (Lyon). Il est passionné de programmation fonctionnelle et de cybersécurité."
   
   
 # Plugins
