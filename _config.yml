@@ -257,6 +257,20 @@ authors:
     web: https://www.malt.fr/profile/bogdanguillemoles
     linkedin: https://www.linkedin.com/in/bogdan-guillemoles-807b941b1/
     description: "Bogdan est de la promotion 2024 d'Epitech (Lyon). Il est passionné de programmation fonctionnelle et de cybersécurité."
+  arthur1.perrot@epitech.eu:
+    name: Arthur Perrot
+    display_name: Arthur P.
+    email: arthur1.perrot@epitech.eu
+    web: https://www.linkedin.com/in/huntervcx/
+    linkedin: https://www.linkedin.com/in/huntervcx/
+    description: "Arthur est un étudiant de la promotion 2024 d'Epitech. Il est passionné par la gestion de projets informatique, le web et le devOps"
+  romain.bouguet@epitech.eu:
+    name: Romain Bouguet
+    display_name: Romain B.
+    email: romain.bouguet@epitech.eu
+    web: https://www.linkedin.com/in/romain-b-9937ba19b/
+    linkedin: https://www.linkedin.com/in/romain-b-9937ba19b/
+    description: "Romain est de la promotion 2024 d'Epitech (Lyon). Il est passionné de Back-End, d'Intelligence Artificielle et et de DevOps"
   
   
 # Plugins
