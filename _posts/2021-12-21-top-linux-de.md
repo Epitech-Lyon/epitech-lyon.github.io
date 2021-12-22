@@ -12,7 +12,7 @@ comments: false
 
 Tout au long de mes années à EPITECH, j'ai pu tester de nombreuses distributions linux ainsi que différents Desktop Environnements (DE), je vais donc vous faire un mini classement des DE que j'ai le plus appréciés. Ce classement est réalisé à partir de mon expérience personnelle en tant que développeur et ne doit pas être pris comme une parole d'évangile.
 
-> A lire également, [Les meilleures distributions linux.](/top-10-linux-distros)
+> A lire également, [Les meilleures distributions linux.](/top-linux-distros)
 
 ## 1. [XFCE][15], la fluidité et les performances avant tout
 

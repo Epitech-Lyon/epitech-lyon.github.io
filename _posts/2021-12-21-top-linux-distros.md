@@ -13,7 +13,7 @@ comments: false
 Durant notre parcours à Epitech, nous avons eu l'occasion de tester plusieurs distributions linux pour nos projets. C'est une expérience très enrichissante qui nous a permis de découvrir le hardware que nous utilisions chaque jour, et comprendre les rouages de l'informatique passée et moderne. Voici donc, selon nous, le classement des meilleures distributions linux *mainstream*, pour une utilisation quotidienne.
 
 
-> A lire également, [Les meilleures DEs sur linux.](/top-10-linux-de)
+> A lire également, [Les meilleures DEs sur linux.](/top-linux-de)
 
 ## Distro #1 : [Ubuntu][4]
 
