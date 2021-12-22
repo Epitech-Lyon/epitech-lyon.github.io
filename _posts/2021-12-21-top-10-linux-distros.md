@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Vue d'Epitech : les meilleures distributions Linux"
+title:  "Les meilleures distributions Linux"
 author:
     - romain.bouguet@epitech.eu
     - arthur1.perrot@epitech.eu
@@ -10,10 +10,10 @@ published: true
 comments: false
 ---
 
-Durant notre parcours à Epitech, nous avons eu l'occasion de tester plusieurs distributions linux pour nos projets. C'est une expérience très enrichissante qui nous a permis de découvrir le hardware que nous utilisions chaque jour, et comprendre les rouages de l'informatique passée et moderne. Voici donc selon nous le classement des meilleures distributions linux mainstream, pour une utilisation quotidienne.
+Durant notre parcours à Epitech, nous avons eu l'occasion de tester plusieurs distributions linux pour nos projets. C'est une expérience très enrichissante qui nous a permis de découvrir le hardware que nous utilisions chaque jour, et comprendre les rouages de l'informatique passée et moderne. Voici donc, selon nous, le classement des meilleures distributions linux *mainstream*, pour une utilisation quotidienne.
 
 
-> A lire également, [Vue d'Epitech : les meilleures DEs sur linux.](/top-10-linux-distros)
+> A lire également, [Les meilleures DEs sur linux.](/top-10-linux-de)
 
 ## Distro #1 : [Ubuntu][4]
 
@@ -55,7 +55,7 @@ Elle est désormais la distribution linux la plus connue au monde pour sa simpli
 Première sortie le **16 août 1993**<br>
 Créée par [**Ian Murdock**][6]
 
-Debian est aujourd'hui la mère de milliers d'autres distributions. Elle est la plus plébiscitée dans le monde des serveurs grâce à sa stabilité et ses performances.
+Debian est aujourd'hui la mère de milliers d'autres distributions. Elle est la mieux plébiscitée dans le monde des serveurs grâce à sa stabilité et ses performances.
 
 
 | Les Plus  👍                |
@@ -151,20 +151,19 @@ Distro fiable et complète, version desktop gratuite de RedHat Entreprise Linux.
 
 ## Comment trouver sa distro ?
 
-Choisir sa distribution Linux peut être complexe. En réalité, le meilleur moyen reste d'essayer une distro qui nous intéresse. Dans une VM, sur une autre machine, en dual boot ou en live.
+Choisir sa distribution Linux peut être complexe. En réalité, le meilleur moyen reste d'essayer une distro qui nous intéresse -- dans une VM, sur une autre machine, en dual boot ou en live. Et puis l'avantage de Linux, c'est que la séparation des partitions vous permettra de changer de distro sans perdre un seul fichier et sans devoir tout recommencer.
 
-Voici un légèr schéma ultra simpliste des questions à se poser pour faire son choix.
-
-Et puis l'avantage de Linux, c'est que la séparation des partitions vous permettra de changer de distro sans perdre un seul fichier et sans devoir tout recommencer.
+Voici un résumé de questions simples à se poser pour faire son choix.
 
 [![Schema de choix de distro](../assets/images/linux-distros/schema.png "Schéma de choix de distro")][10]
 
-Pour connaitre d'avantages de distro, mieux vaut faire un tour sur [DistroWatch][9]. Ce site repertorie quasiment toutes les distro existantes.
+Pour connaître d'avantage de distro, nous recommandons fortement de faire un tour sur [DistroWatch][9] -- ce site repertorie quasiment toutes les distro existantes.
 
 # Conclusion
 
 Voici un léger résumé sous forme de tableau des principales caractéristiques de chaque distro.
-<br>Note pour l'UX/UI, nous parlons ici des distro et non des Desktop Environment
+
+> Note : pour l'UX/UI, nous parlons ici des distro et non des Desktop Environments
 
 <table border=1>
   <tr>
