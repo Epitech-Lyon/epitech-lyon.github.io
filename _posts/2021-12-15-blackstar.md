@@ -5,11 +5,11 @@ author:
     - bogdan.guillemoles@epitech.eu
 categories: [ experience ]
 image: assets/images/blackstar/poster.jpg
-published: true
+published: false
 comments: false
 ---
 
-If you want to hide malicious code from Anti-Virus softwares, there is a wide array of techniques you can pick from. In this work, I tried to abuse a widely known feature of the **ELF** file format to encrypt some code, and then let the binary rewrite itself in order to decrypt the code I wanted to hide in the first place. My work is based on a [PoC's team project](https://github.com/PocInnovation) which itself is inpired from a [whitepaper](http://papermint-designs.com/dmo-blog/2016-01-pocrypt-a-proof-of-concept-for-dynamically-decrypt-linux-binaries) that explains how to use **ELF**'s `SECTION`s to hide malicious code. In this post, I am going to introduce PoC's implementation approach and show off the improvements I have managed to add for more genericity and scalability. I will also discuss some short-term perpectives for those who are interested in the subject. Feel free to fork my work or send me your feedbacks.
+If you want to hide malicious code from Anti-Virus softwares, there is a wide array of techniques you can pick from. In this work, I tried to abuse a widely known feature of the **ELF** file format to encrypt some code, and then let the binary rewrite itself in order to decrypt the code I wanted to hide in the first place. My work is based on a [PoC's team project](https://github.com/PocInnovation) which itself is inpired from a [whitepaper](http://papermint-designs.com/dmo-blog/2016-01-pocrypt-a-proof-of-concept-for-dynamically-decrypt-linux-binaries) that explains how to use **ELF**'s `SECTION`s to hide malicious code. In this post, I am going to introduce PoC's implementation approach and show off the improvements I have added for more genericity and scalability. I will also discuss some short-term perpectives for those who are interested in the subject. Feel free to fork my work and send me your feedbacks.
 
 > 💥
 > The source code I am sharing here is only meant for research 
@@ -19,7 +19,7 @@ If you want to hide malicious code from Anti-Virus softwares, there is a wide ar
 
 ELF is the file format used to define compiled programs on Linux. There is a lot of documentation available on this file format, since it has been around for a very long time -- languages like Rust, C, C++ or Haskell compile their code to ELF files on Linux.
 
-> 🛈 An ELF file is made up of a header, followed by the file's executable data, which is splitted in sections
+> 🛈 An ELF file is made up of a header, followed by the file's executable data, which is splitted into sections
 
 The ELF format has been in used since 1999 -- in a lot of Unix-based systems, like Linux -- and is made up of a header, followed by the file's executable data which is splitted into sections.
 
@@ -29,9 +29,9 @@ As one can see from the image above, the executable is divided into *Sections* w
 
 ![Demonstration of the size -dA command](../assets/images/blackstar/size_eval_expr.png "size -dA output")
 
-In my work, I used sections as a way to *partition* the code and I provided specific tools to smartly encrypt some parts in order to evade anti-virus softwares.
+In my work, I used sections as the first class abstraction level for the source code. This allows me to smartly encrypt the content for evasion purposes.
 
-> 💡 I used sections as a way to *partition* the code and provided specific tools to smartly encrypt the parts in order to evade anti-virus softwares.
+> 💡 I used sections as the first class abstraction level for the source code. This allows me to smartly encrypt the content for evasion purposes.
 
 ## State of the Art ~ WhiteComet
 
@@ -84,21 +84,22 @@ void setup_payload(settings_t *settings)
 }
 ```
 
-As you can tell, the above malware is just a [reverse shell](https://fr.wikipedia.org/wiki/Reverse_shell) for now, but we could do more as you might expect.
+As you can tell, the malware that we want obfuscate is a [reverse shell](https://fr.wikipedia.org/wiki/Reverse_shell) for now, but we could do more.
 
 ## Improving the developper's environnment : my toolset library
 
-Since I am conducting this experiment on ELF files and need the program to rewrite itself, I managed to build a toolset library in order to find offsets in a binary, encrypt and decrypt data, implement custom algorithms... among others. The library will be opensource so one can easily port to other programs, debug and document.
+Since I am conducting this experiment on ELF files and need programs to rewrite themselves, an important part of my contribution is a toolset library, called `blackstar`, than enables to :
+- find offsets in a binary
+- encrypt and decrypt data
+- implement custom algorithms
 
-I used [this Makefile](https://github.com/bogdzn/blackstar/blob/main/lib/star/Makefile) to build the library. As you can see in the `PROD_FLAGS` variable, one can strip data from this binary file, and then compile it back easily with an unstripped program. The full [documentation](https://github.com/bogdzn/blackstar/tree/main/lib/star/docs) is generated with Doxygen.
+Also, the `blackstar` library will contain simple but usable encryption algorithms.
 
-## Playing with the ELF file format
+The library is meant to be opensource so anyone could easily port to other programs, debug or document. In following paragraphs, I am presenting the main features of the library. I will discuss the usage later in the post.
 
-Once our setup is done, we can start to build some useful functions.
+### bl_find_section : searching section by name
 
-### Searching sections by name
-
-The first one will be a function that will look for an ELF section using the section's name:
+This function will look for an ELF section using the section's name:
 
 ```c
 Elf64_Shdr *bl_find_section(void *hdr, char const *name)
@@ -125,11 +126,13 @@ Elf64_Shdr *bl_find_section(void *hdr, char const *name)
 }
 ```
 
-As you can see, we take a pointer named `hdr` as a parameter, which is the head of our whole binary file dumped into memory.
+The function takes a pointer `hdr` as a parameter, which is the head of our whole binary file dumped into memory.
 
-This means we will need a function to read our file:
+This means we will need a function to read our file.
 
-### Reading binary files
+### bl_read : reading binary files
+
+`bl_read` is used to read binary files
 
 ```c
 /**
@@ -168,12 +171,9 @@ blackstar_t *bl_read(char const *filepath)
 }
 ```
 
-In the code shown above, keen observers can see that we have saved the path to our binary file. We will need to rewrite our binary later on, after having encrypted our data.
+Keen observers can see that the path to the binary file is saved. This is because the binary file will be rewritten later on, after data encryption.
 
-Let's write a function for that as well :
-
-### Rewriting the encrypted data
-
+### bl_sync : rewriting the encrypted data
 
 ```c
 int bl_sync(blackstar_t *bstar)
@@ -195,11 +195,13 @@ int bl_sync(blackstar_t *bstar)
 }
 ```
 
-With this, we have our basic tools to do polymorphic ELF file handling. Now, we want to let the user set its own encryption algorithm, but we still want to provide some kind of wrapper to handle the complicated offset calculations and IO operations.
+`bl_sync`, `bl_read`, `bl_find_section` are my basic tools to do polymorphic ELF file handling.
+
+To let the user set its own encryption algorithm, the library provides some utilities that I am presenting below :
 
 ### Applying encryption
 
-To do this, we will offer a standard function pointer defined as follows :
+`bl_naive_crypter` will be the heart of our library. It finds the section to edit, read its content, then calls the crypter function.
 
 ```c
 /**
@@ -213,11 +215,7 @@ To do this, we will offer a standard function pointer defined as follows :
  * \param key_size key's length
  */
 typedef void (*crypter_t)(unsigned char *, size_t, char *, size_t);
-```
 
-Then, we can use it like so:
-
-```c
 /**
  * \fn void bl_naive_crypter(blackstar_t *bstar, const char *tname, const char *kname,
  crypter_t cr)
@@ -228,14 +226,13 @@ Then, we can use it like so:
  * \param kname key's section name
  * \param cr crypting function pointer
  */
+
 void bl_naive_crypter(blackstar_t *, const char *, const char *, crypter_t);
 ```
 
-This function will be the heart of our library. It will need to find the section to edit, read its content, then call the crypter function.
+For simplicity, the library also offers a standard function - `bl_encrypt_section` - to encrypt sections
 
-To simplify our code, we will also offer a standard function to encrypt our section:
-
-### Standard section encryption function
+### bl_encrypt_section : section encryption function
 
 ```c
 int bl_encrypt_section(blackstar_t *bstar, const char *code_sname,
@@ -276,7 +273,7 @@ const char *key_sname, const char *bool_sname, crypter_t crypter, char *key)
 
 ### Usage 
 
-To test our program, we can write a very simple program that will encrypt a section:
+The following lines of code explain how to use our library to write a very simple program that encrypts a section:
 
 ```c
 void encrypt_program(char const *binary_path, char *key,
