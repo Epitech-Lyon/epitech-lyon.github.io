@@ -25,13 +25,13 @@ The ELF format has been in used since 1999 -- in a lot of Unix-based systems, li
 
 ![ELF file format walkthrough](../assets/images/blackstar/elf_file_format.png "elf_file_format")
 
-As one can see from the image above, the executable is divided into *Sections* with different levels of permission. Sections are a very practical way to split, find, smartly encrypt compiled code and evade anti-virus softwares. Sections size can be queried using `size -dA`:
+As one can see from the image above, the executable is divided into *Sections* with different levels of permission. Sections are a very practical way to split, find, smartly encrypt compiled code and --- as you might have guessed --- evade anti-virus softwares. Sections size can be queried using `size -dA`:
 
 ![Demonstration of the size -dA command](../assets/images/blackstar/size_eval_expr.png "size -dA output")
 
-In my work, I used sections as the first class abstraction level for the source code. This allows me to smartly encrypt the content for evasion purposes.
+In my work, I used sections as the first abstraction level for the source code. This allows me to smartly encrypt the content for my evasion experiments.
 
-> 💡 I used sections as the first class abstraction level for the source code. This allows me to smartly encrypt the content for evasion purposes.
+> 💡 I used sections as the first abstraction level for the source code. This allows me to smartly encrypt the content for evasion purposes.
 
 ## State of the Art ~ WhiteComet
 
@@ -84,7 +84,7 @@ void setup_payload(settings_t *settings)
 }
 ```
 
-As you can tell, the malware that we want obfuscate is a [reverse shell](https://fr.wikipedia.org/wiki/Reverse_shell) for now, but we could do more.
+As you can tell, the malware that we want to obfuscate is a [reverse shell](https://fr.wikipedia.org/wiki/Reverse_shell) for now, but we could do more.
 
 ## Improving the developper's environnment : my toolset library
 
@@ -195,13 +195,13 @@ int bl_sync(blackstar_t *bstar)
 }
 ```
 
-`bl_sync`, `bl_read`, `bl_find_section` are my basic tools to do polymorphic ELF file handling.
+`bl_sync`, `bl_read`, `bl_find_section` are my basic tools for polymorphic ELF file handling.
 
-To let the user set its own encryption algorithm, the library provides some utilities that I am presenting below :
+To let the user set its own encryption algorithm, the library also provides some utilities -- `bl_naive_crypter`, `bl_encrypt_section`,  that I am presenting below :
 
 ### Applying encryption
 
-`bl_naive_crypter` will be the heart of our library. It finds the section to edit, read its content, then calls the crypter function.
+`bl_naive_crypter` will be the heart of our library. It finds the section to edit, read its content and calls the crypter function.
 
 ```c
 /**
@@ -230,7 +230,7 @@ typedef void (*crypter_t)(unsigned char *, size_t, char *, size_t);
 void bl_naive_crypter(blackstar_t *, const char *, const char *, crypter_t);
 ```
 
-For simplicity, the library also offers a standard function - `bl_encrypt_section` - to encrypt sections
+For simplicity, the library also offers a standard function - `bl_encrypt_section` - to encrypt sections.
 
 ### bl_encrypt_section : section encryption function
 
@@ -291,21 +291,19 @@ char *ksection, char *bsection, char *csection)
 }
 ```
 
-A limitation of this approach is that we will need to use an encryption method that goes both ways. Here, we use `XOR` encryption as the default encryption method because it allows us to use the same algorithm to encrypt and decrypt our compiled code.
+A limitation of this approach is that we will need to use an encryption method that goes both ways. For instance, here we use `XOR` encryption as the default encryption method because it allows us to use the same algorithm to encrypt and decrypt our compiled code.
 
-To improve this approach, one might want to use something else, as it is very easy to brute-force `XOR` -- by finding repeating offsets in the code for example.
+As a short-term improvement, one might want to use something else, as it is very easy to brute-force `XOR` (by finding reccurent offset patterns in the code for example). Oviously, we will need to think about a way to support more complicated encryption methods later on.
 
-This makes it almost usable, but we will need to think about a way to support more complicated encryption methods later on.
+### Testing our Polymorphic capabilites
 
-## Testing our Polymorphic capabilites
-
-We can try to compile, encrypt, then execute our program, and check the differences:
+Before going further, let's see how the encryption goes and how different the encrypted program is from the original one.
 
 ![testing polymorphism](../assets/images/blackstar/exec.png "Compiling and testing our program")
 
 ![diffs](../assets/images/blackstar/diffs.png "differences between our programs")
 
-It is worth mentionning that if we try to check our compiled version, it has by default its KEY section set to zeroes. However, when we decrypt our program, we create a new random key, so that the encryption key changes everytime we try to encrypt the program.
+It is worth mentionning that if we check our compiled version, we'll see that the KEY section is set to zeroes per default. However, when we decrypt our program, we create a new random key, so that the encryption key changes everytime we try to encrypt the program.
 
 Here is a diff showing the differences between a decrypted binary, and the one that was just compiled:
 
@@ -336,11 +334,11 @@ Here is a diff showing the differences between a decrypted binary, and the one t
 
 We can also see that the offset `78e8` is only filled with zeroes, because the program is decrypted. Indeed, it is the content of the `ELF_BOOL` section.
 
-## Improving the Malware
+## Beyond encryption
 
-Now that we have managed to encrypt and decrypt parts of our program, we can try to improve the program's capabilites. The first thing we can do is sending critical information to the user. This is a good test to see if we can easily add new data to obfuscate.
+Now that we have managed to encrypt and decrypt parts of our program, we can try a more challenging scenario : obfuscating a code that sends critical information to a user.
 
-Like before, we will mark our function with the `SECTION(ELF_CODE)` to specify it should be encrypted.
+Like before, we will mark our function with the `SECTION(ELF_CODE)` to specify that it should be encrypted.
 
 ```c
 SECTION(ELF_CODE)
