@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Obfuscating code in ELF binaries using sections"
+title:  "Introduction to Malware Obfuscation Using ELF Sections"
 author:
     - bogdan.guillemoles@epitech.eu
 categories: [ experience ]
@@ -9,7 +9,13 @@ published: true
 comments: false
 ---
 
-If you want to hide malicious code from Anti-Virus softwares, there is a wide array of techniques you can pick from. In this work, I tried to abuse a widely known feature of the **ELF** file format to encrypt some code, and then let the binary rewrite itself in order to decrypt the code I wanted to hide in the first place. My work is based on a [PoC's team project][1] which itself is inpired from a [whitepaper][2] that explains how to use **ELF**'s `SECTION`s to hide malicious code. In this post, I am going to introduce PoC's implementation approach and show off the improvements I have added for more genericity and scalability. I will also discuss some short-term perpectives for those who are interested in the subject. Feel free to fork my work and send me your feedbacks.
+If you want to hide malicious code from Anti-Virus softwares, there is a wide array of techniques you can pick from. 
+
+In this work, I tried to abuse a widely known feature of the **ELF** file format to encrypt some code, and then let the binary rewrite itself in order to decrypt the code I wanted to hide in the first place. 
+
+My work is based on a [PoC's team project][1] which itself is inpired from a [whitepaper][2] that explains how to use **ELF**'s **SECTION**s to hide malicious code.
+
+In this post, I am going to introduce PoC's implementation approach and show off the improvements I have added for more genericity and scalability. I will also discuss some short-term perpectives for those who are interested in the subject. Feel free to fork my work and send me your feedbacks.
 
 > 💥
 > The source code I am sharing here is only meant for research 
@@ -25,13 +31,13 @@ The ELF format has been in used since 1999 -- in a lot of Unix-based systems, li
 
 ![ELF file format walkthrough](../assets/images/blackstar/elf_file_format.png "elf_file_format")
 
-As one can see from the image above, the executable is divided into *Sections* with different levels of permission. Sections are a very practical way to split, find, smartly encrypt compiled code and --- as you might have guessed --- evade anti-virus softwares. Sections size can be queried using `size -dA`:
+As one can see from the image above, the executable is divided into *Sections* with different levels of permission. Sections are a very practical way to split, find, smartly encrypt compiled code and --- as you might have guessed --- evade anti-virus softwares. Sections size can be queried using `size -dA` (see the image below):
 
 ![Demonstration of the size -dA command](../assets/images/blackstar/size_eval_expr.png "size -dA output")
 
 In my work, I used sections as the first abstraction level for the source code. This allows me to smartly encrypt the content for my evasion experiments.
 
-> 💡 I used sections as the first abstraction level for the source code. This allows me to smartly encrypt the content for evasion purposes.
+> 💡 I used sections as the first abstraction level for the source code. This allows me to smartly encrypt the code content for evasion purposes.
 
 ## State of the Art ~ WhiteComet
 
@@ -41,7 +47,9 @@ As a Proof of Concept, WhiteComet works pretty well. It indeed demonstrates how 
 
 > 🗒 This project is based on a [whitepaper][2] which has been around since 2016.
 
-For instance, PoC's iplementation depends on [fixed-size values][3] -- which makes it hard to adapt or to scale. This is my main improvement axis for more genericity and scalability. In the following lines, I am going to expose concreteley how I processed and discuss the short-term perspectives.
+For instance, PoC's iplementation depends on [fixed-size values][3] which makes it hard to adapt or to scale -- this is my main improvement axis for more genericity and scalability.
+
+In the following lines, I am going to expose concreteley what I have done and discuss the short-term perspectives.
 
 ## Delimiting the Code into Sections
 
@@ -197,7 +205,7 @@ int bl_sync(blackstar_t *bstar)
 
 `bl_sync`, `bl_read`, `bl_find_section` are my basic tools for polymorphic ELF file handling.
 
-To let the user set its own encryption algorithm, the library also provides some utilities -- `bl_naive_crypter`, `bl_encrypt_section`,  that I am presenting below :
+To let the user set its own encryption algorithm, the library also provides some utilities -- `bl_naive_crypter`, `bl_encrypt_section` -- that I am presenting below :
 
 ### Applying encryption
 
