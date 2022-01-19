@@ -5,11 +5,11 @@ author:
     - bogdan.guillemoles@epitech.eu
 categories: [ experience ]
 image: assets/images/blackstar/poster.jpg
-published: false
+published: true
 comments: false
 ---
 
-If you want to hide malicious code from Anti-Virus softwares, there is a wide array of techniques you can pick from. In this work, I tried to abuse a widely known feature of the **ELF** file format to encrypt some code, and then let the binary rewrite itself in order to decrypt the code I wanted to hide in the first place. My work is based on a [PoC's team project](https://github.com/PocInnovation) which itself is inpired from a [whitepaper](http://papermint-designs.com/dmo-blog/2016-01-pocrypt-a-proof-of-concept-for-dynamically-decrypt-linux-binaries) that explains how to use **ELF**'s `SECTION`s to hide malicious code. In this post, I am going to introduce PoC's implementation approach and show off the improvements I have added for more genericity and scalability. I will also discuss some short-term perpectives for those who are interested in the subject. Feel free to fork my work and send me your feedbacks.
+If you want to hide malicious code from Anti-Virus softwares, there is a wide array of techniques you can pick from. In this work, I tried to abuse a widely known feature of the **ELF** file format to encrypt some code, and then let the binary rewrite itself in order to decrypt the code I wanted to hide in the first place. My work is based on a [PoC's team project][1] which itself is inpired from a [whitepaper][2] that explains how to use **ELF**'s `SECTION`s to hide malicious code. In this post, I am going to introduce PoC's implementation approach and show off the improvements I have added for more genericity and scalability. I will also discuss some short-term perpectives for those who are interested in the subject. Feel free to fork my work and send me your feedbacks.
 
 > 💥
 > The source code I am sharing here is only meant for research 
@@ -35,13 +35,13 @@ In my work, I used sections as the first abstraction level for the source code. 
 
 ## State of the Art ~ WhiteComet
 
-As I said above, this project is based on a [whitepaper](http://papermint-designs.com/dmo-blog/2016-01-pocrypt-a-proof-of-concept-for-dynamically-decrypt-linux-binaries) which has been around since 2016. [PoC](https://github.com/PocInnovation) has also done some research on the matter and shared some code -- that I partly used as a starting point for this project.
+As I said above, this project is based on a [whitepaper][2] which has been around since 2016. [PoC][1] has also done some research on the matter and shared some code -- that I partly used as a starting point for this project.
 
 As a Proof of Concept, WhiteComet works pretty well. It indeed demonstrates how to use ELF sections to hide malicious code. However, the implementation is not easy to replicate because of lacks of documentation and genericity.
 
-> 🗒 This project is based on a [whitepaper](http://papermint-designs.com/dmo-blog/2016-01-pocrypt-a-proof-of-concept-for-dynamically-decrypt-linux-binaries) which has been around since 2016.
+> 🗒 This project is based on a [whitepaper][2] which has been around since 2016.
 
-For instance, PoC's iplementation depends on [fixed-size values](https://github.com/PoCInnovation/Whitecomet-Research/blob/master/PolyMetamorphic/Linux-ELF/include/PoCrypt.h#L44) -- which makes it hard to adapt or to scale. This is my main improvement axis for more genericity and scalability. In the following lines, I am going to expose concreteley how I processed and discuss the short-term perspectives.
+For instance, PoC's iplementation depends on [fixed-size values][3] -- which makes it hard to adapt or to scale. This is my main improvement axis for more genericity and scalability. In the following lines, I am going to expose concreteley how I processed and discuss the short-term perspectives.
 
 ## Delimiting the Code into Sections
 
@@ -84,7 +84,7 @@ void setup_payload(settings_t *settings)
 }
 ```
 
-As you can tell, the malware that we want to obfuscate is a [reverse shell](https://fr.wikipedia.org/wiki/Reverse_shell) for now, but we could do more.
+As you can tell, the malware that we want to obfuscate is a [reverse shell][5] for now, but we could do more.
 
 ## Improving the developper's environnment : my toolset library
 
@@ -336,7 +336,7 @@ We can also see that the offset `78e8` is only filled with zeroes, because the p
 
 ## Beyond encryption
 
-Now that we have managed to encrypt and decrypt parts of our program, we can try a more challenging scenario : obfuscating a code that sends critical information to a user.
+Now that we have managed to encrypt and decrypt parts of our program, we can try a more challenging scenario : obfuscating a code that sends critical information to a hacker.
 
 Like before, we will mark our function with the `SECTION(ELF_CODE)` to specify that it should be encrypted.
 
@@ -376,11 +376,13 @@ void send_important_files(settings_t *s)
 
 and done ! Easy as that. If we recompile our program, and run our crypting method on it, we will find any part of the code in that section encrypted.
 
-Now, let's try to add a keylogger. A keylogger is a program that logs keystrokes from the user, without him knowning. This can be very useful if you want to get someone's password, for instance. But how do we do that ?
+Now, let's try to add a keylogger. 
 
-### Building a Key-Logger
+### Going further : Building a Key-Logger
 
-In Unix systems, everything is a file. Images, programs, directories, you name it. That means that device handlers are _also_ files, we just need to find where the file actually is. On most linux installations, it is located in `/dev/input/`
+A keylogger is a program that logs keystrokes from the user, without him knowning. This can be very useful if you want to get someone's password, for instance. But how do we do that ?
+
+In Unix systems, everything is a file - images, programs, directories, you name it. That means that device handlers are _also_ files, you just need to find where the file is if you want to use it. On most linux installations, it is located in `/dev/input/`
 
 !["/dev/input/by-path"](../assets/images/blackstar/keyboard_fd.png "location of device handlers")
 
@@ -422,25 +424,22 @@ int *get_keyboards_fds(int *nb_fd)
 }
 ```
 
-As you can see from here, we return an array of file descriptors, incrementing `nb_fd` when we find a new file descriptor. This will be useful if we have multiple keyboards plugged to the computer.
+As you can see from here, `get_keyboards_fds` return an array of file descriptors, incrementing `nb_fd` when it finds a new file descriptor. This will be useful if several keyboards are plugged to the computer.
 
-We will use `select` to check if a keyboard has been used in the last seconds, and then just simply read it as if it was a file.
-
-### Simple debugger evasion
-
-We can also build a [simple function](https://github.com/bogdzn/blackstar/blob/main/sources/setup.c#L85) that will set-up all of our anti-debugging.
-
-Here, you can see showcased a simple technique, where we look inside `/proc/self/status`, and look for a valid `TracerPid`. This technique is quite effective, until the researcher tries to disassemble the program and remove the call to this function.
-
-![debuggerisattached()](../assets/images/blackstar/debugger.png "function to find any debuggers")
+I used `select` to check if a keyboard has been recently used, and then just simply read it as if it was a file.
 
 ## Final thoughts
 
-This project was quite interesting, mainly to learn in depth how ELF files work, and how we can do funny things with them. However, I still don't think this technique is usable at scale - research has been improved though, and somebody will hopefully iterate over the work I have done to improve this solution.
+This project was quite interesting, mainly to learn in depth how ELF files work, and how we can do *funny* things with them. The tools I have presented above might not be usable at scale but are easily improvable and scalable.
 
 An interesting approach would be to build a custom Binary Packer using this library. Packing a program is a much more common practice for malware distribution and mitigation.
 
 > 👷 An interesting approach would be to build a custom Binary Packer using this library. Packing a program is a much more common practice for malware distribution and mitigation.
 
-The most well-known packer for Linux and Windows programs is the UPX packer, but it does not allow programs to rewrite themselves, like we currently do. This should be an interesting problem to solve.
+The most well-known packer for Linux and Windows programs is the [UPX packer][4], but it does not allow programs to rewrite themselves, like we currently do. This should be an interesting problem to solve.
 
+[1]: (https://github.com/PocInnovation)
+[2]: (http://papermint-designs.com/dmo-blog/2016-01-pocrypt-a-proof-of-concept-for-dynamically-decrypt-linux-binaries)
+[3]: (https://github.com/PoCInnovation/Whitecomet-Research/blob/master/PolyMetamorphic/Linux-ELF/include/PoCrypt.h#L44)
+[4]: https://upx.github.io/
+[5]: (https://fr.wikipedia.org/wiki/Reverse_shell)
