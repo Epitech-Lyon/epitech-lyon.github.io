@@ -6,6 +6,7 @@ author:
 categories: [ experience ]
 image: assets/images/blackstar/poster.jpg
 published: false
+featured: true
 comments: false
 ---
 

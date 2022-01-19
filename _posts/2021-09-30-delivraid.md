@@ -9,7 +9,7 @@ categories: [ hubproject ]
 image: assets/images/delivraid/poster.png
 published: true
 comments: false
-featured: true
+featured: false
 ---  
 
 Delivr’aide est un projet de l’association *l’Equipage Solidaire*[^eqp] ayant pour but d’aider les étudiants en situation de précarité, avec des kits alimentaires ou de première nécessité, en les livrant directement à domicile. 
