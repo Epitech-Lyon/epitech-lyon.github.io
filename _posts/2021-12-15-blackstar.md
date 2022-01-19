@@ -1,16 +1,21 @@
 ---
 layout: post
-title:  "Obfuscating code in ELF binaries using sections"
+title:  "Introduction to Malware Obfuscation Using ELF Sections"
 author:
     - bogdan.guillemoles@epitech.eu
 categories: [ experience ]
 image: assets/images/blackstar/poster.jpg
 published: true
-featured: true
 comments: false
 ---
 
-If you want to hide malicious code from Anti-Virus softwares, there is a wide array of techniques you can pick from. In this work, I tried to abuse a widely known feature of the **ELF** file format to encrypt some code, and then let the binary rewrite itself in order to decrypt the code I wanted to hide in the first place. My work is based on a [PoC's team project](https://github.com/PocInnovation) which itself is inpired from a [whitepaper](http://papermint-designs.com/dmo-blog/2016-01-pocrypt-a-proof-of-concept-for-dynamically-decrypt-linux-binaries) that explains how to use **ELF**'s `SECTION`s to hide malicious code. In this post, I am going to introduce PoC's implementation approach and show off the improvements I have added for more genericity and scalability. I will also discuss some short-term perpectives for those who are interested in the subject. Feel free to fork my work and send me your feedbacks.
+If you want to hide malicious code from Anti-Virus softwares, there is a wide array of techniques you can pick from. 
+
+In this work, I tried to abuse a widely known feature of the **ELF** file format to encrypt some code, and then let the binary rewrite itself in order to decrypt the code I wanted to hide in the first place. 
+
+My work is based on a [PoC's team project][1] which itself is inpired from a [whitepaper][2] that explains how to use **ELF**'s **SECTION**s to hide malicious code.
+
+In this post, I am going to introduce PoC's implementation approach and show off the improvements I have added for more genericity and scalability. I will also discuss some short-term perpectives for those who are interested in the subject. Feel free to fork my work and send me your feedbacks.
 
 > 💥
 > The source code I am sharing here is only meant for research 
@@ -26,23 +31,25 @@ The ELF format has been in used since 1999 -- in a lot of Unix-based systems, li
 
 ![ELF file format walkthrough](../assets/images/blackstar/elf_file_format.png "elf_file_format")
 
-As one can see from the image above, the executable is divided into *Sections* with different levels of permission. Sections are a very practical way to split, find, smartly encrypt compiled code and evade anti-virus softwares. Sections size can be queried using `size -dA`:
+As one can see from the image above, the executable is divided into *Sections* with different levels of permission. Sections are a very practical way to split, find, smartly encrypt compiled code and --- as you might have guessed --- evade anti-virus softwares. Sections size can be queried using `size -dA` (see the image below):
 
 ![Demonstration of the size -dA command](../assets/images/blackstar/size_eval_expr.png "size -dA output")
 
-In my work, I used sections as the first class abstraction level for the source code. This allows me to smartly encrypt the content for evasion purposes.
+In my work, I used sections as the first abstraction level for the source code. This allows me to smartly encrypt the content for my evasion experiments.
 
-> 💡 I used sections as the first class abstraction level for the source code. This allows me to smartly encrypt the content for evasion purposes.
+> 💡 I used sections as the first abstraction level for the source code. This allows me to smartly encrypt the code content for evasion purposes.
 
 ## State of the Art ~ WhiteComet
 
-As I said above, this project is based on a [whitepaper](http://papermint-designs.com/dmo-blog/2016-01-pocrypt-a-proof-of-concept-for-dynamically-decrypt-linux-binaries) which has been around since 2016. [PoC](https://github.com/PocInnovation) has also done some research on the matter and shared some code -- that I partly used as a starting point for this project.
+As I said above, this project is based on a [whitepaper][2] which has been around since 2016. [PoC][1] has also done some research on the matter and shared some code -- that I partly used as a starting point for this project.
 
 As a Proof of Concept, WhiteComet works pretty well. It indeed demonstrates how to use ELF sections to hide malicious code. However, the implementation is not easy to replicate because of lacks of documentation and genericity.
 
-> 🗒 This project is based on a [whitepaper](http://papermint-designs.com/dmo-blog/2016-01-pocrypt-a-proof-of-concept-for-dynamically-decrypt-linux-binaries) which has been around since 2016.
+> 🗒 This project is based on a [whitepaper][2] which has been around since 2016.
 
-For instance, PoC's iplementation depends on [fixed-size values](https://github.com/PoCInnovation/Whitecomet-Research/blob/master/PolyMetamorphic/Linux-ELF/include/PoCrypt.h#L44) -- which makes it hard to adapt or to scale. This is my main improvement axis for more genericity and scalability. In the following lines, I am going to expose concreteley how I processed and discuss the short-term perspectives.
+For instance, PoC's iplementation depends on [fixed-size values][3] which makes it hard to adapt or to scale -- this is my main improvement axis for more genericity and scalability.
+
+In the following lines, I am going to expose concreteley what I have done and discuss the short-term perspectives.
 
 ## Delimiting the Code into Sections
 
@@ -85,7 +92,7 @@ void setup_payload(settings_t *settings)
 }
 ```
 
-As you can tell, the malware that we want obfuscate is a [reverse shell](https://fr.wikipedia.org/wiki/Reverse_shell) for now, but we could do more.
+As you can tell, the malware that we want to obfuscate is a [reverse shell][5] for now, but we could do more.
 
 ## Improving the developper's environnment : my toolset library
 
@@ -196,13 +203,13 @@ int bl_sync(blackstar_t *bstar)
 }
 ```
 
-`bl_sync`, `bl_read`, `bl_find_section` are my basic tools to do polymorphic ELF file handling.
+`bl_sync`, `bl_read`, `bl_find_section` are my basic tools for polymorphic ELF file handling.
 
-To let the user set its own encryption algorithm, the library provides some utilities that I am presenting below :
+To let the user set its own encryption algorithm, the library also provides some utilities -- `bl_naive_crypter`, `bl_encrypt_section` -- that I am presenting below :
 
 ### Applying encryption
 
-`bl_naive_crypter` will be the heart of our library. It finds the section to edit, read its content, then calls the crypter function.
+`bl_naive_crypter` will be the heart of our library. It finds the section to edit, read its content and calls the crypter function.
 
 ```c
 /**
@@ -231,7 +238,7 @@ typedef void (*crypter_t)(unsigned char *, size_t, char *, size_t);
 void bl_naive_crypter(blackstar_t *, const char *, const char *, crypter_t);
 ```
 
-For simplicity, the library also offers a standard function - `bl_encrypt_section` - to encrypt sections
+For simplicity, the library also offers a standard function - `bl_encrypt_section` - to encrypt sections.
 
 ### bl_encrypt_section : section encryption function
 
@@ -292,21 +299,19 @@ char *ksection, char *bsection, char *csection)
 }
 ```
 
-A limitation of this approach is that we will need to use an encryption method that goes both ways. Here, we use `XOR` encryption as the default encryption method because it allows us to use the same algorithm to encrypt and decrypt our compiled code.
+A limitation of this approach is that we will need to use an encryption method that goes both ways. For instance, here we use `XOR` encryption as the default encryption method because it allows us to use the same algorithm to encrypt and decrypt our compiled code.
 
-To improve this approach, one might want to use something else, as it is very easy to brute-force `XOR` -- by finding repeating offsets in the code for example.
+As a short-term improvement, one might want to use something else, as it is very easy to brute-force `XOR` (by finding reccurent offset patterns in the code for example). Oviously, we will need to think about a way to support more complicated encryption methods later on.
 
-This makes it almost usable, but we will need to think about a way to support more complicated encryption methods later on.
+### Testing our Polymorphic capabilites
 
-## Testing our Polymorphic capabilites
-
-We can try to compile, encrypt, then execute our program, and check the differences:
+Before going further, let's see how the encryption goes and how different the encrypted program is from the original one.
 
 ![testing polymorphism](../assets/images/blackstar/exec.png "Compiling and testing our program")
 
 ![diffs](../assets/images/blackstar/diffs.png "differences between our programs")
 
-It is worth mentionning that if we try to check our compiled version, it has by default its KEY section set to zeroes. However, when we decrypt our program, we create a new random key, so that the encryption key changes everytime we try to encrypt the program.
+It is worth mentionning that if we check our compiled version, we'll see that the KEY section is set to zeroes per default. However, when we decrypt our program, we create a new random key, so that the encryption key changes everytime we try to encrypt the program.
 
 Here is a diff showing the differences between a decrypted binary, and the one that was just compiled:
 
@@ -337,11 +342,11 @@ Here is a diff showing the differences between a decrypted binary, and the one t
 
 We can also see that the offset `78e8` is only filled with zeroes, because the program is decrypted. Indeed, it is the content of the `ELF_BOOL` section.
 
-## Improving the Malware
+## Beyond encryption
 
-Now that we have managed to encrypt and decrypt parts of our program, we can try to improve the program's capabilites. The first thing we can do is sending critical information to the user. This is a good test to see if we can easily add new data to obfuscate.
+Now that we have managed to encrypt and decrypt parts of our program, we can try a more challenging scenario : obfuscating a code that sends critical information to a hacker.
 
-Like before, we will mark our function with the `SECTION(ELF_CODE)` to specify it should be encrypted.
+Like before, we will mark our function with the `SECTION(ELF_CODE)` to specify that it should be encrypted.
 
 ```c
 SECTION(ELF_CODE)
@@ -379,11 +384,13 @@ void send_important_files(settings_t *s)
 
 and done ! Easy as that. If we recompile our program, and run our crypting method on it, we will find any part of the code in that section encrypted.
 
-Now, let's try to add a keylogger. A keylogger is a program that logs keystrokes from the user, without him knowning. This can be very useful if you want to get someone's password, for instance. But how do we do that ?
+Now, let's try to add a keylogger. 
 
-### Building a Key-Logger
+### Going further : Building a Key-Logger
 
-In Unix systems, everything is a file. Images, programs, directories, you name it. That means that device handlers are _also_ files, we just need to find where the file actually is. On most linux installations, it is located in `/dev/input/`
+A keylogger is a program that logs keystrokes from the user, without him knowning. This can be very useful if you want to get someone's password, for instance. But how do we do that ?
+
+In Unix systems, everything is a file - images, programs, directories, you name it. That means that device handlers are _also_ files, you just need to find where the file is if you want to use it. On most linux installations, it is located in `/dev/input/`
 
 !["/dev/input/by-path"](../assets/images/blackstar/keyboard_fd.png "location of device handlers")
 
@@ -425,25 +432,22 @@ int *get_keyboards_fds(int *nb_fd)
 }
 ```
 
-As you can see from here, we return an array of file descriptors, incrementing `nb_fd` when we find a new file descriptor. This will be useful if we have multiple keyboards plugged to the computer.
+As you can see from here, `get_keyboards_fds` return an array of file descriptors, incrementing `nb_fd` when it finds a new file descriptor. This will be useful if several keyboards are plugged to the computer.
 
-We will use `select` to check if a keyboard has been used in the last seconds, and then just simply read it as if it was a file.
-
-### Simple debugger evasion
-
-We can also build a [simple function](https://github.com/bogdzn/blackstar/blob/main/sources/setup.c#L85) that will set-up all of our anti-debugging.
-
-Here, you can see showcased a simple technique, where we look inside `/proc/self/status`, and look for a valid `TracerPid`. This technique is quite effective, until the researcher tries to disassemble the program and remove the call to this function.
-
-![debuggerisattached()](../assets/images/blackstar/debugger.png "function to find any debuggers")
+I used `select` to check if a keyboard has been recently used, and then just simply read it as if it was a file.
 
 ## Final thoughts
 
-This project was quite interesting, mainly to learn in depth how ELF files work, and how we can do funny things with them. However, I still don't think this technique is usable at scale - research has been improved though, and somebody will hopefully iterate over the work I have done to improve this solution.
+This project was quite interesting, mainly to learn in depth how ELF files work, and how we can do *funny* things with them. The tools I have presented above might not be usable at scale but are easily improvable and scalable.
 
 An interesting approach would be to build a custom Binary Packer using this library. Packing a program is a much more common practice for malware distribution and mitigation.
 
 > 👷 An interesting approach would be to build a custom Binary Packer using this library. Packing a program is a much more common practice for malware distribution and mitigation.
 
-The most well-known packer for Linux and Windows programs is the UPX packer, but it does not allow programs to rewrite themselves, like we currently do. This should be an interesting problem to solve.
+The most well-known packer for Linux and Windows programs is the [UPX packer][4], but it does not allow programs to rewrite themselves, like we currently do. This should be an interesting problem to solve.
 
+[1]: (https://github.com/PocInnovation)
+[2]: (http://papermint-designs.com/dmo-blog/2016-01-pocrypt-a-proof-of-concept-for-dynamically-decrypt-linux-binaries)
+[3]: (https://github.com/PoCInnovation/Whitecomet-Research/blob/master/PolyMetamorphic/Linux-ELF/include/PoCrypt.h#L44)
+[4]: https://upx.github.io/
+[5]: (https://fr.wikipedia.org/wiki/Reverse_shell)
