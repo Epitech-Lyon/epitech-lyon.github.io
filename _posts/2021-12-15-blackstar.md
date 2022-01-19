@@ -5,7 +5,7 @@ author:
     - bogdan.guillemoles@epitech.eu
 categories: [ experience ]
 image: assets/images/blackstar/poster.jpg
-published: false
+published: true
 featured: true
 comments: false
 ---
