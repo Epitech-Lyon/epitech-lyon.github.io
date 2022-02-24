@@ -302,7 +302,7 @@ char *ksection, char *bsection, char *csection)
 
 A limitation of this approach is that we will need to use an encryption method that goes both ways. For instance, here we use `XOR` encryption as the default encryption method because it allows us to use the same algorithm to encrypt and decrypt our compiled code.
 
-As a short-term improvement, one might want to use something else, as it is very easy to brute-force `XOR` (by finding reccurent offset patterns in the code for example). Oviously, we will need to think about a way to support more complicated encryption methods later on.
+As a short-term improvement, one might want to use something else, as it is very easy to brute-force `XOR` (by finding reccurent offset patterns in the code for example). Obviously, we will need to think about a way to support more complicated encryption methods later on.
 
 ### Testing our Polymorphic capabilites
 
