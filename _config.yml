@@ -271,8 +271,14 @@ authors:
     web: https://www.linkedin.com/in/romain-b-9937ba19b/
     linkedin: https://www.linkedin.com/in/romain-b-9937ba19b/
     description: "Romain est de la promotion 2024 d'Epitech (Lyon). Il est passionné de Back-End, d'Intelligence Artificielle et et de DevOps"
-  
-  
+  paul.gelas@epitech.eu:
+    name: Paul Gelas
+    display_name: Paul G.
+    email: paul.gelas@epitech.eu
+    web: https://www.linkedin.com/in/paul-gelas-14511b153/
+    linkedin: https://www.linkedin.com/in/paul-gelas-14511b153/
+    description: "Paul est une étudiant en 4 année d'Epitech. Passionné de calcul GPGPU, il s'en sert pour le développement de modèles d'Intelligence Artificielle performants"
+    
 # Plugins
 plugins:
   - jekyll-paginate
