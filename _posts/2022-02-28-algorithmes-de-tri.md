@@ -10,20 +10,20 @@ published: true
 comments: false
 ---
 
-In computer science, arranging elements in an ordered sequence is called "sorting". It is a very a common operation in many applications and efficient algorithms to perform it have been developed.
+In computer science, arranging elements in an ordered sequence is called "sorting". It is a very a common operation in many applications and efficient algorithmshave been developed to perform it.
 
 The most common uses of sorted sequences are :
 - making lookup or search efficient.
 - making merging of sequences efficient.
-- enable processing of data in a defined order.
+- enabling processing of data in a defined order.
 
 For example, you might want to give priority to people who have been customers the longest, but also to people who have spent a lot of money or even to people who bought something yesterday. So you have to sort them by different criteria. Sorting is very critical for information systems performance, since it is quicker to find an element in an ordered list than in an unordered one. 
 
 This article discusses sorting strategies and explains how to evaluate the performances of the corresponding algorithms.
 
-## What does a sorting algorithm depend on ?
+## What does a sorting algorithm depend on?
 
-A sorting algorithm depends on two factors : Time complexity and Space complexity. We can also talk about the stability of the algorithm.
+A sorting algorithm depends on two factors : time complexity and space complexity. We can also talk about the stability of the algorithm.
 
 *Time complexity* is the computational complexity that describes the amount of computer time it takes to run an algorithm. For example, `O(log N)` means time goes up linearly while the `N` goes up exponentially. So if it takes 1 second to compute 10 elements, it will take 2 seconds to compute 100 elements, 3 seconds to compute 1000 elements, and so on. *Space complexity* measures the total amount of memory that an algorithm or operation needs to run according to its input size.
 
@@ -31,7 +31,7 @@ The *stability* of a sorting algorithm is concerned with how the algorithm treat
 
 ## Sorting algorithm evaluation
 
-We tested different sorting algorithms in order to discuss the fastest ones and to explain their principles. We have implemented 6 different algorithms.
+We tested different sorting algorithms in order to discuss  about the fastest ones and to explain their main principles. We have implemented 6 different algorithms.
 
 ### Selection Sort
 
@@ -59,7 +59,7 @@ def selectionSort(tab):
 
 ### Insertion Sort
 
-For this algorithm we assume that the first element is already sorted then we take another element and we compare it to the first one. If it’s greater than the sorted element we place it to the right, otherwise, to the left.
+For this algorithm, we assume that the first element is already sorted, then we take another element and we compare it to the first one. If it’s greater than the sorted element we place it to the right, otherwise, to the left.
 
 ```python
 def insertionSort(tab):
@@ -108,7 +108,7 @@ def bubbleSort(tab):
 
 ## Quick Sort
 
-For this one we will divide the list by using a pivot element. This pivot element should always be positioned in a way that elements to the left are less than the pivot and elements to the right are greater than the pivot. We obtained sublists and those sublists are also divided until we have sublists of one element. After that we can recombine sublists into one.
+For this one we will divide the list by using a pivot element. This pivot element should always be positioned in a way that elements to the left are smaller than the pivot and elements to the right are bigger than the pivot. We obtained sublists and those sublists are also divided until we have sublists of one element. After that we can recombine sublists into one.
 
 ```python
 def partition(tab):
@@ -182,9 +182,7 @@ def mergeSort(tab):
 
 ### Shell Sort
 
-It’s a generalized version of the insertion sort we saw earlier. It sorts groups of elements that are far away from them. then it sorts the groups. The interval between elements can be specified by the sequence used. For example: 
-- Shell’s original sequence is : n / 2, n / 4, ..., 1 
-- Knuth’s original sequence is: 1, 4, 13, ..., (3k - 1) / 2 
+It’s a generalized version of the insertion sort we saw earlier. It sorts groups of elements that are far away from each other. The [idea][11] is to arrange the list of elements so that, starting anywhere, taking every hth element produces a sorted list --- such a list is said to be h-sorted. 
 
 ```python
 def shellSort(n, array):
@@ -211,7 +209,7 @@ def shellSort(n, array):
 | **Stability**               | No            |
 
 
-## Method 
+## Evaluation 
 
 For this experiment we use python for testing the algorithms. We take a list of 5 000 numbers and try to sort them 10 times to see their stability and make a mean of the time it takes to sort (the list is always the same and the order of elements isn’t changed between each test). 
 
@@ -250,3 +248,4 @@ We noted the average time of each algorithm in seconds:
 [8]: https://betterexplained.com/articles/sorting-algorithms/ 
 [9]: http://lwh.free.fr/pages/algo/tri/tri.htm 
 [10]: https://www.jesuisundev.com/comprendre-les-algorithmes-de-tri-en-7-minutes/ 
+[11]: https://en.wikipedia.org/wiki/Shellsort
