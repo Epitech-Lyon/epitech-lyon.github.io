@@ -271,6 +271,20 @@ authors:
     web: https://www.linkedin.com/in/romain-b-9937ba19b/
     linkedin: https://www.linkedin.com/in/romain-b-9937ba19b/
     description: "Romain est de la promotion 2024 d'Epitech (Lyon). Il est passionné de Back-End, d'Intelligence Artificielle et et de DevOps"
+  basile.seroul@epitech.eu:
+    name: Basile Seroul
+    display_name: Basile S.
+    email: basile.seroul@epitech.eu
+    web: https://www.linkedin.com/in/basile-seroul-6a74961a3/
+    linkedin: https://www.linkedin.com/in/basile-seroul-6a74961a3/
+    description: "Basile est de la promotion 2024 d'Epitech (Lyon). Il est passionné par la programmation Web et l'intelligence artificielle"
+  adrien.michaud@epitech.eu:
+    name: Adrien Michaud
+    display_name: Adrien M.
+    email: adrien.michaud@epitech.eu
+    web: https://www.linkedin.com/in/adrien-michaud-8327a41a0/
+    linkedin: https://www.linkedin.com/in/adrien-michaud-8327a41a0/
+    description: "Adrien est de la promotion 2024 d'Epitech (Lyon). Il est passionné par la technologie Python et la programmation de jeux video"
   
   
 # Plugins

@@ -27,7 +27,7 @@ A sorting algorithm depends on two factors : time complexity and space complexit
 
 *Time complexity* is the computational complexity that describes the amount of computer time it takes to run an algorithm. For example, `O(log N)` means time goes up linearly while the `N` goes up exponentially. So if it takes 1 second to compute 10 elements, it will take 2 seconds to compute 100 elements, 3 seconds to compute 1000 elements, and so on. *Space complexity* measures the total amount of memory that an algorithm or operation needs to run according to its input size.
 
-The *stability* of a sorting algorithm is concerned with how the algorithm treats equal (or repeated) elements. Stable sorting algorithms preserve the relative order of equal elements, while unstable sorting algorithms don’t. 
+The *stability* of a sorting algorithm depends on how the algorithm treats equal (or repeated) elements. Stable sorting algorithms preserve the relative order of equal elements, while unstable sorting algorithms don’t. 
 
 ## Sorting algorithm evaluation
 
@@ -49,13 +49,17 @@ def selectionSort(tab):
 ```
 
 | *Selection Sort Complexity* |        |
-|-----------------------------|--------|
+|:----------------------------|-------:|
 | Time Complexity             |        |
 | Best                        | O(n²)  |
 | Worst                       | O(n²)  |
 | Average                     | O(n²)  |
 | **Space Complexity**        | O(1)   |
 | **Stability**               | No     |
+|----
+{: rules="groups"}
+
+<br>
 
 ### Insertion Sort
 
@@ -82,6 +86,10 @@ def insertionSort(tab):
 | Average                     | O(n²)  |
 | **Space Complexity**        | O(1)   |
 | **Stability**               | Yes    |
+|----
+{: rules="groups"}
+
+<br>
 
 ### Bubble Sort
 
@@ -105,6 +113,10 @@ def bubbleSort(tab):
 | Average                     | O(n²)  |
 | **Space Complexity**        | O(1)   |
 | **Stability**               | Yes    |
+|----
+{: rules="groups"}
+
+<br>
 
 ## Quick Sort
 
@@ -136,6 +148,10 @@ def quickSort(tab):
 | Average                     | O(n*log n)    |
 | **Space Complexity**        | O(log n)      |
 | **Stability**               | No            |
+|----
+{: rules="groups"}
+
+<br>
 
 ### Merge Sort
 
@@ -179,6 +195,10 @@ def mergeSort(tab):
 | Average                     | O(n*log n)    |
 | **Space Complexity**        | O(n)          |
 | **Stability**               | Yes           |
+|----
+{: rules="groups"}
+
+<br>
 
 ### Shell Sort
 
@@ -207,6 +227,10 @@ def shellSort(n, array):
 | Average                     | O(nlog n)     |
 | **Space Complexity**        | O(1)          |
 | **Stability**               | No            |
+|----
+{: rules="groups"}
+
+<br>
 
 
 ## Evaluation 
