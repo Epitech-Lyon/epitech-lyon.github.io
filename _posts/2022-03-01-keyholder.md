@@ -57,7 +57,7 @@ The core part of the game was made in Saturday. From the beginning, we cared **a
 ![Keyholder on Saturday afternoon]({{ site.baseurl }}/assets/images/keyholder/z8ev36d.jpg)
 <small> Fig 1. </small>
 
-The character always emits blue light that travels very far and creates big shadows on the pillar, so that the player can know its position without even looking at it. The key and the door are the only yellow elements, clearly stating both of the objectives. The key emits a strong yellow light that loses its power and stability as the key loses health. (see Fig. 1)
+The character always emits blue light that travels very far and creates big shadows on the pillar, so that the player can know its position without even looking at it. The key and the door are the only yellow elements, clearly stating both of the objectives. The key emits a strong yellow light that loses its power and stability as the key loses health (see Fig. 1).
 
 The door starts almost completely transparent, and slowly fades in, emitting more and more light until it becomes really bright and a white beam of light comes out of it, announcing the end of the level. We also completed some of the base mechanics: the player can move and shoot, carrying the key. The enemies can die *and* steal the key from the player.
 
@@ -69,7 +69,7 @@ For now though, there is no way to win the level and the player and enemies are 
 <small> Fig 2. </small>
 
 On this last day, we implemented a way to win, and added 2 more levels.
-We also added graphics for the player, the enemy, and the portal they come out of. The enemies also now have a purple aura around them to make them easier to spot. (see Fig. 2)
+We also added graphics for the player, the enemy, and the portal they come out of. The enemies also now have a purple aura around them to make them easier to spot (see Fig. 2). 
 
 We worked on some feedback features, like screenshake when you shoot and kill an enemy, a slight movement of the camera following the mouse, and of course **sound and music**!
 
@@ -85,6 +85,7 @@ Yay! The game is now challenging. But sadly there are only 3 levels, so it's pre
 Worry not, we added an endless mode! This mode features only one level, but with no door. The only goal is to keep the key intact for as long as possible. A score counter was added for everyone to flex their g@mer skills with proof.
 
 ### Please try our game!
+
 If you'd like to download our entry, please go to our itch.io page! Do not hesitate to give us your feedback on Itch as well.
 
 Itch :  [click here to play][1]
@@ -96,16 +97,16 @@ We made every choice consciously while taking care not to reproduce past mistake
 
 ## References
 
-- [Godo Engine Official Website][1]
-- [https://github.com/Spacelenin][2]
-- [https://github.com/Gr1moire][3]
-- [https://github.com/Imnibis][4]
 - [https://github.com/STMiki][5]
-- [https://github.com/DorianCollin][6]
+- [https://github.com/Imnibis][4]
 - [https://github.com/matmansn][7]
+- [https://github.com/Gr1moire][3]
+- [https://sfconservancy.org/][12]
+- [Godot Engine Official Website][1]
+- [https://github.com/Spacelenin][2]
+- [https://github.com/DorianCollin][6]
 - [https://github.com/LorienEpitech][8]
 - [https://galerianstudio.itch.io/keyholder][9]
-- [https://sfconservancy.org/][12]
 
 
 [1]: https://godotengine.org/
@@ -117,6 +118,7 @@ We made every choice consciously while taking care not to reproduce past mistake
 [7]: https://github.com/matmansn
 [8]: https://github.com/LorienEpitech
 [9]: https://galerianstudio.itch.io/keyholder
+
 [10]: https://github.com/godotengine/godot
 [11]: https://godotengine.org/license
 [12]: https://sfconservancy.org/
