@@ -10,26 +10,28 @@ published: true
 comments: false
 ---
 
-Today, companies are facing the problem of trying to sort a height list of elements quickly. But first, what is sorting and why is it important ? In computer science, arranging in an ordered sequence is called "sorting". Sorting is a common operation in many applications, and efficient algorithms to perform it have been developed.
+In computer science, arranging elements in an ordered sequence is called "sorting". It is a very a common operation in many applications and efficient algorithms to perform it have been developed.
 
-The most common uses of sorted sequences are: 
+The most common uses of sorted sequences are :
 - making lookup or search efficient.
 - making merging of sequences efficient.
-- enable processing of data in a defined order. 
+- enable processing of data in a defined order.
 
-For example, you might want to give priority to people who have been customers the longest, but also to people who have spent a lot of money or even to people who bought something yesterday. So you have to sort them by different criteria. Sorting is also important in performance of algorithms, it can be easier to find an element in an ordered list than in an unordered one. 
+For example, you might want to give priority to people who have been customers the longest, but also to people who have spent a lot of money or even to people who bought something yesterday. So you have to sort them by different criteria. Sorting is very critical for information systems performance, since it is quicker to find an element in an ordered list than in an unordered one. 
+
+This article discusses sorting strategies and explains how to evaluate the performances of the corresponding algorithms.
 
 ## What does a sorting algorithm depend on ?
 
-A sorting algorithm depends on two factors : Time complexity and Space complexity. We can also talk about the stability of the algorithm. Time complexity is the computational complexity that describes the amount of computer time it takes to run an algorithm. For example, O(log N) means time goes up linearly while the N goes up exponentially. So if it takes 1 second to compute 10 elements, it will take 2 seconds to compute 100 elements, 3 seconds to compute 1000 elements, and so on.
+A sorting algorithm depends on two factors : Time complexity and Space complexity. We can also talk about the stability of the algorithm.
 
-Space complexity measures the total amount of memory that an algorithm or operation needs to run according to its input size.
+*Time complexity* is the computational complexity that describes the amount of computer time it takes to run an algorithm. For example, `O(log N)` means time goes up linearly while the `N` goes up exponentially. So if it takes 1 second to compute 10 elements, it will take 2 seconds to compute 100 elements, 3 seconds to compute 1000 elements, and so on. *Space complexity* measures the total amount of memory that an algorithm or operation needs to run according to its input size.
 
-The stability of a sorting algorithm is concerned with how the algorithm treats equal (or repeated) elements. Stable sorting algorithms preserve the relative order of equal elements, while unstable sorting algorithms don’t. 
+The *stability* of a sorting algorithm is concerned with how the algorithm treats equal (or repeated) elements. Stable sorting algorithms preserve the relative order of equal elements, while unstable sorting algorithms don’t. 
 
 ## Sorting algorithm evaluation
 
-We tested different sorting algorithms in order to find the fastest one and to explain their principles. We have implemented 6 different algorithms: 
+We tested different sorting algorithms in order to discuss the fastest ones and to explain their principles. We have implemented 6 different algorithms.
 
 ### Selection Sort
 
