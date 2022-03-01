@@ -26,7 +26,6 @@ To this day we have a year of experience with the engine and making 2D games, an
  
 If you'd like to try Godot yourself, you can download it from its [official website][1].
 
-
 ## The team
 
 Our team, Galerian Studio, fluctuates between 3 to 7 members depending on the project.
@@ -39,7 +38,6 @@ For this one, we were 7, namely:
 - [Dorian Collin][6]
 - [Mathis Clanche][7]
 - [Lorien Remy][8]
-
 
 ## Development process
 
