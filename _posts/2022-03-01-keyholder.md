@@ -8,6 +8,7 @@ categories: [ experience ]
 image: assets/images/keyholder/poster.png
 published: true
 comments: false
+featured: true
 ---
 
 **Keyholder** was made during the weekend from February the 11th to the 13th of 2022, for an Epitech Jam which is sort of a contest where you have to produce a game or a software fitting an imposed theme in ~48 hours. This time, the theme of the jam was "Success", which is a very broad theme that could be interpreted in many ways:
@@ -23,7 +24,7 @@ We took example on both of these ideas for our game.
 
 [Godot][10] is completely free and open source under the very permissive [MIT license][11]. No strings attached, no royalties, nothing. The users' games are theirs, down to the last line of engine code. Godot's development is fully independent and community-driven, empowering users to help shape their engine to match their expectations. It is supported by the [Software Freedom Conservancy][12] not-for-profit.
 
-Since Godot is a free, open-source and quite easy to learn, it is a very popular tool among Epitech Game Jam authors. It was our pick for the challenge.
+Since Godot is free, open-source and quite easy to learn, it is a very popular tool among Epitech Game Jam authors. It was our pick for the challenge.
 
 ## The team
 
