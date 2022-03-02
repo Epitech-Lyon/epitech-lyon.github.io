@@ -271,6 +271,21 @@ authors:
     web: https://www.linkedin.com/in/romain-b-9937ba19b/
     linkedin: https://www.linkedin.com/in/romain-b-9937ba19b/
     description: "Romain est de la promotion 2024 d'Epitech (Lyon). Il est passionné de Back-End, d'Intelligence Artificielle et et de DevOps"
+  pascal.betti@epitech.eu:
+    name: Pascal Betti
+    display_name: Pascal B.
+    email: pascal.betti@epitech.eu
+    web: https://www.linkedin.com/in/pascal-betti/
+    linkedin: https://www.linkedin.com/in/pascal-betti/
+    description: "Pascal est de la promotion 2024 d'Epitech (Lyon). Il est passionné par le développement de Jeu Video"
+  rayane.djellabi@epitech.eu:
+    name: Rayane Djellabi
+    display_name: Rayane D.
+    email: rayane.djellabi@epitech.eu
+    web: https://www.linkedin.com/in/rdjellabi/
+    linkedin: https://www.linkedin.com/in/rdjellabi/
+    description: "Rayane est de la promotion 2024 d'Epitech (Lyon). Il est passionné par les moteurs de développement de jeux videos tels que Godot Engine ou Unity."
+
   
   
 # Plugins
