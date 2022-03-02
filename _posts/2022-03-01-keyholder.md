@@ -10,12 +10,12 @@ published: true
 comments: false
 ---
 
-**Keyholder** -- previously named The Key of Success -- was made during the weekend from February the 11th to the 13th of 2022, for an Epitech Jam which is sort of a contest where you have to produce a game or a software fitting an imposed theme in ~48 hours. This time, the theme of the jam was "Success", which is a very large theme that could be interpreted in many ways:
+**Keyholder** was made during the weekend from February the 11th to the 13th of 2022, for an Epitech Jam which is sort of a contest where you have to produce a game or a software fitting an imposed theme in ~48 hours. This time, the theme of the jam was "Success", which is a very broad theme that could be interpreted in many ways:
 
 > An Epitech Jam which is sort of a contest where you have to produce a game or a software fitting an imposed theme in ~48 hours.
 
 - First off, success defines the act of achieving, reaching your objectives. But success may require taking risks.
-- Secondly, we settled on two widely used symbols that also fit to describe success: the key (for exemple the key of success), which represents potential, and the door, that represents an objective to reach.
+- Secondly, we settled on two widely used symbols that also fit to describe success: the key (for exemple the key of success), which represents potential, and the door, that represents the objective to reach.
 
 We took example on both of these ideas for our game.
 
@@ -42,17 +42,17 @@ For this one, we were 7, namely:
 
 ### Friday
 
-The theme was revealed and we went through the ideation process. Each one of us gave one or more idea that we discussed together. Some were great, some were terrible - for the sake of your minds, I won't expose them in this post.
+The theme was revealed and we went through the ideation process. Each one of us gave one or more ideas that we discussed together. Some were great, some were terrible - for the sake of your minds, I won't expose them in this post.
 
-Due to our past experiences, we were careful to fully lay out what the game was going to be. Everyone had to know exactly what the game was about and what they had to do, because we've had problems in past jams where some members of the team didn't fully understand what they needed to do, so they did nothing ! When choosing the kind of game to develop, it's important to keep in mind that you only have the weekend to do it. A common mistake is being too ambitious.
+Due to our past experiences, we were careful to fully lay out what the game was going to be. Everyone had to know exactly what the game was about and what they had to do, because we've had problems in past jams where some members of the team didn't fully understand what they needed to do, so they did nothing! When choosing the kind of game to develop, it's important to keep in mind that you only have a weekend to do it. A common mistake is being too ambitious.
 
-In the evening, we began the development on a twin-stick top-down shooter where the player is carrying a key that enemies want to steal from him. When the player doesn't have the key, it slowly dies down. The goal is to prevent the key from breaking until the door is open.
+In the evening, we began the development on a twin-stick top-down shooter where the player is carrying a key that enemies want to steal. When the player doesn't have the key, it slowly dies down. The goal is to prevent the key from breaking until the door opens.
 
 Our principal inspiration was Yoshi's Island, in which Yoshi has to protect Baby Mario.
 
 ### Saturday
 
-The core part of the game was made in Saturday. From the beginning, we cared **a lot** about the atmosphere of the game. We planned for the game to take place in some sort of a temple. That's why one of the first things we focused on was the lighting.
+The core part of the game was made in Saturday. From the beginning, we cared **a lot** about the atmosphere of the game. We planned for the game to take place in some sort of temple. That's why one of the first things we focused on was the lighting.
 
 ![Keyholder on Saturday afternoon]({{ site.baseurl }}/assets/images/keyholder/z8ev36d.jpg)
 <small> Fig 1. </small>
@@ -88,7 +88,7 @@ Worry not, we added an endless mode! This mode features only one level, but with
 
 If you'd like to download our entry, please go to our itch.io page! Do not hesitate to give us your feedback on Itch as well.
 
-Itch :  [click here to play][1]
+Itch :  [click here to play][9]
 
 ## Conclusion
 
