@@ -24,7 +24,7 @@ We took example on both of these ideas for our game.
 
 [Godot][10] is completely free and open source under the very permissive [MIT license][11]. No strings attached, no royalties, nothing. The users' games are theirs, down to the last line of engine code. Godot's development is fully independent and community-driven, empowering users to help shape their engine to match their expectations. It is supported by the [Software Freedom Conservancy][12] not-for-profit.
 
-Since Godot is a free, open-source and quite easy to learn, it is a very popular tool among Epitech Game Jam authors. It was our pick for the challenge.
+Since Godot is free, open-source and quite easy to learn, it is a very popular tool among Epitech Game Jam authors. It was our pick for the challenge.
 
 ## The team
 
