@@ -98,15 +98,8 @@ We made every choice consciously while taking care not to reproduce past mistake
 
 ## References
 
-- [https://github.com/STMiki][5]
-- [https://github.com/Imnibis][4]
-- [https://github.com/matmansn][7]
-- [https://github.com/Gr1moire][3]
 - [https://sfconservancy.org/][12]
 - [Godot Engine Official Website][1]
-- [https://github.com/Spacelenin][2]
-- [https://github.com/DorianCollin][6]
-- [https://github.com/LorienEpitech][8]
 - [https://galerianstudio.itch.io/keyholder][9]
 
 
