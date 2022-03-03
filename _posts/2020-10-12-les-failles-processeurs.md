@@ -1,10 +1,12 @@
 ---
 layout: post
 title:  "Les failles des microprocesseurs"
-author: mverdier
+author:
+    - maugan.verdier@epitech.eu
 categories: [ talk ]
 image: assets/images/failles/affiche.jpg
 published: false
+comments: false
 ---
 
 ## Présentation

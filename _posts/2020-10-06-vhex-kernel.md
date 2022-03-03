@@ -1,10 +1,13 @@
 ---
 layout: post
 title:  "Vhex (Kernel pour les calculatrices Casio)"
-author: ymagnin
+author:
+    - yann.magnin@epitech.eu
 categories: [ hubproject ]
 image: assets/images/vhex/vhex.jpg
 published: true
+featured: false
+comments: false
 ---
 
 L'année dernière, j'ai choisi de faire comme [projet Hub][4] un kernel pour les calculatrices Casio. Comme le projet est toujours d'actualité et que j'ai l'opportunité de partager mes prévisions pour la suite, je vais essayer d'expliquer le plus possible l'objectif derrière ce noyau.
@@ -23,7 +26,7 @@ Par contre, je préfère mettre les choses au clair dès le début, le projet n'
 
 ### Explication du projet
 
-Pour en revenir au sujet, mon envie première est de mettre en place plusieurs projets qui sont plus ou moins "liés" entre eux et qui ont pour objectif principal de fournir un kernel UNIX-like libre pour les calculatrices Casio (mais je pense qu'avec une bonne organisation, il ne devrait pas y avoir trop de difficulté à porter le projet sur une architecture différente).
+Pour en revenir au sujet, mon envie première est de mettre en place plusieurs projets qui sont plus ou moins "liés" entre eux et qui ont pour objectif principal de fournir un kernel UNIX-like libre pour les calculatrices Casio (mais je pense qu'avec une bonne organisation, il ne devrait pas y avoir trop de difficultés à porter le projet sur une architecture différente).
 
 Vous avez ici la vue d'ensemble des projets :
 
@@ -39,7 +42,7 @@ Vous avez ici la vue d'ensemble des projets :
 ------------------------------------------------------------
 ```
 
-Chaque partie que vous voyez la sera indépendantes pour permettre à quiconque le souhaite de participer au projet.
+Chaque partie sera indépendante pour permettre à quiconque le souhaite de participer au projet.
 
 ---
 

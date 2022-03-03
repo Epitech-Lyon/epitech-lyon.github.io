@@ -1,10 +1,12 @@
 ---
 layout: post
 title:  "Click N Collect"
-author: jhouvenaghel
+author:
+    - juliette.houvenaghel@epitech.eu
 categories: [ hubproject ]
 image: assets/images/clickncollect/logo192.png
 published: true
+comments: false
 ---
 Quel outil pour fluidifier la prise de commandes pendant les horaires de pointe?
 

@@ -1,10 +1,13 @@
 ---
 layout: post
 title:  "L'art du référencement Web"
-author: rlo
+author:
+    - rayane.lo@epitech.eu
+    - moussa.hechaichi@epitech.eu
 categories: [ workshop ]
 image: assets/images/art-referencement/affiche.jpg
 published: true
+comments: false
 ---
 
 Dans le cadre d’un workshop réalisé pour les étudiants d’Epitech-Lyon, nous avons présenté et partagé nos connaissances en référencement naturel, plus communément appelé [SEO][1] -- **S**earch **E**ngine **O**ptimisation.

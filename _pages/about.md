@@ -2,7 +2,7 @@
 layout: page
 title: About us
 permalink: /about
-comments: true
+comments: false
 ---
 
 <div class="row justify-content-between">
@@ -47,7 +47,7 @@ comments: true
                 Want to know more about our students work? Contact us or have a look <a target="_blank" href="https://github.com/epitech-lyon">here <i class="fab fa-github"></i></a>.
             </p>
 
-            <a target="_blank" href="{{site.baseurl}}/contact" class="btn btn-warning">Say Hi!</a>
+            <a target="_blank" href="mailto:lyon@epitech.eu" class="btn btn-warning">Say Hi!</a>
 
         </div>
     </div>

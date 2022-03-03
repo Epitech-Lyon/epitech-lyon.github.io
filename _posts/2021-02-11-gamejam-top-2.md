@@ -1,10 +1,12 @@
 ---
 layout: post
 title:  "Présentation d'un jeu vidéo pour sensibiliser à l'écologie"
-author: araynaud
+author:
+    - araynaud
 categories: [ talk ]
 image: assets/images/top2_gamejam/top2.png
 published: false
+comments: false
 ---
 
 Dans le cadre d’un challenge d’innovation, nous avons organisé un hackathon jeux-vidéos avec pour thème : empreinte. Le but du challenge étant de développer un jeu agréable, performant et divertissant en respectant au maximum le thème. 
