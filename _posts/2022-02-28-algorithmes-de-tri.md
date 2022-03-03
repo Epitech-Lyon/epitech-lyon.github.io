@@ -17,7 +17,7 @@ The most common uses of sorted sequences are :
 - making merging of sequences efficient.
 - enabling processing of data in a defined order.
 
-For example, you might want to give priority to people who have been customers the longest, but also to people who have spent a lot of money or even to people who bought something yesterday. So you have to sort them by different criteria. Sorting is very critical for information systems performance, since it is quicker to find an element in an ordered list than in an unordered one. 
+For example, you might want to give priority to people who have been customers the longest, but also to people who have spent a lot of money or even to people who bought something yesterday. So you have to sort them by different criteria. Sorting is very critical for information systems performance, since it is quicker to find an element in an ordered list than in an unordered one.
 
 This article discusses sorting strategies and explains how to evaluate the performances of the corresponding algorithms.
 
@@ -27,7 +27,7 @@ A sorting algorithm depends on two factors : time complexity and space complexit
 
 *Time complexity* is the computational complexity that describes the amount of computer time it takes to run an algorithm. For example, `O(log N)` means time goes up linearly while the `N` goes up exponentially. So if it takes 1 second to compute 10 elements, it will take 2 seconds to compute 100 elements, 3 seconds to compute 1000 elements, and so on. *Space complexity* measures the total amount of memory that an algorithm or operation needs to run according to its input size.
 
-The *stability* of a sorting algorithm depends on how the algorithm treats equal (or repeated) elements. Stable sorting algorithms preserve the relative order of equal elements, while unstable sorting algorithms don’t. 
+The *stability* of a sorting algorithm depends on how the algorithm treats equal (or repeated) elements. Stable sorting algorithms preserve the relative order of equal elements, while unstable sorting algorithms don’t.
 
 ## Sorting algorithm evaluation
 
@@ -232,23 +232,22 @@ def shellSort(n, array):
 
 <br>
 
+## Evaluation
 
-## Evaluation 
+For this experiment we use python for testing the algorithms. We take a list of 5 000 numbers and try to sort them 10 times to see their stability and make a mean of the time it takes to sort (the list is always the same and the order of elements isn’t changed between each test).
 
-For this experiment we use python for testing the algorithms. We take a list of 5 000 numbers and try to sort them 10 times to see their stability and make a mean of the time it takes to sort (the list is always the same and the order of elements isn’t changed between each test). 
-
-The PC used has an Intel(R) Core(TM) i7-8750H CPU @ 2.20GHz   2.21 GHz processor and 16Go of ram. Since the time can be influenced by the processor's efficiency, time can change between other computers. Moreover, the algorithms used can probably be improved and the number of tests (only 10 by algorithms) could be increased to have a better idea of the time taken. 
+The PC used has an Intel(R) Core(TM) i7-8750H CPU @ 2.20GHz 2.21 GHz processor and 16Go of RAM. Since the time can be influenced by the processor's efficiency, time can change between other computers. Moreover, the algorithms used can probably be improved and the number of tests (only 10 by algorithms) could be increased to have a better idea of the time taken.
 
 ## Results 
 
-We noted the average time of each algorithm in seconds: 
+We noted the average time of each algorithm in seconds:
 
 - Selection Sort upon 10 sort of 5 000 elements: 1,313 seconds 
-- Insertion Sort upon 10 sort of 5 000 elements: 1,727 seconds 
+- Insertion Sort upon 10 sort of 5 000 elements: 1,727 seconds
 - Bubble Sort upon 10 sort of 5 000 elements: 2,42 seconds 
 - Quick Sort upon 10 sort of 5 000 elements: 0,078 seconds 
-- Merge Sort upon 10 sort of 5 000 elements: 0,078 seconds 
-- Shell Sort upon 10 sort of 5 000 elements: 0,099 seconds 
+- Merge Sort upon 10 sort of 5 000 elements: 0,078 seconds
+- Shell Sort upon 10 sort of 5 000 elements: 0,099 seconds
 
 ## Références
 - [https://github.com/CubeLeopard5/Sorting-Algrithms][1]
@@ -262,14 +261,14 @@ We noted the average time of each algorithm in seconds:
 - [http://lwh.free.fr/pages/algo/tri/tri.htm][9]
 - [https://www.jesuisundev.com/comprendre-les-algorithmes-de-tri-en-7-minutes/][10]
 
-[1]: https://github.com/CubeLeopard5/Sorting-Algrithms 
-[2]: https://www.programiz.com/dsa/merge-sort 
-[3]: https://www.programiz.com/dsa/quick-sort 
-[4]: https://www.programiz.com/dsa/bubble-sort 
-[5]: https://www.programiz.com/dsa/selection-sort 
-[6]: https://www.programiz.com/dsa/insertion-sort 
-[7]: https://www.programiz.com/dsa/shell-sort 
-[8]: https://betterexplained.com/articles/sorting-algorithms/ 
-[9]: http://lwh.free.fr/pages/algo/tri/tri.htm 
-[10]: https://www.jesuisundev.com/comprendre-les-algorithmes-de-tri-en-7-minutes/ 
+[1]: https://github.com/CubeLeopard5/Sorting-Algrithms
+[2]: https://www.programiz.com/dsa/merge-sort
+[3]: https://www.programiz.com/dsa/quick-sort
+[4]: https://www.programiz.com/dsa/bubble-sort
+[5]: https://www.programiz.com/dsa/selection-sort
+[6]: https://www.programiz.com/dsa/insertion-sort
+[7]: https://www.programiz.com/dsa/shell-sort
+[8]: https://betterexplained.com/articles/sorting-algorithms/
+[9]: http://lwh.free.fr/pages/algo/tri/tri.htm
+[10]: https://www.jesuisundev.com/comprendre-les-algorithmes-de-tri-en-7-minutes/
 [11]: https://en.wikipedia.org/wiki/Shellsort
