@@ -1,16 +1,16 @@
 ---
 layout: post
-title:  "Sorting algorithms"
+title:  "An overview of the most popular sorting algorithms"
 author:
     - adrien.michaud@epitech.eu
     - basile.seroul@epitech.eu
-categories: [ experience ]
+categories: [ experiment ]
 image: assets/images/sorting-algorithms/poster.jpg
 published: true
 comments: false
 ---
 
-In computer science, arranging elements in an ordered sequence is called "sorting". It is a very a common operation in many applications and efficient algorithmshave been developed to perform it.
+In computer science, arranging elements in an ordered sequence is called "sorting". It is a very a common operation in many applications and efficient algorithms have been developed to perform it.
 
 The most common uses of sorted sequences are :
 - making lookup or search efficient.
@@ -118,7 +118,7 @@ def bubbleSort(tab):
 
 <br>
 
-## Quick Sort
+### Quick Sort
 
 For this one we will divide the list by using a pivot element. This pivot element should always be positioned in a way that elements to the left are smaller than the pivot and elements to the right are bigger than the pivot. We obtained sublists and those sublists are also divided until we have sublists of one element. After that we can recombine sublists into one.
 
@@ -236,6 +236,9 @@ def shellSort(n, array):
 
 For this experiment we use python for testing the algorithms. We take a list of 5 000 numbers and try to sort them 10 times to see their stability and make a mean of the time it takes to sort (the list is always the same and the order of elements isn’t changed between each test).
 
+> We have shared the python implementation of the sorting algorithms is available [here][1] !
+
+
 The PC used has an Intel(R) Core(TM) i7-8750H CPU @ 2.20GHz 2.21 GHz processor and 16Go of RAM. Since the time can be influenced by the processor's efficiency, time can change between other computers. Moreover, the algorithms used can probably be improved and the number of tests (only 10 by algorithms) could be increased to have a better idea of the time taken.
 
 ## Results 
@@ -250,16 +253,16 @@ We noted the average time of each algorithm in seconds:
 - Shell Sort upon 10 sort of 5 000 elements: 0,099 seconds
 
 ## Références
-- [https://github.com/CubeLeopard5/Sorting-Algrithms][1]
-- [https://www.programiz.com/dsa/merge-sort][2]
-- [https://www.programiz.com/dsa/quick-sort][3]
-- [https://www.programiz.com/dsa/bubble-sort][4]
-- [https://www.programiz.com/dsa/selection-sort][5]
-- [https://www.programiz.com/dsa/insertion-sort][6]
-- [https://www.programiz.com/dsa/shell-sort][7]
-- [https://betterexplained.com/articles/sorting-algorithms/][8]
-- [http://lwh.free.fr/pages/algo/tri/tri.htm][9]
-- [https://www.jesuisundev.com/comprendre-les-algorithmes-de-tri-en-7-minutes/][10]
+- [Sorting Algorithms Python Code -- CubeLeopard5/Sorting-Algrithms][1]
+- [Merge Sort -- Programiz.com][2]
+- [Quick Sort -- Programiz.com][3]
+- [Bubble Sort -- Programiz.com][4]
+- [Selection Sort -- Programiz.com][5]
+- [Insertion Sort -- Programiz.com][6]
+- [Shell Sort -- Programiz.com][7]
+- [Sorting Algorithms -- BetterExplained.com][8]
+- [Tri -- lwh.free.fr][9]
+- [Comprendre les algorithmes de tri en 7 minutes -- JeSuisUnDev.com][10]
 
 [1]: https://github.com/CubeLeopard5/Sorting-Algrithms
 [2]: https://www.programiz.com/dsa/merge-sort

@@ -3,7 +3,7 @@ layout: post
 title:  "Machines virtuelles et contenaires : comment créer ses propres serveurs from scratch?"
 author:
     - maugan.verdier@epitech.eu
-categories: [ experience ]
+categories: [ experiment ]
 image: assets/images/homeserver/poster.jpg
 published: true
 comments: false

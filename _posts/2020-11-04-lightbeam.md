@@ -3,7 +3,7 @@ layout: post
 title:  "LightBeam project : Introduction to Kernel Development"
 author:
     - leo.karoubi@epitech.eu
-categories: [ experience ]
+categories: [ experiment ]
 image: assets/images/lightbeam/affiche.jpg
 published: false
 comments: false

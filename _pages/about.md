@@ -16,7 +16,7 @@ comments: false
             <li> <b>Scientific talks</b> : Conference of a pro or student / former alumni on a tech subject generally held in the HUB </li>
             <li> <b>Workshops</b>: Experimentation to discover a tech project / concept </li>
             <li> <b>R&D projects</b> : Ambitious project alone or in group, validated by a jury </li>
-            <li> <b>Experiences</b> : Discovering a tool or a technique </li>
+            <li> <b>Experiments</b> : Discovering a tool or a technique </li>
         </ul>
 
         <p class="mb-5" align="center">
