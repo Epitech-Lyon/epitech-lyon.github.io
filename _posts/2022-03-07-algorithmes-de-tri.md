@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "An overview of the most popular sorting algorithms"
+title:  "A Technical Overview of the Most Popular Sorting Algorithms"
 author:
     - adrien.michaud@epitech.eu
     - basile.seroul@epitech.eu
