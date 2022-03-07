@@ -6,7 +6,6 @@ author:
 categories: [ experiment ]
 image: assets/images/raycaster/poster.png
 published: true
-featured: true
 comments: false
 rating: 5
 ---
