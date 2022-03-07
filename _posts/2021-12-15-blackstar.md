@@ -3,7 +3,7 @@ layout: post
 title:  "Introduction to Malware Obfuscation Using ELF Sections"
 author:
     - bogdan.guillemoles@epitech.eu
-categories: [ experience ]
+categories: [ experiment ]
 image: assets/images/blackstar/poster.jpg
 published: true
 featured: true

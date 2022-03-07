@@ -3,7 +3,7 @@ layout: post
 title:  "Developing a Descent FPS Game Using SFML "
 author:
     - zacharie.corniere@epitech.eu
-categories: [ experience ]
+categories: [ experiment ]
 image: assets/images/raycaster/poster.png
 published: true
 featured: true
@@ -13,7 +13,7 @@ rating: 5
 
 I found the YouTube channel of [OneLoneCoder](https://www.youtube.com/channel/UC-yuWVUplUJZvieEligKBkA), especially a video about building a First Person Shooter (*FPS*[^fps]) from scratch. The video was really interesting, and at the end of it, I had a working *FPS* using *SFML*[^sfml]. But I was lacking frame per seconds. So I improved it. And then, I realized that I was displaying on a really small window (200x200), so I extended it. And I added enemies. And so on and so forth...
 
-In this post, I am sharing my experience (and my code) for the curious.
+In this post, I am sharing my experiment (and my code) for the curious.
 
 ## Technologies used
 
