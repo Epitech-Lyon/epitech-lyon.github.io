@@ -19,7 +19,7 @@ The most common uses of sorted sequences are :
 
 For example, you might want to give priority to people who have been customers the longest, but also to people who have spent a lot of money or even to people who bought something yesterday. So you have to sort them by different criteria. Sorting is very critical for information systems performance, since it is quicker to find an element in an ordered list than in an unordered one.
 
-This article discusses sorting strategies and explains how to evaluate the performances of the corresponding algorithms.
+This article discusses sorting strategies and shows off the performances of the corresponding algorithms.
 
 ## What does a sorting algorithm depend on?
 
@@ -29,7 +29,7 @@ A sorting algorithm depends on two factors : time complexity and space complexit
 
 The *stability* of a sorting algorithm depends on how the algorithm treats equal (or repeated) elements. Stable sorting algorithms preserve the relative order of equal elements, while unstable sorting algorithms don’t.
 
-## Sorting algorithm evaluation
+## Sorting algorithms evaluation
 
 We tested different sorting algorithms in order to discuss  about the fastest ones and to explain their main principles. We have implemented 6 different algorithms.
 
@@ -63,7 +63,7 @@ def selectionSort(tab):
 
 ### Insertion Sort
 
-For this algorithm, we assume that the first element is already sorted, then we take another element and we compare it to the first one. If it’s greater than the sorted element we place it to the right, otherwise, to the left.
+For this algorithm, we assume that the first element is already sorted, then we take another element and we compare it to the first one. If it’s greater than the sorted element, we place it to the right, otherwise, to the left.
 
 ```python
 def insertionSort(tab):
@@ -120,7 +120,7 @@ def bubbleSort(tab):
 
 ### Quick Sort
 
-For this one we will divide the list by using a pivot element. This pivot element should always be positioned in a way that elements to the left are smaller than the pivot and elements to the right are bigger than the pivot. We obtained sublists and those sublists are also divided until we have sublists of one element. After that we can recombine sublists into one.
+For this one, we will divide the list by using a pivot element. This pivot element should always be positioned in a way that elements to the left are smaller than the pivot and elements to the right are bigger than the pivot. Thus we obtain sublists, and those sublists are also divided until we have sublists of one element. After that we can recombine sublists into one.
 
 ```python
 def partition(tab):
@@ -155,7 +155,7 @@ def quickSort(tab):
 
 ### Merge Sort
 
-This algorithm looks like the quick sort. We divide the list into sublists by cutting it in halves. When we have lists of one element we recombine the lists into greater sorted lists until we finished to recombine all lists.
+This algorithm looks like the quick sort. We divide the list into sublists by cutting it in halves. When we have lists of one element, we recombine the lists into greater sorted lists until we finished to recombine all lists.
 
 ```python
 def mergeSort(tab):
@@ -202,7 +202,7 @@ def mergeSort(tab):
 
 ### Shell Sort
 
-It’s a generalized version of the insertion sort we saw earlier. It sorts groups of elements that are far away from each other. The [idea][11] is to arrange the list of elements so that, starting anywhere, taking every hth element produces a sorted list --- such a list is said to be h-sorted. 
+It’s a generalized version of the insertion sort we saw earlier. It sorts groups of elements that are far away from each other. The [idea][11] is to arrange the list of elements so that, starting anywhere, taking every `h-th` element produces a sorted list --- such a list is said to be `h-sorted`. 
 
 ```python
 def shellSort(n, array):
@@ -234,16 +234,15 @@ def shellSort(n, array):
 
 ## Evaluation
 
-For this experiment we use python for testing the algorithms. We take a list of 5 000 numbers and try to sort them 10 times to see their stability and make a mean of the time it takes to sort (the list is always the same and the order of elements isn’t changed between each test).
+For our evaluation experiment, we used python to implement the algorithms. We took a list of 5 000 numbers, sorted them 10 times and averaged the duration for stability purposes (the list is always the same and the order of elements isn’t changed between each test).
 
-> We have shared the python implementation of the sorting algorithms is available [here][1] !
-
+> The python implementation of the sorting algorithms is available [here][1] !
 
 The PC used has an Intel(R) Core(TM) i7-8750H CPU @ 2.20GHz 2.21 GHz processor and 16Go of RAM. Since the time can be influenced by the processor's efficiency, time can change between other computers. Moreover, the algorithms used can probably be improved and the number of tests (only 10 by algorithms) could be increased to have a better idea of the time taken.
 
 ## Results 
 
-We noted the average time of each algorithm in seconds:
+We have collected the average time for each algorithm in seconds:
 
 - Selection Sort upon 10 sort of 5 000 elements: 1,313 seconds 
 - Insertion Sort upon 10 sort of 5 000 elements: 1,727 seconds
@@ -251,6 +250,8 @@ We noted the average time of each algorithm in seconds:
 - Quick Sort upon 10 sort of 5 000 elements: 0,078 seconds 
 - Merge Sort upon 10 sort of 5 000 elements: 0,078 seconds
 - Shell Sort upon 10 sort of 5 000 elements: 0,099 seconds
+
+According to our experiment, the Merge Sort and the Quick Sort seem to the fastest algorithms. What do you think ?
 
 ## Références
 - [Sorting Algorithms Python Code -- CubeLeopard5/Sorting-Algrithms][1]
