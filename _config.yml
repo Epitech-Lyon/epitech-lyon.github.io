@@ -299,7 +299,20 @@ authors:
     web: https://www.linkedin.com/in/adrien-michaud-8327a41a0/
     linkedin: https://www.linkedin.com/in/adrien-michaud-8327a41a0/
     description: "Adrien est de la promotion 2024 d'Epitech (Lyon). Il est passionné par la technologie Python et la programmation de jeux video"
-  
+  samson.dubuy@epitech.eu:
+    name: Samson Dubuy
+    display_name: Samson D.
+    email: samson.dubuy@epitech.eu
+    web: https://www.linkedin.com/school/epitech---european-institute-of-technology/mycompany/verification/
+    linkedin: https://www.linkedin.com/school/epitech---european-institute-of-technology/mycompany/verification/
+    description: "Samson est un étudiant de la promotion 2026 de d'Epitech (Lyon). Il est passionné par le réseau et les MMORPGs"
+  noe.grange@epitech.eu:
+    name: Noé Grange
+    display_name: Noé G.
+    email: noe.grange@epitech.eu
+    web: https://www.linkedin.com/school/epitech---european-institute-of-technology/mycompany/verification/
+    linkedin: https://www.linkedin.com/school/epitech---european-institute-of-technology/mycompany/verification/
+    description: "Noé est un étudiant de la promotion 2026 de d'Epitech (Lyon). Il est passionné de programmation en réseau et d'E-Sport"
   
 # Plugins
 plugins:
