@@ -299,6 +299,13 @@ authors:
     web: https://www.linkedin.com/in/adrien-michaud-8327a41a0/
     linkedin: https://www.linkedin.com/in/adrien-michaud-8327a41a0/
     description: "Adrien est de la promotion 2024 d'Epitech (Lyon). Il est passionné par la technologie Python et la programmation de jeux video"
+  axel.bard-de-coutance@epitech.eu:
+    name: Axel Bard de Coutance
+    display_name: Axel
+    email: axel.bard-de-coutance@epitech.eu
+    web: https://www.linkedin.com/in/axel-bard-de-coutance-a0a38722a/
+    linkedin: https://www.linkedin.com/in/axel-bard-de-coutance-a0a38722a/
+    description: "Axel est de la promotion 2026 d'Epitech (Lyon). Il est passionné par la programation bas-niveau et la cybersécurité"
   
   
 # Plugins
