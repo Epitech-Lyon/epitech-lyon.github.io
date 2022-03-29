@@ -4,7 +4,7 @@ title:  "Keyholder: a twin-stick top-down shooter made with Godot"
 author:
     - pascal.betti@epitech.eu
     - rayane.djellabi@epitech.eu
-categories: [ experience ]
+categories: [ experiment ]
 image: assets/images/keyholder/poster.png
 published: true
 comments: false
